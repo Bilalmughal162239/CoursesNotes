@@ -1,0 +1,276 @@
+.html-notes-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.notes-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 10px;
+}
+
+.notes-header h1 {
+  margin: 0 0 10px 0;
+  font-size: 2.5rem;
+}
+
+.notes-header p {
+  margin: 0;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.level-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.level-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  background: #f8f9fa;
+  color: #495057;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.level-btn:hover {
+  background: #e9ecef;
+  transform: translateY(-2px);
+}
+
+.level-btn.active {
+  background: #007bff;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.content-area {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.topics-sidebar {
+  flex: 0 0 250px;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+
+.topics-sidebar h3 {
+  margin: 0 0 15px 0;
+  color: #495057;
+  font-size: 1.1rem;
+}
+
+.topics-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.topic-btn {
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.topic-btn:hover {
+  background: #e9ecef;
+}
+
+.topic-btn.active {
+  background: #007bff;
+  color: white;
+}
+
+.topic-content {
+  flex: 1;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.topic-detail {
+  padding: 30px;
+}
+
+.topic-detail h2 {
+  margin: 0 0 25px 0;
+  color: #2c3e50;
+  font-size: 1.8rem;
+  border-bottom: 3px solid #007bff;
+  padding-bottom: 10px;
+}
+
+.theory-section,
+.code-section,
+.explanation-section,
+.task-section {
+  margin-bottom: 25px;
+}
+
+.theory-section h3,
+.code-section h3,
+.explanation-section h3,
+.task-section h3 {
+  color: #495057;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.code-block {
+  background: #2d3748;
+  color: #e2e8f0;
+  padding: 20px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.explanation-text {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  border-left: 4px solid #28a745;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  white-space: pre-line;
+}
+
+.task-box {
+  background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #e17055;
+}
+
+.task-box p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.final-project {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  padding: 30px;
+  border-radius: 15px;
+  margin-top: 40px;
+}
+
+.final-project h2 {
+  margin: 0 0 15px 0;
+  color: #2c3e50;
+  font-size: 2rem;
+}
+
+.project-description {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: #495057;
+}
+
+.project-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.requirements,
+.project-structure,
+.bonus-features {
+  flex: 1 1 300px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.requirements h3,
+.project-structure h3,
+.bonus-features h3 {
+  margin: 0 0 15px 0;
+  color: #2c3e50;
+}
+
+.requirements ul,
+.bonus-features ul {
+  padding-left: 20px;
+}
+
+.requirements li,
+.bonus-features li {
+  margin-bottom: 8px;
+}
+
+.structure-code {
+  background: #2d3748;
+  color: #e2e8f0;
+  padding: 15px;
+  border-radius: 5px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  overflow-x: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content-area {
+    flex-direction: column;
+  }
+
+  .topics-sidebar {
+    position: static;
+  }
+
+  .notes-header h1 {
+    font-size: 2rem;
+  }
+
+  .topic-detail {
+    padding: 20px;
+  }
+
+  .project-details {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .html-notes-container {
+    padding: 10px;
+  }
+
+  .level-navigation {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .level-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
