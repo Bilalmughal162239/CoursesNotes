@@ -6,6 +6,7 @@ import Footer from '../footer/Footer'
 import About from '../pages/About'
 import HTMLNotesPage from '../pages/HTMLNotesPage'
 import Contact from '../pages/Contact'
+import NodeNotesPage from '../pages/NodeNotesPage'
 
 const Index = () => {
     return (
@@ -16,6 +17,7 @@ const Index = () => {
                     <Route path='/' element={<Home />} />
                     <Route path='about' element={<About />} />
                     <Route path='HTMLNotesPage' element={<HTMLNotesPage />} />
+                    <Route path='NodeNotesPage' element={<NodeNotesPage />} />
                     <Route path='Contact' element={<Contact />} />
                 </Routes>
             </main>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaCheck, FaCopy } from 'react-icons/fa';
 
 const HTMLNotesPage = () => {
   const [activeLevel, setActiveLevel] = useState('beginner');
@@ -1307,7 +1308,23 @@ Display progress using <meter>.`,
       "Include structured data for SEO (JSON-LD)"
     ]
   };
+  const [copied, setCopied] = useState(false);
 
+  const handleCopy = () => {
+    // Get the code text
+    const codeText = htmlContent[activeLevel].topics[activeTopicIndex].code;
+
+    // Copy to clipboard
+    navigator.clipboard.writeText(codeText)
+      .then(() => {
+        setCopied(true);
+        // Reset after 2 seconds
+        setTimeout(() => setCopied(false), 2000);
+      })
+      .catch(err => {
+        console.error('Failed to copy: ', err);
+      });
+  };
   return (
     <div className="min-h-screen bg-gray-50 p-4 sm:p-6 lg:p-8">
       {/* Header */}
@@ -1388,7 +1405,26 @@ Display progress using <meter>.`,
                   <span className="text-2xl mr-2">💻</span>
                   Code Example
                 </h3>
-                <div className="bg-gray-900 text-gray-100 p-4 sm:p-6 rounded-lg overflow-x-auto">
+                <div className="bg-gray-900 text-gray-100 p-4 sm:p-6 rounded-lg overflow-x-auto relative">
+                  {/* Copy Button */}
+                  <button
+                    onClick={handleCopy}
+                    className="absolute top-3 right-3 flex items-center space-x-1 bg-gray-700 hover:bg-gray-600 text-white py-1 px-3 rounded-md text-sm transition-colors duration-200"
+                  >
+                    {copied ? (
+                      <>
+                        <FaCheck className="text-green-400" />
+                        <span>Copied!</span>
+                      </>
+                    ) : (
+                      <>
+                        <FaCopy />
+                        <span>Copy</span>
+                      </>
+                    )}
+                  </button>
+
+                  {/* Code Content */}
                   <pre className="text-xs sm:text-sm font-mono leading-relaxed">
                     <code>{htmlContent[activeLevel].topics[activeTopicIndex].code}</code>
                   </pre>

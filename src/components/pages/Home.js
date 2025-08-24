@@ -295,10 +295,7 @@ const Home = () => {
       <section className="features-section py-20">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+            <div
               className="space-y-8"
             >
               <div>
@@ -329,12 +326,8 @@ const Home = () => {
                     description: 'Access course materials and updates forever'
                   }
                 ].map((feature, index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
                     className="flex items-start space-x-4"
                   >
                     <div className="w-8 h-8 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
@@ -344,14 +337,11 @@ const Home = () => {
                       <h3 className="text-lg font-semibold mb-1">{feature.title}</h3>
                       <p className="text-gray-600">{feature.description}</p>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+            </div>
+            <div
               className="relative"
             >
               <div className="bg-gradient-to-br from-primary-500 to-secondary-500 rounded-3xl p-8 text-white">
@@ -389,7 +379,7 @@ const Home = () => {
                   </motion.button>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

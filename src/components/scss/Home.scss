@@ -95,25 +95,25 @@
     }
   }
 
-  .features-section {
-    position: relative;
+  // .features-section {
+  //   position: relative;
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 24rem;
-      /* w-96 */
-      height: 24rem;
-      /* h-96 */
-      border-radius: 9999px;
-      opacity: 0.5;
-      background: linear-gradient(to bottom right, #ffecd2 0%, #fcb69f 100%);
-      transform: translate(-50%, -50%);
-      z-index: -1;
-    }
-  }
+  //   &::before {
+  //     content: '';
+  //     position: absolute;
+  //     top: 50%;
+  //     left: 50%;
+  //     width: 24rem;
+  //     /* w-96 */
+  //     height: 24rem;
+  //     /* h-96 */
+  //     border-radius: 9999px;
+  //     opacity: 0.5;
+  //     background: linear-gradient(to bottom right, #ffecd2 0%, #fcb69f 100%);
+  //     transform: translate(-50%, -50%);
+  //     z-index: -1;
+  //   }
+  // }
 }
 
 @keyframes float {

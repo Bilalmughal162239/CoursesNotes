@@ -48,7 +48,7 @@ const Header = () => {
     { name: 'Bootstrap', icon: SiBootstrap, color: "text-purple-600", href: '/courses/bootstrap' },
     { name: 'JavaScript', icon: FaJs, color: "text-yellow-500", href: '/courses/javascript' },
     { name: 'React', icon: FaReact, color: "text-cyan-400", href: '/courses/react' },
-    { name: 'Node.js', icon: FaNodeJs, color: "text-green-600", href: 'NodeNotes' },
+    { name: 'Node.js', icon: FaNodeJs, color: "text-green-600", href: 'NodeNotesPage' },
     { name: 'C', icon: SiCplusplus, color: "text-indigo-600", href: '/courses/c' },
     { name: 'C++', icon: SiCplusplus, color: "text-indigo-700", href: '/courses/cpp' },
     { name: 'Python', icon: FaPython, color: "text-sky-500", href: '/courses/python' },
@@ -65,19 +65,16 @@ const Header = () => {
       <div className="container mx-auto">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link to="/">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="flex items-center space-x-2"
-            >
-              <div className="logo-icon">
-                <FaCode className="text-2xl lg:text-3xl text-primary-500" />
-              </div>
-              <span className="logo-text text-xl lg:text-2xl font-bold bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">
-                CodeMaster
-              </span>
-            </motion.div>
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-2">
+            <div className="logo-icon p-1 sm:p-2 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-lg text-white">
+              <FaCode className="text-xl sm:text-2xl lg:text-3xl" />
+            </div>
+            <span className="logo-text text-lg sm:text-xl lg:text-2xl font-bold bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">
+              CodeMaster
+            </span>
           </Link>
+
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
@@ -145,15 +142,17 @@ const Header = () => {
 
           {/* Theme Toggle & Mobile Menu Button */}
           <div className="flex items-center space-x-4">
+            {/* Dark mode toggle only for md and above */}
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsDarkMode(!isDarkMode)}
-              className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors duration-300"
+              className="hidden md:flex p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors duration-300"
             >
               {isDarkMode ? <FaSun className="text-yellow-500" /> : <FaMoon className="text-gray-600" />}
             </motion.button>
 
+            {/* Mobile menu button */}
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
