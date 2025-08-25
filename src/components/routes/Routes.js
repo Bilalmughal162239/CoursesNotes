@@ -7,6 +7,7 @@ import About from '../pages/About'
 import HTMLNotesPage from '../pages/HTMLNotesPage'
 import Contact from '../pages/Contact'
 import NodeNotesPage from '../pages/NodeNotesPage'
+import CssNotesPage from '../pages/CssNotesPage'
 
 const Index = () => {
     return (
@@ -18,6 +19,7 @@ const Index = () => {
                     <Route path='about' element={<About />} />
                     <Route path='HTMLNotesPage' element={<HTMLNotesPage />} />
                     <Route path='NodeNotesPage' element={<NodeNotesPage />} />
+                    <Route path='CssNotesPage' element={<CssNotesPage />} />
                     <Route path='Contact' element={<Contact />} />
                 </Routes>
             </main>
