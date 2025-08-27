@@ -11,42 +11,55 @@ const NodeNotesPage = () => {
       topics: [
         {
           title: "1. Node.js Introduction & Setup",
-          theory: `<h1>What is Node.js?</h1> 
- <p>Node.js is a JavaScript runtime environment built on Chrome's V8 JavaScript engine. It is used for building server-side applications.</p>
- <h3>Key Features:</h3> 
- <ul>
-   <li>Asynchronous & Event-driven: Non-blocking I/O operations</li>
-   <li>Single-threaded: Event loop mechanism</li>
-   <li>Cross-platform: Windows, Mac, Linux</li>
-   <li>NPM: Largest package ecosystem</li>
- </ul>
- <h3>Installation Steps:</h3>
- <pre>
- # Step 1: Download Node.js from <a href="https://nodejs.org" target="_blank">nodejs.org</a>
- # Step 2: After installation verify
- node --version
- npm --version
- 
- # Step 3: Create your first project
- mkdir my-node-app
- cd my-node-app
- </pre>
- <h3>Your First Node.js Program:</h3>
- <pre>
- // app.js
- console.log("Hello World from Node.js!");
- console.log("Node.js version:", process.version);
- console.log("Platform:", process.platform);
- 
- // To run in terminal:
- // node app.js
- </pre>
- <h3>Output:</h3>
- <pre>
- Hello World from Node.js!
- Node.js version: v18.17.0
- Platform: win32
- </pre>`,
+          theory: `
+<div class="p-6 bg-gray-50 rounded-lg shadow-md space-y-6">
+
+  <h1 class="text-3xl font-bold text-indigo-600">What is Node.js?</h1>
+  <p class="text-gray-700 leading-relaxed">
+    Node.js is a JavaScript runtime environment built on Chrome's V8 JavaScript engine. It is used for building server-side applications.
+  </p>
+
+  <h3 class="text-2xl font-semibold text-indigo-500">Key Features:</h3>
+  <ul class="list-disc pl-6 text-gray-700 space-y-2">
+    <li>Asynchronous & Event-driven: Non-blocking I/O operations</li>
+    <li>Single-threaded: Event loop mechanism</li>
+    <li>Cross-platform: Windows, Mac, Linux</li>
+    <li>NPM: Largest package ecosystem</li>
+  </ul>
+
+  <h3 class="text-2xl font-semibold text-indigo-500">Installation Steps:</h3>
+  <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto text-sm text-gray-800">
+# Step 1: Download Node.js from 
+<a href="https://nodejs.org" target="_blank" class="text-blue-600 underline">nodejs.org</a>
+# Step 2: After installation verify
+node --version
+npm --version
+
+# Step 3: Create your first project
+mkdir my-node-app
+cd my-node-app
+  </pre>
+
+  <h3 class="text-2xl font-semibold text-indigo-500">Your First Node.js Program:</h3>
+  <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto text-sm text-gray-800">
+// app.js
+console.log("Hello World from Node.js!");
+console.log("Node.js version:", process.version);
+console.log("Platform:", process.platform);
+
+// To run in terminal:
+// node app.js
+  </pre>
+
+  <h3 class="text-2xl font-semibold text-indigo-500">Output:</h3>
+  <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto text-sm text-gray-800">
+Hello World from Node.js!
+Node.js version: v18.17.0
+Platform: win32
+  </pre>
+
+</div>
+`,
           code: `<!DOCTYPE html>
  <html lang="en">
  <head>
@@ -81,15 +94,30 @@ const NodeNotesPage = () => {
         {
           title: "2. JavaScript Fundamentals for Node.js",
           theory: `
- <h3>Variables & Data Types</h3>
- <p>In JavaScript, there are three types of variables: <code>var</code>, <code>let</code>, and <code>const</code>. Data types include primitive types (string, number, boolean, null, undefined, symbol, bigint) and non-primitive types (objects, arrays, functions).</p>
- 
- <h3>Functions in Node.js</h3>
- <p>Functions are used for code reuse. In Node.js, regular functions, arrow functions, and async functions are commonly used.</p>
- 
- <h3>Promises & Async/Await</h3>
- <p>Promises and Async/Await are used to handle asynchronous operations. They allow non-blocking behavior, which is a core feature of Node.js.</p>
-   `,
+<div class="p-6 bg-gray-50 rounded-lg shadow-md space-y-6">
+
+  <h3 class="text-2xl font-semibold text-indigo-500">Variables & Data Types</h3>
+  <p class="text-gray-700 leading-relaxed">
+    In JavaScript, there are three types of variables: 
+    <code class="bg-gray-100 px-1 rounded text-sm text-red-600">var</code>, 
+    <code class="bg-gray-100 px-1 rounded text-sm text-red-600">let</code>, and 
+    <code class="bg-gray-100 px-1 rounded text-sm text-red-600">const</code>. 
+    Data types include primitive types (string, number, boolean, null, undefined, symbol, bigint) and non-primitive types (objects, arrays, functions).
+  </p>
+
+  <h3 class="text-2xl font-semibold text-indigo-500">Functions in Node.js</h3>
+  <p class="text-gray-700 leading-relaxed">
+    Functions are used for code reuse. In Node.js, regular functions, arrow functions, and async functions are commonly used.
+  </p>
+
+  <h3 class="text-2xl font-semibold text-indigo-500">Promises & Async/Await</h3>
+  <p class="text-gray-700 leading-relaxed">
+    Promises and Async/Await are used to handle asynchronous operations. 
+    They allow non-blocking behavior, which is a core feature of Node.js.
+  </p>
+
+</div>
+`,
           code: `// variables.js
 // ES6 Variables
 const name = "Ahmad";           // Constant
@@ -188,14 +216,31 @@ readFileAsync();`,
         {
           title: "3. Core Modules",
           theory: `
-<p>Node.js has several <strong>built-in core modules</strong> that can be used directly without installation. These modules are used for system-level tasks such as file handling, path management, operating system info, URL parsing, and more.</p>
-<h3>1. Path Module</h3>
-<p>The Path module is used to work with file and directory paths.</p>
-<h3>2. OS Module</h3>
-<p>The OS module is used to retrieve information about the operating system (CPU, memory, platform, uptime, etc.).</p>
-<h3>3. URL Module</h3>
-<p>The URL module is used to parse, manipulate, and construct URL strings.</p>`
-          ,
+<div class="p-6 bg-gray-50 rounded-lg shadow-md space-y-6">
+
+  <p class="text-gray-700 leading-relaxed">
+    Node.js has several <strong class="text-indigo-600 font-semibold">built-in core modules</strong> 
+    that can be used directly without installation. These modules are used for system-level tasks 
+    such as file handling, path management, operating system info, URL parsing, and more.
+  </p>
+
+  <h3 class="text-2xl font-semibold text-indigo-500">1. Path Module</h3>
+  <p class="text-gray-700 leading-relaxed">
+    The Path module is used to work with file and directory paths.
+  </p>
+
+  <h3 class="text-2xl font-semibold text-indigo-500">2. OS Module</h3>
+  <p class="text-gray-700 leading-relaxed">
+    The OS module is used to retrieve information about the operating system (CPU, memory, platform, uptime, etc.).
+  </p>
+
+  <h3 class="text-2xl font-semibold text-indigo-500">3. URL Module</h3>
+  <p class="text-gray-700 leading-relaxed">
+    The URL module is used to parse, manipulate, and construct URL strings.
+  </p>
+
+</div>
+`,
           code: `// path-example.js
 const path = require('path');
 // Current file ka path
@@ -268,27 +313,40 @@ console.log("New URL:", newUrl.toString());`,
 
         {
           title: "4. File System Operations",
-          theory: `<p><strong>File System (fs) module</strong> is a core Node.js module used to work with files and directories. It provides synchronous, asynchronous(callback),       and promises-based methods.</p>
-<h3>1. Reading Files</h3>
-<ul>
-  <li><strong>Synchronous:</strong> Blocking, execution waits until reading is complete.</li>
-  <li><strong>Asynchronous (Callback):</strong> Non-blocking, result received via callback.</li>
-  <li><strong>Promises/Async-Await:</strong> Modern and clean way to handle asynchronous file operations.</li>
-  <li><strong>Check if file exists:</strong> Use <code>fs.existsSync</code>.</li>
-</ul>
-<h3>2. Writing Files</h3>
-<ul>
-  <li><strong>writeFile:</strong> Writes new data to a file (overwrites existing content).</li>
-  <li><strong>appendFile:</strong> Adds data to an existing file.</li>
-  <li><strong>writeFileSync:</strong> Synchronous file writing.</li>
-</ul>
-<h3>3. Directory Operations</h3>
-<ul>
-  <li><strong>mkdirSync:</strong> Create a new directory.</li>
-  <li><strong>readdirSync:</strong> Read contents of a directory.</li>
-  <li><strong>rmSync:</strong> Delete a directory.</li>
-  <li><strong>watchFile:</strong> Monitor file changes.</li>
-</ul>`,
+          theory: `
+<div class="p-6 bg-gray-50 rounded-lg shadow-md space-y-6">
+
+  <p class="text-gray-700 leading-relaxed">
+    <strong class="text-indigo-600 font-semibold">File System (fs) module</strong> is a core Node.js module 
+    used to work with files and directories. It provides synchronous, asynchronous (callback), 
+    and promises-based methods.
+  </p>
+
+  <h3 class="text-2xl font-semibold text-indigo-500">1. Reading Files</h3>
+  <ul class="list-disc list-inside text-gray-700 space-y-1">
+    <li><strong>Synchronous:</strong> Blocking, execution waits until reading is complete.</li>
+    <li><strong>Asynchronous (Callback):</strong> Non-blocking, result received via callback.</li>
+    <li><strong>Promises/Async-Await:</strong> Modern and clean way to handle asynchronous file operations.</li>
+    <li><strong>Check if file exists:</strong> Use <code class="bg-gray-200 px-1 rounded">fs.existsSync</code>.</li>
+  </ul>
+
+  <h3 class="text-2xl font-semibold text-indigo-500">2. Writing Files</h3>
+  <ul class="list-disc list-inside text-gray-700 space-y-1">
+    <li><strong>writeFile:</strong> Writes new data to a file (overwrites existing content).</li>
+    <li><strong>appendFile:</strong> Adds data to an existing file.</li>
+    <li><strong>writeFileSync:</strong> Synchronous file writing.</li>
+  </ul>
+
+  <h3 class="text-2xl font-semibold text-indigo-500">3. Directory Operations</h3>
+  <ul class="list-disc list-inside text-gray-700 space-y-1">
+    <li><strong>mkdirSync:</strong> Create a new directory.</li>
+    <li><strong>readdirSync:</strong> Read contents of a directory.</li>
+    <li><strong>rmSync:</strong> Delete a directory.</li>
+    <li><strong>watchFile:</strong> Monitor file changes.</li>
+  </ul>
+
+</div>
+`,
           code: `// file-read.js
  const fs = require('fs');
  const path = require('path');
@@ -441,24 +499,37 @@ console.log("New URL:", newUrl.toString());`,
         {
           title: "5. HTTP Module & Basic Server",
           theory: `
- <p><strong>HTTP module</strong> is a built-in Node.js module used to create servers and handle HTTP requests.</p>
- <h3>1. Basic HTTP Server</h3>
- <ul>
-   <li><strong>http.createServer:</strong> Creates a server that handles requests.</li>
-   <li><strong>req.url:</strong> The requested path from the client.</li>
-   <li><strong>req.method:</strong> Request method (GET, POST, PUT, DELETE).</li>
-   <li><strong>res.setHeader:</strong> Set response headers.</li>
-   <li><strong>res.end:</strong> Send response back to the client.</li>
- </ul>
- <h3>2. Routing</h3>
- <p>You can create routes by writing conditions for different <strong>paths and methods</strong> (e.g., '/', '/about', '/users').</p>
- <h3>3. HTTP Client</h3>
- <ul>
-   <li><strong>http/https modules:</strong> Used to make GET and POST requests.</li>
-   <li><strong>http.get:</strong> Simple GET request.</li>
-   <li><strong>http.request:</strong> Advanced requests (e.g., POST with body data).</li>
- </ul>
- `,
+<div class="p-6 bg-gray-50 rounded-lg shadow-md space-y-6">
+
+  <p class="text-gray-700 leading-relaxed">
+    <strong class="text-indigo-600 font-semibold">HTTP module</strong> is a built-in Node.js module used 
+    to create servers and handle HTTP requests.
+  </p>
+
+  <h3 class="text-2xl font-semibold text-indigo-500">1. Basic HTTP Server</h3>
+  <ul class="list-disc list-inside text-gray-700 space-y-1">
+    <li><strong>http.createServer:</strong> Creates a server that handles requests.</li>
+    <li><strong>req.url:</strong> The requested path from the client.</li>
+    <li><strong>req.method:</strong> Request method (GET, POST, PUT, DELETE).</li>
+    <li><strong>res.setHeader:</strong> Set response headers.</li>
+    <li><strong>res.end:</strong> Send response back to the client.</li>
+  </ul>
+
+  <h3 class="text-2xl font-semibold text-indigo-500">2. Routing</h3>
+  <p class="text-gray-700 leading-relaxed">
+    You can create routes by writing conditions for different 
+    <strong class="text-indigo-600">paths and methods</strong> (e.g., '/', '/about', '/users').
+  </p>
+
+  <h3 class="text-2xl font-semibold text-indigo-500">3. HTTP Client</h3>
+  <ul class="list-disc list-inside text-gray-700 space-y-1">
+    <li><strong>http/https modules:</strong> Used to make GET and POST requests.</li>
+    <li><strong>http.get:</strong> Simple GET request.</li>
+    <li><strong>http.request:</strong> Advanced requests (e.g., POST with body data).</li>
+  </ul>
+
+</div>
+`,
           code: `// basic-server.js
  const http = require('http');
  const url = require('url');
@@ -605,30 +676,46 @@ console.log("New URL:", newUrl.toString());`,
         {
           title: "6. NPM & Package Management",
           theory: `
- <p><strong>NPM (Node Package Manager)</strong> is the default package manager for Node.js, used to install, update, and manage dependencies.</p>
- <h3>1. Project Initialization</h3>
- <pre><code>npm init -y</code></pre>
- <p>This command creates a <strong>package.json</strong> file that tracks project metadata and dependencies.</p>
- <h3>2. Package Installation</h3>
- <ul>
-   <li><code>npm install express</code> → Adds an application dependency.</li>
-   <li><code>npm install --save-dev nodemon</code> → Adds a development dependency.</li>
-   <li><code>npm install -g pm2</code> → Installs a package globally (system-wide).</li>
-   <li><code>npm install express@4.18.0</code> → Installs a specific version of a package.</li>
- </ul>
- <h3>3. Package Management</h3>
- <ul>
-   <li><code>npm update</code> → Updates packages to the latest compatible version.</li>
-   <li><code>npm uninstall express</code> → Removes a dependency.</li>
- </ul>
- <h3>4. package.json Example</h3>
- <p>This file defines dependencies, scripts, and project information.</p>
- <h3>5. Environment Variables</h3>
- <ul>
-   <li>The <code>dotenv</code> package is used to store sensitive information (DB URL, API keys, JWT secrets) in a separate <code>.env</code> file.</li>
-   <li>For central configuration, a <code>config.js</code> file is used.</li>
- </ul>
-   `,
+<div class="p-6 bg-gray-50 rounded-lg shadow-md space-y-6">
+
+  <p class="text-gray-700 leading-relaxed">
+    <strong class="text-indigo-600 font-semibold">NPM (Node Package Manager)</strong> is the default package manager for Node.js, 
+    used to install, update, and manage dependencies.
+  </p>
+
+  <h3 class="text-2xl font-semibold text-indigo-500">1. Project Initialization</h3>
+  <pre class="bg-gray-200 p-4 rounded-md overflow-x-auto"><code>npm init -y</code></pre>
+  <p class="text-gray-700 leading-relaxed">
+    This command creates a <strong class="text-indigo-600 font-semibold">package.json</strong> file that tracks project metadata and dependencies.
+  </p>
+
+  <h3 class="text-2xl font-semibold text-indigo-500">2. Package Installation</h3>
+  <ul class="list-disc list-inside text-gray-700 space-y-1">
+    <li><code>npm install express</code> → Adds an application dependency.</li>
+    <li><code>npm install --save-dev nodemon</code> → Adds a development dependency.</li>
+    <li><code>npm install -g pm2</code> → Installs a package globally (system-wide).</li>
+    <li><code>npm install express@4.18.0</code> → Installs a specific version of a package.</li>
+  </ul>
+
+  <h3 class="text-2xl font-semibold text-indigo-500">3. Package Management</h3>
+  <ul class="list-disc list-inside text-gray-700 space-y-1">
+    <li><code>npm update</code> → Updates packages to the latest compatible version.</li>
+    <li><code>npm uninstall express</code> → Removes a dependency.</li>
+  </ul>
+
+  <h3 class="text-2xl font-semibold text-indigo-500">4. package.json Example</h3>
+  <p class="text-gray-700 leading-relaxed">
+    This file defines dependencies, scripts, and project information.
+  </p>
+
+  <h3 class="text-2xl font-semibold text-indigo-500">5. Environment Variables</h3>
+  <ul class="list-disc list-inside text-gray-700 space-y-1">
+    <li>The <code>dotenv</code> package is used to store sensitive information (DB URL, API keys, JWT secrets) in a separate <code>.env</code> file.</li>
+    <li>For central configuration, a <code>config.js</code> file is used.</li>
+  </ul>
+
+</div>
+`,
           code: `# Commands
 npm init -y
 npm install express
@@ -733,8 +820,19 @@ UPLOAD_PATH=./uploads`,
         },
         {
           title: "Beginner Mini Task 1: File Manager CLI",
-          theory:
-            "This task introduces basic Node.js file system operations with a command-line interface (CLI). It covers creating, reading, deleting files, and navigating directories using Node.js core modules like fs, path, and readline.",
+          theory: `
+<div class="p-6 bg-gray-50 rounded-lg shadow-md space-y-4">
+
+  <p class="text-gray-700 leading-relaxed">
+    This task introduces basic <strong class="text-indigo-600 font-semibold">Node.js file system operations</strong> with a <strong class="text-indigo-600 font-semibold">command-line interface (CLI)</strong>.
+  </p>
+
+  <p class="text-gray-700 leading-relaxed">
+    It covers <strong class="text-indigo-600 font-semibold">creating, reading, deleting files</strong>, and <strong class="text-indigo-600 font-semibold">navigating directories</strong> using Node.js core modules like <code class="bg-gray-100 text-indigo-600 px-1 rounded">fs</code>, <code class="bg-gray-100 text-indigo-600 px-1 rounded">path</code>, and <code class="bg-gray-100 text-indigo-600 px-1 rounded">readline</code>.
+  </p>
+
+</div>
+`,
           code: `// file-manager.js
  const fs = require('fs');
  const path = require('path');
@@ -901,8 +999,23 @@ UPLOAD_PATH=./uploads`,
         },
         {
           title: "Beginner Mini Task 2: Simple Web Server with File Serving",
-          theory:
-            "This task introduces creating a basic web server in Node.js. The server can serve static files (HTML, CSS, JS, images, etc.) and handle simple API routes. It uses Node.js core modules like http, fs, path, and url.",
+          theory: `
+<div class="p-6 bg-gray-50 rounded-lg shadow-md space-y-4">
+
+  <p class="text-gray-700 leading-relaxed">
+    This task introduces <strong class="text-indigo-600 font-semibold">creating a basic web server</strong> in Node.js.
+  </p>
+
+  <p class="text-gray-700 leading-relaxed">
+    The server can serve <strong class="text-indigo-600 font-semibold">static files</strong> like HTML, CSS, JS, images, etc., and handle simple <strong class="text-indigo-600 font-semibold">API routes</strong>.
+  </p>
+
+  <p class="text-gray-700 leading-relaxed">
+    It uses Node.js core modules such as <code class="bg-gray-100 text-indigo-600 px-1 rounded">http</code>, <code class="bg-gray-100 text-indigo-600 px-1 rounded">fs</code>, <code class="bg-gray-100 text-indigo-600 px-1 rounded">path</code>, and <code class="bg-gray-100 text-indigo-600 px-1 rounded">url</code>.
+  </p>
+
+</div>
+`,
           code: `// web-server.js
  const http = require('http');
  const fs = require('fs');
@@ -1145,14 +1258,29 @@ UPLOAD_PATH=./uploads`,
         {
           title: "Express.js Framework",
           theory: `
-Express.js is a fast, unopinionated, and minimalist web framework for Node.js. 
-It provides a robust set of features for building web and mobile applications, including:
-- Routing
-- Middleware support
-- Template engines
-- Static file serving
-- Error handling
-It allows developers to create RESTful APIs and web servers efficiently with minimal code.
+<div class="p-6 bg-gray-50 rounded-lg shadow-md space-y-4">
+
+  <p class="text-gray-700 leading-relaxed">
+    <strong class="text-indigo-600 font-semibold">Express.js</strong> is a fast, unopinionated, and minimalist web framework for Node.js.
+  </p>
+
+  <p class="text-gray-700 leading-relaxed">
+    It provides a robust set of features for building web and mobile applications, including:
+  </p>
+
+  <ul class="list-disc list-inside text-gray-700 space-y-1">
+    <li>Routing</li>
+    <li>Middleware support</li>
+    <li>Template engines</li>
+    <li>Static file serving</li>
+    <li>Error handling</li>
+  </ul>
+
+  <p class="text-gray-700 leading-relaxed">
+    It allows developers to create RESTful APIs and web servers efficiently with minimal code.
+  </p>
+
+</div>
 `,
           code: `
 // Basic Express Setup:
@@ -1343,13 +1471,25 @@ Mini Task:
         {
           title: "Express Router",
           theory: `
-Express Router is a powerful feature of Express.js that allows you to organize your routes into modular, mountable route handlers. 
-It helps in keeping your codebase clean and maintainable, especially in large applications. Key points:
-- Each router can have its own middleware.
-- Routers can be mounted on paths (e.g., '/api/users').
-- Supports all HTTP methods (GET, POST, PUT, DELETE, etc.).
-- Can handle route parameters and query parameters.
-- Facilitates separation of concerns by grouping related routes together.
+<div class="p-6 bg-gray-50 rounded-lg shadow-md space-y-4">
+
+  <p class="text-gray-700 leading-relaxed">
+    <strong class="text-indigo-600 font-semibold">Express Router</strong> is a powerful feature of Express.js that allows you to organize your routes into modular, mountable route handlers.
+  </p>
+
+  <p class="text-gray-700 leading-relaxed">
+    It helps in keeping your codebase clean and maintainable, especially in large applications. Key points:
+  </p>
+
+  <ul class="list-disc list-inside text-gray-700 space-y-1">
+    <li>Each router can have its own middleware.</li>
+    <li>Routers can be mounted on paths (e.g., '/api/users').</li>
+    <li>Supports all HTTP methods (GET, POST, PUT, DELETE, etc.).</li>
+    <li>Can handle route parameters and query parameters.</li>
+    <li>Facilitates separation of concerns by grouping related routes together.</li>
+  </ul>
+
+</div>
 `,
           code: `
 // Express Router Example:
@@ -1487,14 +1627,29 @@ Mini Task:
         {
           title: "Express Main App with Router",
           theory: `
-In a large Express.js application, it is best practice to organize routes using Express Routers and a main application file. 
-The main app handles:
-- Middleware (security, logging, CORS, parsing)
-- Mounting routers for modular route management
-- Global error handling
-- Health checks and API documentation
-- Graceful shutdown of the server
-This approach improves maintainability, scalability, and separation of concerns.
+<div class="p-6 bg-gray-50 rounded-lg shadow-md space-y-4">
+
+  <p class="text-gray-700 leading-relaxed">
+    In a large <strong class="text-indigo-600 font-semibold">Express.js</strong> application, it is best practice to organize routes using Express Routers and a main application file.
+  </p>
+
+  <p class="text-gray-700 leading-relaxed">
+    The main app handles:
+  </p>
+
+  <ul class="list-disc list-inside text-gray-700 space-y-1">
+    <li>Middleware (security, logging, CORS, parsing)</li>
+    <li>Mounting routers for modular route management</li>
+    <li>Global error handling</li>
+    <li>Health checks and API documentation</li>
+    <li>Graceful shutdown of the server</li>
+  </ul>
+
+  <p class="text-gray-700 leading-relaxed">
+    This approach improves maintainability, scalability, and separation of concerns.
+  </p>
+
+</div>
 `,
           code: `
 // Main App with Router Example:
@@ -1659,18 +1814,33 @@ Mini Task:
         {
           title: "Express Middleware Concepts",
           theory: `
-Middleware in Express.js are functions that have access to the request (req), response (res), and next middleware in the request-response cycle. 
-They are used for:
-- Logging requests
-- Authentication and authorization
-- Validation of input data
-- Rate limiting
-- Caching responses
-- Adding request IDs
-- Custom CORS handling
-- Error handling
-- Measuring response time
-Middleware can be global (applied to all routes) or route-specific.
+<div class="p-6 bg-gray-50 rounded-lg shadow-md space-y-4">
+
+  <p class="text-gray-700 leading-relaxed">
+    <strong class="text-indigo-600 font-semibold">Middleware</strong> in Express.js are functions that have access to the <code class="bg-gray-200 px-1 rounded">request (req)</code>, <code class="bg-gray-200 px-1 rounded">response (res)</code>, and next middleware in the request-response cycle.
+  </p>
+
+  <p class="text-gray-700 leading-relaxed">
+    They are used for:
+  </p>
+
+  <ul class="list-disc list-inside text-gray-700 space-y-1">
+    <li>Logging requests</li>
+    <li>Authentication and authorization</li>
+    <li>Validation of input data</li>
+    <li>Rate limiting</li>
+    <li>Caching responses</li>
+    <li>Adding request IDs</li>
+    <li>Custom CORS handling</li>
+    <li>Error handling</li>
+    <li>Measuring response time</li>
+  </ul>
+
+  <p class="text-gray-700 leading-relaxed">
+    Middleware can be <span class="font-semibold">global</span> (applied to all routes) or <span class="font-semibold">route-specific</span>.
+  </p>
+
+</div>
 `,
           code: `
 // middleware/index.js
@@ -1743,7 +1913,29 @@ Mini Tasks:
         },
         {
           title: "MongoDB Connection Setup and Configuration",
-          theory: "MongoDB connection setup is crucial for any Node.js application. The Database class provides a singleton pattern for managing MongoDB connections with Mongoose. It includes connection options for performance optimization, event listeners for monitoring connection status, and methods for graceful connection management.",
+          theory: `
+<div class="p-6 bg-gray-50 rounded-lg shadow-md space-y-4">
+
+  <p class="text-gray-700 leading-relaxed">
+    <strong class="text-indigo-600 font-semibold">MongoDB connection setup</strong> is crucial for any Node.js application.
+  </p>
+
+  <p class="text-gray-700 leading-relaxed">
+    The <code class="bg-gray-200 px-1 rounded">Database</code> class provides a <span class="font-semibold text-indigo-600">singleton pattern</span> for managing MongoDB connections with <code class="bg-gray-200 px-1 rounded">Mongoose</code>.
+  </p>
+
+  <p class="text-gray-700 leading-relaxed">
+    It includes:
+  </p>
+
+  <ul class="list-disc list-inside text-gray-700 space-y-1">
+    <li>Connection options for performance optimization</li>
+    <li>Event listeners for monitoring connection status</li>
+    <li>Methods for graceful connection management</li>
+  </ul>
+
+</div>
+`,
           code: `// config/database.js
 const mongoose = require('mongoose');
 
@@ -1816,7 +2008,29 @@ module.exports = new Database();`,
         },
         {
           title: "Data Modeling with Mongoose Schemas",
-          theory: "Mongoose schemas define the structure of documents in MongoDB collections. The User and Product models demonstrate comprehensive schema design with validation, indexes, virtuals, and custom methods. These schemas include data validation, relationships, and business logic encapsulation.",
+          theory: `
+<div class="p-6 bg-gray-50 rounded-lg shadow-md space-y-4">
+
+  <p class="text-gray-700 leading-relaxed">
+    <strong class="text-indigo-600 font-semibold">Mongoose schemas</strong> define the structure of documents in MongoDB collections.
+  </p>
+
+  <p class="text-gray-700 leading-relaxed">
+    The <code class="bg-gray-200 px-1 rounded">User</code> and <code class="bg-gray-200 px-1 rounded">Product</code> models demonstrate comprehensive schema design with validation, indexes, virtuals, and custom methods.
+  </p>
+
+  <p class="text-gray-700 leading-relaxed">
+    These schemas include:
+  </p>
+
+  <ul class="list-disc list-inside text-gray-700 space-y-1">
+    <li>Data validation</li>
+    <li>Relationships between collections</li>
+    <li>Business logic encapsulation</li>
+  </ul>
+
+</div>
+`,
           code: `// models/User.js
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
@@ -1891,7 +2105,19 @@ module.exports = mongoose.model('User', userSchema);`,
         },
         {
           title: "Service Layer for Business Logic",
-          theory: "The service layer separates business logic from route handlers, promoting cleaner code organization and reusability. UserService and ProductService classes encapsulate all database operations, providing a clean API for controllers to interact with data models.",
+          theory: `
+<div class="p-6 bg-gray-50 rounded-lg shadow-md space-y-4">
+
+  <p class="text-gray-700 leading-relaxed">
+    The <strong class="text-indigo-600 font-semibold">service layer</strong> separates business logic from route handlers, promoting cleaner code organization and reusability.
+  </p>
+
+  <p class="text-gray-700 leading-relaxed">
+    <code class="bg-gray-200 px-1 rounded">UserService</code> and <code class="bg-gray-200 px-1 rounded">ProductService</code> classes encapsulate all database operations, providing a clean API for controllers to interact with data models.
+  </p>
+
+</div>
+`,
           code: `// services/userService.js
 const User = require('../models/User');
 
@@ -1987,7 +2213,19 @@ module.exports = new UserService();`,
         },
         {
           title: "RESTful API Integration with Express",
-          theory: "The Express application integrates all components to create a fully functional RESTful API. It includes middleware for security, logging, and error handling, along with route handlers that use the service layer to process requests and return responses.",
+          theory: `
+<div class="p-6 bg-gray-50 rounded-lg shadow-md space-y-4">
+
+  <p class="text-gray-700 leading-relaxed">
+    The <strong class="text-indigo-600 font-semibold">Express application</strong> integrates all components to create a fully functional <strong class="text-indigo-600 font-semibold">RESTful API</strong>.
+  </p>
+
+  <p class="text-gray-700 leading-relaxed">
+    It includes <strong class="text-indigo-600 font-semibold">middleware</strong> for security, logging, and error handling, along with <strong class="text-indigo-600 font-semibold">route handlers</strong> that use the service layer to process requests and return responses.
+  </p>
+
+</div>
+`,
           code: `// app.js
 const express = require('express');
 const database = require('./config/database');
@@ -2103,28 +2341,1095 @@ module.exports = app;`,
         }
       ]
     },
+    advanced: {
+      title: "Advance Level Node js",
+      topics: [
+        {
+          title: 'Advanced Express Features',
+          theory: `
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">A. Router-Level Middleware</h2>
+    <p class="text-gray-700 mb-4">
+      Middleware that runs only for specific routes or routers. Useful for tasks like authentication, logging, or validation on a particular route group.
+    </p>
+    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const express = require('express');
+const app = express();
+const router = express.Router();
+
+// Middleware runs for all /admin routes
+router.use((req, res, next) => {
+  console.log('Admin route accessed');
+  next();
+});
+
+// Routes
+router.get('/dashboard', (req, res) => {
+  res.send('Admin Dashboard');
+});
+
+app.use('/admin', router);
+
+app.listen(3000, () => console.log('Server running on port 3000'));</code></pre>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">B. Error-Handling Middleware</h2>
+    <p class="text-gray-700 mb-4">
+      Centralized error handling middleware catches and manages application errors gracefully.
+    </p>
+    <pre class="bg-gray-100 p-3 rounded mb-4"><code>app.get('/error', (req, res, next) => {
+  try {
+    throw new Error('Something went wrong!');
+  } catch (err) {
+    next(err); // Pass to error handler
+  }
+});
+
+// Error handler middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ message: err.message });
+});</code></pre>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">C. Advanced Routing Techniques</h2>
+    <ul class="list-disc list-inside text-gray-800 mb-4">
+      <li><strong>Route Parameters:</strong> dynamic parts of URL, accessed via <code>req.params</code>.</li>
+      <li><strong>Optional Parameters:</strong> parameters that may or may not be present in the route.</li>
+      <li><strong>Regex Routes:</strong> routes matching pattern via regular expressions.</li>
+    </ul>
+    <pre class="bg-gray-100 p-3 rounded mb-4"><code>// Route parameter
+app.get('/user/:id', (req, res) => {
+  res.send(\`User ID: \${req.params.id}\`);
+});
+
+// Optional parameter
+app.get('/order/:id?', (req, res) => {
+  res.send(req.params.id ? \`Order: \${req.params.id}\` : 'All Orders');
+});
+
+// Regex route
+app.get(/a/, (req, res) => {
+  res.send('Route contains letter "a"');
+});</code></pre>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">D. Modular App Structure</h2>
+    <p class="text-gray-700 mb-4">
+      Organize routes, middleware, and controllers in separate files for maintainability.
+    </p>
+    <pre class="bg-gray-100 p-3 rounded mb-4"><code>project/
+├── app.js
+├── routes/
+│   └── userRoutes.js
+├── controllers/
+│   └── userController.js
+└── middleware/
+    └── auth.js
+</code></pre>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">E. Third-Party Middleware</h2>
+    <p class="text-gray-700 mb-4">
+      Common middleware to add functionality easily.
+    </p>
+    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const morgan = require('morgan');
+const cors = require('cors');
+
+app.use(bodyParser.json());
+app.use(cookieParser());
+app.use(morgan('dev'));
+app.use(cors());
+</code></pre>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">F. Example: Complete Advanced Express App</h2>
+    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const express = require('express');
+const app = express();
+
+// Built-in middleware
+app.use(express.json());
+
+// Route-level middleware for '/api' routes
+app.use('/api', (req, res, next) => {
+  console.log('API route accessed');
+  next();
+});
+
+// Modular user router
+const userRouter = express.Router();
+userRouter.get('/:id', (req, res) => {
+  res.json({ userId: req.params.id });
+});
+app.use('/users', userRouter);
+
+// Global error handler
+app.use((err, req, res, next) => {
+  res.status(500).json({ error: err.message });
+});
+
+app.listen(3000, () => console.log('Server running on 3000'));</code></pre>
+
+    <h2 class="text-xl font-semibold text-blue-500 mb-2">✅ Summary</h2>
+    <p class="text-gray-700">
+      Advanced Express features include router-level middleware, centralized error handling, modular app design, advanced routing, and integration of third-party middleware. These enable writing scalable, maintainable, and robust Express applications.
+    </p>
+  `,
+          code: `
+// Router-level middleware example
+const express = require('express');
+const app = express();
+const router = express.Router();
+
+router.use((req, res, next) => {
+  console.log('Middleware for /admin routes');
+  next();
+});
+
+router.get('/dashboard', (req, res) => {
+  res.send('Admin Dashboard');
+});
+app.use('/admin', router);
+
+// Error handling middleware example
+app.get('/error', (req, res, next) => {
+  try {
+    throw new Error('Oops!');
+  } catch (err) {
+    next(err);
+  }
+});
+
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ error: err.message });
+});
+
+// Advanced routing examples
+app.get('/user/:id', (req, res) => {
+  res.send(\`User ID: \${req.params.id}\`);
+});
+
+app.get('/order/:id?', (req, res) => {
+  res.send(req.params.id ? \`Order \${req.params.id}\` : 'All Orders');
+});
+
+app.get(/a/, (req, res) => {
+  res.send('Contains letter "a"');
+});
+
+// Third-party middleware usage
+const bodyParser = require('body-parser');
+const morgan = require('morgan');
+const cors = require('cors');
+
+app.use(bodyParser.json());
+app.use(morgan('dev'));
+app.use(cors());
+  `,
+          explanation: `
+  - Router-level middleware applies logic to specific route groups, improving modularity and reusability.
+  - Error-handling middleware centralizes error processing, enabling consistent responses.
+  - Advanced routing supports dynamic parameters, optional parameters, and regex-based routes.
+  - Modular app structures separate concerns into routes, controllers, and middleware for maintainability.
+  - Third-party middleware like body-parser, cookie-parser, morgan, and cors extend app functionality easily.
+  - These techniques help build scalable, organized, and secure Express.js applications.
+  `,
+          task: `
+  Task:
+  1. Create a router with middleware that logs requests on all routes under /admin.
+  2. Setup a global error handler that catches errors and returns JSON responses.
+  3. Implement routes with required and optional parameters.
+  4. Use body-parser and cors middleware in your app.
+  5. Organize routes and controllers into separate files following modular structure.
+  `
+        },
+        {
+          title: 'Real-time Applications with Socket.io',
+          theory: `
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">A. Installing Socket.io</h2>
+    <p class="text-gray-700 mb-4">
+      Use npm to install Socket.io and Express for real-time app development.
+    </p>
+    <pre class="bg-gray-100 p-3 rounded mb-4"><code>npm install socket.io
+npm install express</code></pre>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">B. Setting up a Basic Server</h2>
+    <p class="text-gray-700 mb-4">
+      Create an Express server integrated with Socket.io to handle real-time communication.
+    </p>
+    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const express = require('express');
+const http = require('http');
+const { Server } = require('socket.io');
+
+const app = express();
+const server = http.createServer(app);
+const io = new Server(server);
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index.html');
+});
+
+io.on('connection', (socket) => {
+  console.log('A user connected: ' + socket.id);
+
+  socket.on('chat message', (msg) => {
+    console.log('Message: ' + msg);
+    io.emit('chat message', msg);  // broadcast to all clients
+  });
+
+  socket.on('disconnect', () => {
+    console.log('User disconnected');
+  });
+});
+
+server.listen(3000, () => console.log('Server running on port 3000'));</code></pre>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">C. Client Side (index.html)</h2>
+    <p class="text-gray-700 mb-4">
+      Basic client listens and emits socket events to the server.
+    </p>
+    <pre class="bg-gray-100 p-3 rounded mb-4"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Socket.io Chat&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;ul id="messages"&gt;&lt;/ul&gt;
+    &lt;form id="form"&gt;
+      &lt;input id="input" autocomplete="off" /&gt;
+      &lt;button&gt;Send&lt;/button&gt;
+    &lt;/form&gt;
+
+    &lt;script src="/socket.io/socket.io.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+      const socket = io();
+
+      const form = document.getElementById('form');
+      const input = document.getElementById('input');
+      const messages = document.getElementById('messages');
+
+      form.addEventListener('submit', (e) =&gt; {
+        e.preventDefault();
+        if (input.value) {
+          socket.emit('chat message', input.value);
+          input.value = '';
+        }
+      });
+
+      socket.on('chat message', (msg) =&gt; {
+        const li = document.createElement('li');
+        li.textContent = msg;
+        messages.appendChild(li);
+      });
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">D. Key Features of Socket.io</h2>
+    <ul class="list-disc list-inside text-gray-800 mb-4">
+      <li>Event-based bi-directional communication between client and server.</li>
+      <li>Rooms and namespaces to organize clients and messages.</li>
+      <li>Broadcasting messages to all or selected clients.</li>
+      <li>Automatic reconnection on disconnection.</li>
+      <li>Supports sending binary data like images and files.</li>
+      <li>Ideal for chat apps, live notifications, collaborative tools, and multiplayer games.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">E. Example: Room-based Chat</h2>
+    <pre class="bg-gray-100 p-3 rounded mb-4"><code>io.on('connection', (socket) =&gt; {
+  socket.on('join room', (room) =&gt; {
+    socket.join(room);
+    socket.to(room).emit('message', 'A new user joined ' + room);
+  });
+
+  socket.on('room message', ({ room, msg }) =&gt; {
+    io.to(room).emit('message', msg);
+  });
+});</code></pre>
+
+    <h2 class="text-xl font-semibold text-blue-500 mb-2">F. Summary</h2>
+    <p class="text-gray-700">
+      Socket.io enables real-time capabilities for Node.js applications by providing low-latency, bidirectional communication with powerful features like rooms, automatic reconnection, and support for binary data. It is perfect for chat apps, live updates, notifications, and collaborative environments.
+    </p>
+  `,
+          code: `
+// Basic Socket.io server setup
+const express = require('express');
+const http = require('http');
+const { Server } = require('socket.io');
+
+const app = express();
+const server = http.createServer(app);
+const io = new Server(server);
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index.html');
+});
+
+io.on('connection', (socket) => {
+  console.log('A user connected: ' + socket.id);
+
+  socket.on('chat message', (msg) => {
+    console.log('Message: ' + msg);
+    io.emit('chat message', msg);
+  });
+
+  socket.on('disconnect', () => {
+    console.log('User disconnected');
+  });
+});
+
+server.listen(3000, () => console.log('Server running on port 3000'));
+
+
+// Example: Room-based chat
+io.on('connection', (socket) => {
+  socket.on('join room', (room) => {
+    socket.join(room);
+    socket.to(room).emit('message', 'A new user joined ' + room);
+  });
+
+  socket.on('room message', ({ room, msg }) => {
+    io.to(room).emit('message', msg);
+  });
+});
+  `,
+          explanation: `
+  - Socket.io facilitates real-time, event-driven communication between client and server.
+  - Apps can send and receive messages instantly enabling live chat, notifications, or collaborative features.
+  - Rooms and namespaces let you group clients logically for targeted message broadcasting.
+  - Built-in features include automatic reconnection and binary data support.
+  - Works seamlessly with Express.js to create scalable real-time applications.
+  `,
+          task: `
+  Task:
+  1. Setup a Socket.io server with Express and broadcast messages received from clients to all connected clients.
+  2. Build a client side page that can send and display chat messages in real-time.
+  3. Extend the server to support room-based chat where clients join rooms and only communicate within them.
+  4. Experiment with broadcasting messages excluding the sender.
+  5. Explore sending binary data like images using Socket.io.
+  `
+        },
+        {
+          title: 'Testing & Debugging in Node.js/Express',
+          theory: `
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">A. Types of Testing</h2>
+    <ul class="list-disc list-inside text-gray-800 mb-4">
+      <li><strong>Unit Testing:</strong> Test individual functions or modules in isolation.</li>
+      <li><strong>Integration Testing:</strong> Test interactions between multiple modules or APIs.</li>
+      <li><strong>End-to-End (E2E) Testing:</strong> Test the full application flow from start to finish.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">B. Popular Testing Frameworks</h2>
+    <ul class="list-disc list-inside text-gray-800 mb-4">
+      <li><strong>Mocha:</strong> Flexible test framework for Node.js.</li>
+      <li><strong>Chai:</strong> Assertion library that complements Mocha for readable assertions.</li>
+      <li><strong>Jest:</strong> All-in-one testing framework with mocking capabilities.</li>
+      <li><strong>Supertest:</strong> Library for testing Express APIs.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">C. Setting Up Mocha & Chai</h2>
+    <pre class="bg-gray-100 p-3 rounded mb-4"><code>npm install --save-dev mocha chai supertest
+
+// Add to package.json scripts
+"scripts": {
+  "test": "mocha"
+}</code></pre>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">D. Example: Unit Testing a Function</h2>
+    <p class="text-gray-700 mb-4">math.js</p>
+    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function sum(a, b) {
+  return a + b;
+}
+module.exports = sum;
+</code></pre>
+
+    <p class="text-gray-700 mb-4">test/math.test.js</p>
+    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const sum = require('../math');
+const { expect } = require('chai');
+
+describe('Sum Function', () => {
+  it('should return 5 for 2+3', () => {
+    expect(sum(2, 3)).to.equal(5);
+  });
+
+  it('should return a number', () => {
+    expect(sum(2, 3)).to.be.a('number');
+  });
+});
+</code></pre>
+    <p class="text-gray-700 mb-4">Run tests via <code>npm test</code></p>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">E. Example: Testing Express APIs</h2>
+    <p class="text-gray-700 mb-4">app.js</p>
+    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const express = require('express');
+const app = express();
+app.use(express.json());
+
+app.get('/hello', (req, res) => res.json({ message: 'Hello World' }));
+
+module.exports = app;
+</code></pre>
+
+    <p class="text-gray-700 mb-4">test/app.test.js</p>
+    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const request = require('supertest');
+const app = require('../app');
+const { expect } = require('chai');
+
+describe('GET /hello', () => {
+  it('should return Hello World', async () => {
+    const res = await request(app).get('/hello');
+    expect(res.status).to.equal(200);
+    expect(res.body.message).to.equal('Hello World');
+  });
+});
+</code></pre>
+    <p class="text-gray-700 mb-4">Run tests via <code>npm test</code></p>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">F. Debugging in Node.js</h2>
+    <ul class="list-disc list-inside text-gray-800 mb-4">
+      <li><strong>Built-in Debugger:</strong> Use <code>node inspect app.js</code>, commands <code>n</code> (next), <code>c</code> (continue).</li>
+      <li><strong>Chrome DevTools:</strong> Run <code>node --inspect-brk app.js</code>, open <code>chrome://inspect</code> in Chrome browser.</li>
+      <li><strong>Logging:</strong> Use <code>console.log()</code>, <code>console.error()</code>, and libraries like winston, debug, morgan for HTTP logs.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">G. Tips for Advanced Debugging</h2>
+    <ul class="list-disc list-inside text-gray-800 mb-4">
+      <li>Carefully check async code and await promises to catch errors.</li>
+      <li>Use breakpoints on key functions or suspected buggy code.</li>
+      <li>Test error handling with edge cases.</li>
+      <li>Use mock data and mocks for APIs and database during testing.</li>
+    </ul>
+
+    <h2 class="text-xl font-semibold text-blue-500 mb-2">H. Summary</h2>
+    <p class="text-gray-700">
+      Testing improves code reliability, while debugging improves maintainability. Use frameworks like Mocha, Chai, Jest, and Supertest for thorough testing. Leverage Node.js built-in debugger, Chrome DevTools, and logging for effective debugging.
+    </p>
+  `,
+          code: `
+// math.js
+function sum(a, b) {
+  return a + b;
+}
+module.exports = sum;
+
+// test/math.test.js
+const sum = require('../math');
+const { expect } = require('chai');
+
+describe('Sum Function', () => {
+  it('should return 5 for 2+3', () => {
+    expect(sum(2, 3)).to.equal(5);
+  });
+
+  it('should return a number', () => {
+    expect(sum(2, 3)).to.be.a('number');
+  });
+});
+
+// app.js (Express app)
+const express = require('express');
+const app = express();
+app.use(express.json());
+
+app.get('/hello', (req, res) => res.json({ message: 'Hello World' }));
+
+module.exports = app;
+
+// test/app.test.js
+const request = require('supertest');
+const app = require('../app');
+const { expect } = require('chai');
+
+describe('GET /hello', () => {
+  it('should return Hello World', async () => {
+    const res = await request(app).get('/hello');
+    expect(res.status).to.equal(200);
+    expect(res.body.message).to.equal('Hello World');
+  });
+});
+  `,
+          explanation: `
+  - Testing types include unit, integration, and end-to-end tests.
+  - Mocha is a flexible testing framework, Chai adds assertions.
+  - Jest is an all-in-one tester with mocking support.
+  - Supertest helps test Express HTTP endpoints.
+  - Debugging uses Node.js inspector, inline logging, and Chrome DevTools.
+  - Effective debugging includes breakpoint usage, logging, and handling async errors.
+  - Writing tests and debugging help ensure stable and maintainable Node.js apps.
+  `,
+          task: `
+  Task:
+  1. Create a simple function like sum and write Mocha/Chai tests for it.
+  2. Create a minimal Express app and test an endpoint with Supertest.
+  3. Use Node.js built-in debugger to step through your code.
+  4. Add error handling routes and test error responses.
+  5. Log errors consistently using a logging library or console.error().
+  `
+        },
+        {
+          title: 'Performance Optimization in Node.js',
+          theory: `
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">A. Non-Blocking I/O</h2>
+    <p class="text-gray-700 mb-4">
+      Node.js operates on a single-threaded event loop; blocking operations freeze the server.
+      Prefer asynchronous APIs to keep the server responsive.
+    </p>
+    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const fs = require('fs');
+
+// Blocking - avoid this
+const data = fs.readFileSync('file.txt', 'utf8');
+console.log(data);
+
+// Non-blocking - preferred
+fs.readFile('file.txt', 'utf8', (err, data) =&gt; {
+  if (err) throw err;
+  console.log(data);
+});
+</code></pre>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">B. Use Streams for Large Data</h2>
+    <p class="text-gray-700 mb-4">
+      Streams process data piece-by-piece, reducing memory usage, great for files, video streaming, uploads/downloads.
+    </p>
+    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const fs = require('fs');
+
+const readStream = fs.createReadStream('largefile.txt');
+const writeStream = fs.createWriteStream('output.txt');
+
+readStream.pipe(writeStream);
+</code></pre>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">C. Caching</h2>
+    <p class="text-gray-700 mb-4">
+      Reduce repeated expensive calls to DB or APIs using cache.
+    </p>
+    <pre class="bg-gray-100 p-3 rounded mb-4"><code>let cache = {};
+
+function getUser(id) {
+  if (cache[id]) return Promise.resolve(cache[id]);
+  return db.getUser(id).then(user =&gt; {
+    cache[id] = user;
+    return user;
+  });
+}
+// For distributed caching, consider Redis or similar.
+</code></pre>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">D. Cluster Module</h2>
+    <p class="text-gray-700 mb-4">
+      Take advantage of multi-core CPUs by creating worker processes.
+      Cluster mode allows handling more requests concurrently.
+    </p>
+    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const cluster = require('cluster');
+const http = require('http');
+const numCPUs = require('os').cpus().length;
+
+if (cluster.isMaster) {
+  for (let i = 0; i &lt; numCPUs; i++) {
+    cluster.fork();
+  }
+} else {
+  http.createServer((req, res) =&gt; res.end('Hello')).listen(3000);
+}
+</code></pre>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">E. Load Balancing</h2>
+    <p class="text-gray-700 mb-4">
+      Distribute traffic efficiently using NGINX or PM2 cluster mode.
+    </p>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">F. Optimize Middleware</h2>
+    <p class="text-gray-700 mb-4">
+      Use middleware selectively and avoid heavy computations inside request handlers to reduce latency.
+    </p>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">G. Memory Leak Prevention</h2>
+    <p class="text-gray-700 mb-4">
+      Monitor and fix unreleased objects in long-running Node apps.
+      Tools include <code>node --inspect</code>, Chrome DevTools, heapdump, and <code>clinic.js</code>.
+    </p>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">H. Profiling & Monitoring</h2>
+    <ul class="list-disc list-inside text-gray-800 mb-4">
+      <li>Node.js built-in Profiler</li>
+      <li>Clinic.js (doctor, flame graphs)</li>
+      <li>PM2 Monitoring (<code>pm2 monit</code>)</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">I. Database Optimization</h2>
+    <p class="text-gray-700 mb-4">
+      Use indexes, connection pooling, efficient queries, and avoid N+1 query problems.
+      Fetch only necessary fields to reduce latency.
+    </p>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">J. Code Optimization</h2>
+    <ul class="list-disc list-inside text-gray-800 mb-4">
+      <li>Avoid blocking loops and heavy synchronous code.</li>
+      <li>Use async/await to simplify asynchronous logic and avoid callback hell.</li>
+      <li>Apply efficient algorithms and data structures.</li>
+      <li>Compress HTTP responses with gzip using <code>compression</code> middleware.</li>
+    </ul>
+    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const compression = require('compression');
+app.use(compression());
+</code></pre>
+
+    <h2 class="text-xl font-semibold text-blue-500 mb-2">K. Summary</h2>
+    <ul class="list-disc list-inside text-gray-800">
+      <li>Prefer non-blocking I/O and use streams for big data.</li>
+      <li>Implement caching to reduce expensive operations.</li>
+      <li>Use clustering and load balancing to scale across CPU cores.</li>
+      <li>Profile and monitor apps for memory leaks and CPU bottlenecks.</li>
+      <li>Optimize middleware, DB queries, and code logic.</li>
+    </ul>
+  `,
+          code: `
+// Non-blocking I/O example
+const fs = require('fs');
+
+fs.readFile('example.txt', 'utf8', (err, data) => {
+  if (err) throw err;
+  console.log(data);
+});
+
+// Using streams for file copy
+const readStream = fs.createReadStream('largefile.txt');
+const writeStream = fs.createWriteStream('output.txt');
+readStream.pipe(writeStream);
+
+// Simple caching example
+let cache = {};
+function getUser(id) {
+  if (cache[id]) return Promise.resolve(cache[id]);
+  return db.getUser(id).then(user => {
+    cache[id] = user;
+    return user;
+  });
+}
+
+// Cluster example
+const cluster = require('cluster');
+const http = require('http');
+const numCPUs = require('os').cpus().length;
+
+if (cluster.isMaster) {
+  for(let i=0; i<numCPUs; i++) cluster.fork();
+} else {
+  http.createServer((req, res) => res.end('Hello')).listen(3000);
+}
+
+// Compression middleware usage
+const compression = require('compression');
+app.use(compression());
+  `,
+          explanation: `
+  - Non-blocking asynchronous calls prevent server from freezing during long tasks.
+  - Streams efficiently handle large data without hogging memory.
+  - Caching stores frequently requested data to speed up responses.
+  - Clustering uses all CPU cores to handle higher concurrency.
+  - Middleware optimization reduces unnecessary processing.
+  - Detecting and fixing memory leaks prevents server crashes.
+  - Profiling tools help identify CPU-heavy code and memory issues.
+  - Database query optimization saves time and resources.
+  - Compressing HTTP responses reduces data transfer size.
+  `,
+          task: `
+  Task:
+  1. Convert a blocking fs.readFileSync call to non-blocking fs.readFile.
+  2. Use streams to copy a large file from source to destination.
+  3. Implement a memory cache for user data wrapped in a function.
+  4. Setup a simple cluster to run your server on all available CPU cores.
+  5. Add compression middleware to an Express app.
+  6. Profile the application using built-in Node tools and observe CPU usage.
+  `
+        },
+        {
+          title: 'Security Best Practices in Node.js/Express',
+          theory: `
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">A. Input Validation & Sanitization</h2>
+    <p class="text-gray-700 mb-4">
+      Never trust user input. Always validate and sanitize data using libraries like <code>express-validator</code>.
+    </p>
+    <pre class="bg-gray-100 p-3 rounded mb-4"><code>npm install express-validator
+
+const { body, validationResult } = require('express-validator');
+
+app.post('/register', 
+  body('email').isEmail().normalizeEmail(),
+  body('password').isLength({ min: 6 }),
+  (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
+    res.send('User registered');
+  }
+);
+</code></pre>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">B. Protect Against XSS (Cross-Site Scripting)</h2>
+    <p class="text-gray-700 mb-4">
+      Escape HTML output in templates and use security headers to prevent XSS attacks.
+    </p>
+    <pre class="bg-gray-100 p-3 rounded mb-4"><code>npm install helmet
+
+const helmet = require('helmet');
+app.use(helmet());
+</code></pre>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">C. Prevent CSRF (Cross-Site Request Forgery)</h2>
+    <p class="text-gray-700 mb-4">
+      Use <code>csurf</code> middleware to protect against CSRF attacks.
+    </p>
+    <pre class="bg-gray-100 p-3 rounded mb-4"><code>npm install csurf cookie-parser
+
+const csrf = require('csurf');
+const cookieParser = require('cookie-parser');
+
+app.use(cookieParser());
+app.use(csrf({ cookie: true }));
+
+app.get('/form', (req, res) =&gt; {
+  res.send(\`&lt;form&gt;&lt;input type="hidden" name="_csrf" value="\${req.csrfToken()}"&gt;&lt;/form&gt;\`);
+});
+</code></pre>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">D. Secure Passwords</h2>
+    <p class="text-gray-700 mb-4">
+      Never store passwords in plain text. Hash passwords securely using <code>bcrypt</code>.
+    </p>
+    <pre class="bg-gray-100 p-3 rounded mb-4"><code>npm install bcrypt
+
+const bcrypt = require('bcrypt');
+
+async function registerUser(password) {
+  const hashed = await bcrypt.hash(password, 10);
+  console.log(hashed);
+}
+</code></pre>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">E. Use HTTPS</h2>
+    <p class="text-gray-700 mb-4">
+      Always serve your app over HTTPS in production using SSL certificates or Let's Encrypt.
+    </p>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">F. Limit Request Rate</h2>
+    <p class="text-gray-700 mb-4">
+      Prevent DDoS attacks by limiting request rates using <code>express-rate-limit</code>.
+    </p>
+    <pre class="bg-gray-100 p-3 rounded mb-4"><code>npm install express-rate-limit
+
+const rateLimit = require('express-rate-limit');
+
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100 // limit each IP to 100 requests per window
+});
+
+app.use(limiter);
+</code></pre>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">G. Avoid Sensitive Data Exposure</h2>
+    <p class="text-gray-700 mb-4">
+      Store API keys, passwords, and DB credentials in environment variables.
+      Never commit .env files publicly.
+    </p>
+    <pre class="bg-gray-100 p-3 rounded mb-4"><code>npm install dotenv
+
+require('dotenv').config();
+const dbPassword = process.env.DB_PASSWORD;
+</code></pre>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">H. Security Headers</h2>
+    <p class="text-gray-700 mb-4">
+      Use Helmet to set HTTP headers that prevent MIME sniffing, clickjacking, and XSS.
+    </p>
+    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const helmet = require('helmet');
+app.use(helmet());
+</code></pre>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">I. Prevent SQL/NoSQL Injection</h2>
+    <p class="text-gray-700 mb-4">
+      Use parameterized queries instead of string concatenation to prevent injection.
+    </p>
+    <pre class="bg-gray-100 p-3 rounded mb-4"><code>// Example with MongoDB
+db.collection('users').findOne({ username: userInput }); // safe</code></pre>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">J. Session Security</h2>
+    <p class="text-gray-700 mb-4">
+      Use secure, HTTP-only cookies for sessions.
+    </p>
+    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const session = require('express-session');
+
+app.use(session({
+  secret: 'your_secret_key',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { httpOnly: true, secure: true }
+}));
+</code></pre>
+
+    <h2 class="text-xl font-semibold text-blue-500 mb-2">K. Summary</h2>
+    <ul class="list-disc list-inside text-gray-800">
+      <li>Validate and sanitize all user input.</li>
+      <li>Always serve over HTTPS.</li>
+      <li>Hash passwords securely with bcrypt.</li>
+      <li>Implement rate limiting to prevent abuse.</li>
+      <li>Use secure cookies and manage sessions carefully.</li>
+      <li>Set strict security HTTP headers using Helmet.</li>
+      <li>Protect your app from XSS, CSRF, injection, and sensitive data leaks.</li>
+    </ul>
+  `,
+          code: `
+// Input validation with express-validator
+const { body, validationResult } = require('express-validator');
+const express = require('express');
+const app = express();
+
+app.use(express.json());
+
+app.post('/register', 
+  body('email').isEmail().normalizeEmail(),
+  body('password').isLength({ min: 6 }),
+  (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) return res.status(400).json({ errors: errors.array() });
+    res.send('User registered');
+  }
+);
+
+// Helmet for security headers
+const helmet = require('helmet');
+app.use(helmet());
+
+// CSRF protection middleware
+const csrf = require('csurf');
+const cookieParser = require('cookie-parser');
+
+app.use(cookieParser());
+app.use(csrf({ cookie: true }));
+
+app.get('/form', (req, res) => {
+  res.send(\`<form>
+    <input type="hidden" name="_csrf" value="\${req.csrfToken()}">
+  </form>\`);
+});
+
+// Password hashing with bcrypt
+const bcrypt = require('bcrypt');
+
+async function registerUser(password) {
+  const hashed = await bcrypt.hash(password, 10);
+  console.log('Hashed Password:', hashed);
+}
+
+// Rate limiting
+const rateLimit = require('express-rate-limit');
+
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100
+});
+app.use(limiter);
+
+// Environment variables for secrets
+require('dotenv').config();
+const dbPassword = process.env.DB_PASSWORD;
+
+// Secure session cookies
+const session = require('express-session');
+app.use(session({
+  secret: 'your_secret_key',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { httpOnly: true, secure: true }
+}));
+`,
+          explanation: `
+  - Input validation prevents malicious or malformed data from being processed.
+  - Using Helmet adds protective HTTP headers for common attack vectors like XSS.
+  - CSRF tokens prevent unauthorized actions performed by third-party sites.
+  - Hashing passwords with bcrypt ensures stored credentials are secure.
+  - HTTPS guarantees encrypted communication preventing data theft.
+  - Rate limiting helps mitigate denial-of-service (DoS) and brute force attacks.
+  - Storing sensitive info in environment variables avoids accidental leaks.
+  - Secure cookies and sessions prevent session hijacking.
+  - Protecting against injections reduces risk of data breaches.
+  `,
+          task: `
+  Task:
+  1. Add input validation and sanitization to a registration route.
+  2. Configure Helmet to enhance HTTP security headers for your Express app.
+  3. Implement CSRF protection with csurf in a form submission.
+  4. Hash user passwords using bcrypt before storing them.
+  5. Set up rate limiting limiting requests per IP.
+  6. Manage environment variables securely for sensitive secrets.
+  7. Configure express-session with secure cookie options.
+  `
+        },
+        {
+          title: 'Advanced Node.js Projects',
+          theory: `
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">A. Project Idea 1: Real-Time Chat Application</h2>
+    <p class="text-gray-700 mb-4">Features include user registration and authentication, real-time messaging with Socket.io, private messages, chat rooms, message history stored in MongoDB, typing indicators, and online status.</p>
+    <pre class="bg-gray-100 p-3 rounded mb-4"><code>chat-app/
+├── server/
+│   ├── index.js             // Entry point
+│   ├── routes/
+│   │   └── auth.js
+│   ├── controllers/
+│   │   └── chatController.js
+│   ├── models/
+│   │   └── message.js
+│   └── middleware/
+│       └── authMiddleware.js
+├── client/
+│   ├── index.html
+│   └── app.js
+├── package.json
+└── .env
+</code></pre>
+    <p><strong>Key Concepts Used:</strong> Express routes & middleware, Socket.io real-time messaging, MongoDB with Mongoose, JWT authentication, frontend dynamic UI.</p>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">B. Project Idea 2: E-commerce Backend API</h2>
+    <p class="text-gray-700 mb-4">Features include CRUD for products, categories, users, JWT authentication with role-based access, file uploads for product images, cart & order management, and payment integrations.</p>
+    <pre class="bg-gray-100 p-3 rounded mb-4"><code>ecommerce-api/
+├── app.js                   // Express app
+├── routes/
+│   ├── userRoutes.js
+│   ├── productRoutes.js
+│   └── orderRoutes.js
+├── controllers/
+│   ├── userController.js
+│   ├── productController.js
+│   └── orderController.js
+├── models/
+│   ├── user.js
+│   ├── product.js
+│   └── order.js
+├── middleware/
+│   └── authMiddleware.js
+├── config/
+│   └── db.js
+└── package.json
+</code></pre>
+    <p><strong>Key Concepts Used:</strong> REST API design, JWT authentication & authorization, Express middleware, DB relationships (MongoDB/SQL), error & validation handling, query optimization.</p>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">C. Project Idea 3: Real-Time Collaboration Tool</h2>
+    <p class="text-gray-700 mb-4">Features include multiple users editing documents simultaneously, real-time updates via WebSocket/Socket.io, user presence and cursor tracking, document history/version control, file attachments, notifications.</p>
+    <pre class="bg-gray-100 p-3 rounded mb-4"><code>collab-app/
+├── server/
+│   ├── index.js
+│   ├── routes/
+│   ├── controllers/
+│   └── models/
+├── client/
+│   ├── index.html
+│   └── app.js
+├── package.json
+└── .env
+</code></pre>
+    <p><strong>Key Concepts Used:</strong> Real-time WebSocket communication, Express APIs for persistence, MongoDB/PostgreSQL storage, authentication/authorization, frontend dynamic UI with collaboration.</p>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">D. Advanced Features in All Projects</h2>
+    <ul class="list-disc list-inside text-gray-800 mb-4">
+      <li>Real-time updates with Socket.io</li>
+      <li>Authentication & authorization with JWT</li>
+      <li>Input validation & security (XSS, CSRF)</li>
+      <li>Error handling via centralized middleware</li>
+      <li>Performance optimization with caching, streaming</li>
+      <li>Testing & debugging using Mocha, Chai, Supertest</li>
+      <li>Scalable modular project structure (routes, controllers, middleware)</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold text-blue-600 mb-3">E. Bonus Enhancements</h2>
+    <ul class="list-disc list-inside text-gray-800 mb-4">
+      <li>Dark/light mode toggle using JS and CSS</li>
+      <li>Notifications using WebSockets or Push API</li>
+      <li>File uploads & cloud storage (AWS S3, Cloudinary)</li>
+      <li>Admin dashboards for analytics and monitoring</li>
+      <li>Unit, integration, and end-to-end tests for reliability</li>
+    </ul>
+
+    <h2 class="text-xl font-semibold text-blue-500 mb-2">F. Summary</h2>
+    <p class="text-gray-700">
+      Advanced Node.js projects combine backend APIs, real-time capabilities, robust security, and performance tuning. A proper modular folder structure promotes maintainability. Projects such as chat apps, e-commerce APIs, and collaboration tools demonstrate full-stack mastery, while bonus features improve UX and reliability.
+    </p>
+  `,
+          code: `
+// Example snippet: Basic setup for chat-app server/index.js
+const express = require('express');
+const http = require('http');
+const { Server } = require('socket.io');
+const mongoose = require('mongoose');
+const app = express();
+const server = http.createServer(app);
+const io = new Server(server);
+
+// Connect to MongoDB (replace MONGO_URI in .env)
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+
+app.use(express.json());
+
+// Authentication routes (in routes/auth.js)
+const authRouter = require('./routes/auth');
+app.use('/auth', authRouter);
+
+// Socket.io event handling
+io.on('connection', (socket) => {
+  console.log('User connected: ' + socket.id);
+
+  socket.on('chat message', msg => {
+    io.emit('chat message', msg);
+  });
+
+  socket.on('disconnect', () => {
+    console.log('User disconnected');
+  });
+});
+
+server.listen(3000, () => console.log('Server running on port 3000'));
+  `,
+          explanation: `
+  - Real-time chat apps use Express for API, Socket.io for two-way communication, and MongoDB to store message history.
+  - E-commerce backends feature RESTful endpoints with secured access, file uploads, and payment integration.
+  - Collaboration tools rely heavily on WebSocket updates and data consistency with DB versioning.
+  - All projects benefit from modular structure with separated routing, controllers, and middleware.
+  - Real-time updates, authentication, validation, and testing are cornerstones of advanced Node.js apps.
+  - Bonus features enhance user experience and application robustness.
+  `,
+          task: `
+  Task:
+  1. Create the folder structure for a chat app with separate folders for routes, controllers, middleware, models.
+  2. Setup Socket.io to broadcast messages between clients.
+  3. Implement JWT-based authentication route in the chat app.
+  4. Design product CRUD APIs with role-based access in an e-commerce backend.
+  5. Build a collaborative document editor with real-time cursor updates using Socket.io.
+  6. Add input validation and error handling middleware in your projects.
+  7. Add caching mechanism to optimize repeated DB calls.
+  8. Write unit & integration tests covering key features.
+  `
+        },
+      ]
+    },
   };
 
   const finalProject = {
-  title: "Final Project: Restaurant Website (Node.js + Express)",
-  description:
-    "Back-end for the restaurant website using Node.js and Express. Includes server-side rendering/APIs, form handling, validation, and deployment readiness.",
+    title: "Final Project: Restaurant Website (Node.js + Express)",
+    description:
+      "Back-end for the restaurant website using Node.js and Express. Includes server-side rendering/APIs, form handling, validation, and deployment readiness.",
 
-  requirements: [
-    "Use Express with MVC structure (routes, controllers, models, views)",
-    "ENV-based config with dotenv",
-    "Templating (EJS/Handlebars) OR pure REST APIs with a frontend",
-    "Static files for CSS/Images served efficiently",
-    "Forms: Contact & Reservation with server-side validation",
-    "Email notifications (e.g., Nodemailer) for contact/reservations",
-    "Basic authentication for admin (login/logout, protected routes)",
-    "Menu data from DB (MongoDB/Mongoose) or JSON fallback",
-    "Error handling middleware + 404/500 pages",
-    "Logging (morgan) and security headers (helmet)",
-    "SEO-friendly server-side rendered pages (if using EJS)"
-  ],
+    requirements: [
+      "Use Express with MVC structure (routes, controllers, models, views)",
+      "ENV-based config with dotenv",
+      "Templating (EJS/Handlebars) OR pure REST APIs with a frontend",
+      "Static files for CSS/Images served efficiently",
+      "Forms: Contact & Reservation with server-side validation",
+      "Email notifications (e.g., Nodemailer) for contact/reservations",
+      "Basic authentication for admin (login/logout, protected routes)",
+      "Menu data from DB (MongoDB/Mongoose) or JSON fallback",
+      "Error handling middleware + 404/500 pages",
+      "Logging (morgan) and security headers (helmet)",
+      "SEO-friendly server-side rendered pages (if using EJS)"
+    ],
 
-  structure: `restaurant-node/
+    structure: `restaurant-node/
 ├── package.json
 ├── .env                         (PORT=, MONGODB_URI=, SMTP creds)
 ├── server.js                    (app bootstrap)
@@ -2169,52 +3474,52 @@ module.exports = app;`,
 │   └── images/                  (logo, hero, dishes)
 └── README.md`,
 
-  api_endpoints: [
-    "GET /                -> Home page (SSR) or API status",
-    "GET /menu            -> Menu page (SSR) or GET /api/menu",
-    "GET /about           -> About page",
-    "GET /contact         -> Contact page",
-    "GET /reservation     -> Reservation page",
-    "POST /api/contact    -> Send message (Nodemailer)",
-    "POST /api/reservations -> Create reservation (validation + save)",
-    "GET /api/reservations (admin) -> List reservations (protected)",
-    "POST /api/auth/login -> Admin login (session/JWT)",
-    "POST /api/auth/logout -> Logout"
-  ],
+    api_endpoints: [
+      "GET /                -> Home page (SSR) or API status",
+      "GET /menu            -> Menu page (SSR) or GET /api/menu",
+      "GET /about           -> About page",
+      "GET /contact         -> Contact page",
+      "GET /reservation     -> Reservation page",
+      "POST /api/contact    -> Send message (Nodemailer)",
+      "POST /api/reservations -> Create reservation (validation + save)",
+      "GET /api/reservations (admin) -> List reservations (protected)",
+      "POST /api/auth/login -> Admin login (session/JWT)",
+      "POST /api/auth/logout -> Logout"
+    ],
 
-  tech_stack: [
-    "Node.js, Express",
-    "EJS (or Handlebars/Pug) for SSR OR pure REST + frontend",
-    "MongoDB + Mongoose (or JSON for demo)",
-    "Nodemailer for emails",
-    "express-validator, helmet, morgan, cookie-session/JWT"
-  ],
+    tech_stack: [
+      "Node.js, Express",
+      "EJS (or Handlebars/Pug) for SSR OR pure REST + frontend",
+      "MongoDB + Mongoose (or JSON for demo)",
+      "Nodemailer for emails",
+      "express-validator, helmet, morgan, cookie-session/JWT"
+    ],
 
-  scripts_example: {
-    dev: "nodemon server.js",
-    start: "node server.js",
-    lint: "eslint .",
-    "seed:menu": "node scripts/seedMenu.js"
-  },
+    scripts_example: {
+      dev: "nodemon server.js",
+      start: "node server.js",
+      lint: "eslint .",
+      "seed:menu": "node scripts/seedMenu.js"
+    },
 
-  validation_examples: [
-    "Name: required, 2–50 chars",
-    "Email: valid email",
-    "Phone: optional but normalized",
-    "Date/Time: required, future time",
-    "Guests: integer 1–12",
-    "Message: max 500 chars"
-  ],
+    validation_examples: [
+      "Name: required, 2–50 chars",
+      "Email: valid email",
+      "Phone: optional but normalized",
+      "Date/Time: required, future time",
+      "Guests: integer 1–12",
+      "Message: max 500 chars"
+    ],
 
-  bonus: [
-    "Admin dashboard to manage menu & reservations (CRUD)",
-    "Image upload for dishes (multer + cloud storage)",
-    "Rate limiting for POST routes",
-    "Global i18n (e.g., i18next)",
-    "Dockerfile + docker-compose for dev",
-    "CI workflow (lint/test) and one-click deploy (Railway/Render/Vercel serverless)"
-  ]
-};
+    bonus: [
+      "Admin dashboard to manage menu & reservations (CRUD)",
+      "Image upload for dishes (multer + cloud storage)",
+      "Rate limiting for POST routes",
+      "Global i18n (e.g., i18next)",
+      "Dockerfile + docker-compose for dev",
+      "CI workflow (lint/test) and one-click deploy (Railway/Render/Vercel serverless)"
+    ]
+  };
 
 
   // Function to safely render HTML
@@ -2251,7 +3556,7 @@ module.exports = app;`,
       </header>
 
       {/* Level Navigation */}
-      <nav className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-8 max-w-5xl mx-auto container">
+      <nav className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 mb-8 max-w-5xl mx-auto container">
         {Object.keys(htmlContent).map((level) => (
           <button
             key={level}

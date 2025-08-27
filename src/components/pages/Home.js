@@ -15,6 +15,7 @@ import {
   FaGraduationCap
 } from 'react-icons/fa';
 import { SiCplusplus, SiBootstrap } from 'react-icons/si';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const courses = [
@@ -25,7 +26,8 @@ const Home = () => {
       bgColor: 'bg-orange-100',
       students: '15.2k',
       rating: 4.9,
-      description: 'Master the foundation of web development'
+      description: 'Master the foundation of web development',
+      href: 'HTMLNotesPage'
     },
     {
       name: 'CSS3',
@@ -34,7 +36,8 @@ const Home = () => {
       bgColor: 'bg-blue-100',
       students: '12.8k',
       rating: 4.8,
-      description: 'Create beautiful and responsive designs'
+      description: 'Create beautiful and responsive designs',
+      href: 'CssNotesPage',
     },
     {
       name: 'JavaScript',
@@ -43,6 +46,7 @@ const Home = () => {
       bgColor: 'bg-yellow-100',
       students: '18.5k',
       rating: 4.9,
+      href: 'JavaSceriptNotes',
       description: 'Build interactive web applications'
     },
     {
@@ -61,6 +65,7 @@ const Home = () => {
       bgColor: 'bg-green-100',
       students: '11.7k',
       rating: 4.8,
+      href: 'NodeNotesPage',
       description: 'Build scalable backend applications'
     },
     {
@@ -70,6 +75,7 @@ const Home = () => {
       bgColor: 'bg-purple-100',
       students: '9.4k',
       rating: 4.7,
+      href: 'BootstrapNotes',
       description: 'Rapid responsive web development'
     },
     {
@@ -278,13 +284,17 @@ const Home = () => {
                     <span className="text-sm">{course.students}</span>
                   </div>
                 </div>
-                <motion.button
+                <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-full bg-gradient-to-r from-primary-500 to-secondary-500 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-shadow duration-300"
                 >
-                  Start Course
-                </motion.button>
+                  <Link
+                    to={course.href}
+                    className="w-full bg-gradient-to-r from-primary-500 to-secondary-500 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-shadow duration-300 inline-block text-center"
+                  >
+                    Start Course
+                  </Link>
+                </motion.div>
               </motion.div>
             ))}
           </motion.div>

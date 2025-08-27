@@ -8,6 +8,8 @@ import HTMLNotesPage from '../pages/HTMLNotesPage'
 import Contact from '../pages/Contact'
 import NodeNotesPage from '../pages/NodeNotesPage'
 import CssNotesPage from '../pages/CssNotesPage'
+import BootstrapNotes from '../pages/BootstrapNotes'
+import JavaSceriptNotes from '../pages/JavaSceriptNotes'
 
 const Index = () => {
     return (
@@ -20,6 +22,8 @@ const Index = () => {
                     <Route path='HTMLNotesPage' element={<HTMLNotesPage />} />
                     <Route path='NodeNotesPage' element={<NodeNotesPage />} />
                     <Route path='CssNotesPage' element={<CssNotesPage />} />
+                    <Route path='BootstrapNotes' element={<BootstrapNotes />} />
+                    <Route path='JavaSceriptNotes' element={<JavaSceriptNotes />} />
                     <Route path='Contact' element={<Contact />} />
                 </Routes>
             </main>

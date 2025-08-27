@@ -45,8 +45,8 @@ const Header = () => {
   const courseItems = [
     { name: 'HTML', icon: FaHtml5, color: "text-orange-600", href: 'HTMLNotesPage' },
     { name: 'CSS', icon: FaCss3Alt, color: "text-blue-600", href: 'CssNotesPage' },
-    { name: 'Bootstrap', icon: SiBootstrap, color: "text-purple-600", href: '/courses/bootstrap' },
-    { name: 'JavaScript', icon: FaJs, color: "text-yellow-500", href: '/courses/javascript' },
+    { name: 'Bootstrap', icon: SiBootstrap, color: "text-purple-600", href: 'BootstrapNotes' },
+    { name: 'JavaScript', icon: FaJs, color: "text-yellow-500", href: 'JavaSceriptNotes' },
     { name: 'React', icon: FaReact, color: "text-cyan-400", href: '/courses/react' },
     { name: 'Node.js', icon: FaNodeJs, color: "text-green-600", href: 'NodeNotesPage' },
     { name: 'C', icon: SiCplusplus, color: "text-indigo-600", href: '/courses/c' },

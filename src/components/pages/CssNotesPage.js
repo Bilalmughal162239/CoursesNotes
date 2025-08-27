@@ -12,53 +12,56 @@ const CssNotesPage = () => {
         {
           title: "Introduction to CSS",
           theory: `
-<h2>Introduction to CSS</h2>
-<p>CSS (Cascading Style Sheets) is used to style HTML elements and control the appearance of web pages. 
-It allows you to change colors, fonts, spacing, layout, and overall design without altering the HTML content itself.</p>
+<div class="p-6 bg-gray-50 rounded-lg shadow-md space-y-6">
 
-<h3>1. What is CSS?</h3>
-<ul>
-  <li>CSS styles the appearance of web pages.</li>
-  <li>It controls layout, colors, fonts, spacing, and more.</li>
-</ul>
+  <h2 class="text-3xl font-bold text-indigo-600">Introduction to CSS</h2>
+  <p class="text-gray-700 leading-relaxed">
+    CSS (Cascading Style Sheets) is used to style HTML elements and control the appearance of web pages. 
+    It allows you to change <span class="font-semibold">colors</span>, <span class="font-semibold">fonts</span>, <span class="font-semibold">spacing</span>, <span class="font-semibold">layout</span>, and overall design without altering the HTML content itself.
+  </p>
 
-<h3>2. CSS Syntax</h3>
-<p>A CSS rule consists of a selector, a property, and a value.</p>
-<p><strong>Syntax:</strong> <code>selector { property: value; }</code></p>
-<p><strong>Example:</strong> <code>p { color: blue; font-size: 18px; }</code></p>
+  <h3 class="text-2xl font-semibold text-indigo-500 mt-4">1. What is CSS?</h3>
+  <ul class="list-disc pl-6 text-gray-700 space-y-1">
+    <li>CSS styles the appearance of web pages.</li>
+    <li>It controls layout, colors, fonts, spacing, and more.</li>
+  </ul>
 
-<h3>3. Types of CSS</h3>
-<p>There are three main types of CSS:</p>
+  <h3 class="text-2xl font-semibold text-indigo-500 mt-4">2. CSS Syntax</h3>
+  <p class="text-gray-700 leading-relaxed">A CSS rule consists of a <span class="font-semibold">selector</span>, a <span class="font-semibold">property</span>, and a <span class="font-semibold">value</span>.</p>
+  
+  <p class="text-gray-700"><strong>Syntax:</strong></p>
+  <pre class="bg-gray-100 p-4 rounded text-gray-800 text-sm overflow-x-auto">
+selector { property: value; }
+  </pre>
 
-<h4>a) Inline CSS</h4>
-<ul>
-  <li>Applied directly to an HTML element using the <code>style</code> attribute.</li>
-  <li>Example: <code>&lt;p style="color: red;"&gt;Text&lt;/p&gt;</code></li>
-</ul>
+  <p class="text-gray-700"><strong>Example:</strong></p>
+  <pre class="bg-gray-100 p-4 rounded text-gray-800 text-sm overflow-x-auto">
+p { color: blue; font-size: 18px; }
+  </pre>
 
-<h4>b) Internal CSS</h4>
-<ul>
-  <li>Placed inside a <code>&lt;style&gt;</code> tag within the HTML <code>&lt;head&gt;</code> section.</li>
-  <li>Example:
-    <pre>
+  <h3 class="text-2xl font-semibold text-indigo-500 mt-4">3. Types of CSS</h3>
+  <ul class="list-disc pl-6 text-gray-700 space-y-1">
+    <li><strong>Inline CSS:</strong> Applied directly to an HTML element using the <code class="bg-gray-200 px-1 rounded">style</code> attribute.
+      <pre class="bg-gray-100 p-4 rounded text-gray-800 text-sm overflow-x-auto">
+&lt;p style="color: red;"&gt;Hello&lt;/p&gt;
+      </pre>
+    </li>
+    <li><strong>Internal CSS:</strong> Placed inside a <code class="bg-gray-200 px-1 rounded">&lt;style&gt;</code> tag in <code class="bg-gray-200 px-1 rounded">&lt;head&gt;</code>.
+      <pre class="bg-gray-100 p-4 rounded text-gray-800 text-sm overflow-x-auto">
 &lt;style&gt;
   p { color: green; }
 &lt;/style&gt;
-    </pre>
-  </li>
-</ul>
-
-<h4>c) External CSS</h4>
-<ul>
-  <li>Placed in a separate <code>.css</code> file and linked to HTML using <code>&lt;link&gt;</code> tag.</li>
-  <li>Example:
-    <pre>
+      </pre>
+    </li>
+    <li><strong>External CSS:</strong> Placed in a separate <code class="bg-gray-200 px-1 rounded">.css</code> file and linked with <code class="bg-gray-200 px-1 rounded">&lt;link&gt;</code>.
+      <pre class="bg-gray-100 p-4 rounded text-gray-800 text-sm overflow-x-auto">
 &lt;link rel="stylesheet" href="styles.css"&gt;
-    </pre>
-  </li>
-</ul>
-`,
+      </pre>
+    </li>
+  </ul>
 
+</div>
+`,
           code: `
 <!-- Inline CSS -->
 <p style="color: blue; font-size: 18px;">This paragraph uses inline CSS.</p>
@@ -103,32 +106,38 @@ p.external-example { color: red; font-size: 22px; }
         {
           title: "CSS Selectors",
           theory: `
-<h2>CSS Selectors</h2>
-<p>CSS selectors are patterns used to select HTML elements that you want to style. They allow you to target elements in many different ways.</p>
+<div class="p-6 bg-gray-50 rounded-lg shadow-md space-y-6">
 
-<h3>1. Basic Selectors</h3>
-<ul>
-  <li><strong>Universal selector:</strong> <code>*</code> selects all elements.</li>
-  <li><strong>Type selector:</strong> Selects elements by their tag name, e.g., <code>p</code>, <code>h1</code>.</li>
-  <li><strong>Class selector:</strong> Selects elements with a specific class, e.g., <code>.className</code>.</li>
-  <li><strong>ID selector:</strong> Selects element by ID, e.g., <code>#idName</code>.</li>
-  <li><strong>Descendant selector:</strong> Selects elements inside another element, e.g., <code>div p</code>.</li>
-  <li><strong>Child selector:</strong> Selects direct children only, e.g., <code>div > p</code>.</li>
-  <li><strong>Adjacent sibling selector:</strong> Selects element immediately after another, e.g., <code>h1 + p</code>.</li>
-  <li><strong>General sibling selector:</strong> Selects all siblings after an element, e.g., <code>h1 ~ p</code>.</li>
-</ul>
+  <h2 class="text-3xl font-bold text-indigo-600">CSS Selectors</h2>
+  <p class="text-gray-700 leading-relaxed">
+    CSS selectors are patterns used to select HTML elements that you want to style. They allow you to target elements in many different ways.
+  </p>
 
-<h3>2. Group Selector</h3>
-<p>Select multiple elements at once, e.g., <code>p, h1, h2</code>.</p>
+  <h3 class="text-2xl font-semibold text-indigo-500 mt-4">1. Basic Selectors</h3>
+  <ul class="list-disc pl-6 text-gray-700 space-y-2">
+    <li><strong>Universal selector:</strong> <code class="bg-gray-200 px-1 rounded">*</code> selects all elements.</li>
+    <li><strong>Type selector:</strong> Selects elements by their tag name, e.g., <code class="bg-gray-200 px-1 rounded">p</code>, <code class="bg-gray-200 px-1 rounded">h1</code>.</li>
+    <li><strong>Class selector:</strong> Selects elements with a specific class, e.g., <code class="bg-gray-200 px-1 rounded">.className</code>.</li>
+    <li><strong>ID selector:</strong> Selects element by ID, e.g., <code class="bg-gray-200 px-1 rounded">#idName</code>.</li>
+    <li><strong>Descendant selector:</strong> Selects elements inside another element, e.g., <code class="bg-gray-200 px-1 rounded">div p</code>.</li>
+    <li><strong>Child selector:</strong> Selects direct children only, e.g., <code class="bg-gray-200 px-1 rounded">div > p</code>.</li>
+    <li><strong>Adjacent sibling selector:</strong> Selects element immediately after another, e.g., <code class="bg-gray-200 px-1 rounded">h1 + p</code>.</li>
+    <li><strong>General sibling selector:</strong> Selects all siblings after an element, e.g., <code class="bg-gray-200 px-1 rounded">h1 ~ p</code>.</li>
+  </ul>
 
-<h3>3. Attribute Selectors</h3>
-<p>Select elements with a specific attribute or value, e.g., <code>input[type="text"]</code>.</p>
+  <h3 class="text-2xl font-semibold text-indigo-500 mt-4">2. Group Selector</h3>
+  <p class="text-gray-700 leading-relaxed">Select multiple elements at once, e.g., <code class="bg-gray-200 px-1 rounded">p, h1, h2</code>.</p>
 
-<h3>4. Pseudo-classes</h3>
-<p>Select elements in a special state, e.g., <code>:hover</code>, <code>:focus</code>, <code>:first-child</code>.</p>
+  <h3 class="text-2xl font-semibold text-indigo-500 mt-4">3. Attribute Selectors</h3>
+  <p class="text-gray-700 leading-relaxed">Select elements with a specific attribute or value, e.g., <code class="bg-gray-200 px-1 rounded">input[type="text"]</code>.</p>
 
-<h3>5. Pseudo-elements</h3>
-<p>Select and style parts of elements, e.g., <code>::before</code>, <code>::after</code>.</p>
+  <h3 class="text-2xl font-semibold text-indigo-500 mt-4">4. Pseudo-classes</h3>
+  <p class="text-gray-700 leading-relaxed">Select elements in a special state, e.g., <code class="bg-gray-200 px-1 rounded">:hover</code>, <code class="bg-gray-200 px-1 rounded">:focus</code>, <code class="bg-gray-200 px-1 rounded">:first-child</code>.</p>
+
+  <h3 class="text-2xl font-semibold text-indigo-500 mt-4">5. Pseudo-elements</h3>
+  <p class="text-gray-700 leading-relaxed">Select and style parts of elements, e.g., <code class="bg-gray-200 px-1 rounded">::before</code>, <code class="bg-gray-200 px-1 rounded">::after</code>.</p>
+
+</div>
 `,
 
           code: `
@@ -246,51 +255,57 @@ p.external-example { color: red; font-size: 22px; }
         {
           title: "CSS Properties",
           theory: `
-<h2>CSS Properties</h2>
-<p>CSS properties are used to style HTML elements. They control text, layout, colors, spacing, positioning, and more.</p>
+<div class="p-6 bg-gray-50 rounded-lg shadow-md space-y-6">
 
-<h3>1. Text and Font Properties</h3>
-<ul>
-  <li><code>font-family</code>: Sets the font of the text.</li>
-  <li><code>font-size</code>: Sets the size of the text.</li>
-  <li><code>font-weight</code>: Sets the boldness of text (normal, bold, 100–900).</li>
-  <li><code>line-height</code>: Controls spacing between lines.</li>
-  <li><code>text-align</code>: Aligns text (left, center, right, justify).</li>
-  <li><code>text-transform</code>: Changes text case (uppercase, lowercase, capitalize).</li>
-  <li><code>letter-spacing</code>: Controls spacing between letters.</li>
-  <li><code>word-spacing</code>: Controls spacing between words.</li>
-</ul>
+  <h2 class="text-3xl font-bold text-indigo-600">CSS Properties</h2>
+  <p class="text-gray-700 leading-relaxed">
+    CSS properties are used to style HTML elements. They control text, layout, colors, spacing, positioning, and more.
+  </p>
 
-<h3>2. Box Model</h3>
-<p>Every HTML element is a box. Box model consists of:</p>
-<ul>
-  <li><strong>Content:</strong> The actual content inside the box.</li>
-  <li><strong>Padding:</strong> Space between content and border.</li>
-  <li><strong>Border:</strong> Surrounds the padding and content.</li>
-  <li><strong>Margin:</strong> Space outside the border.</li>
-  <li><strong>Box-sizing:</strong> Defines how width and height are calculated: <code>border-box</code>, <code>content-box</code>.</li>
-</ul>
+  <h3 class="text-2xl font-semibold text-indigo-500 mt-4">1. Text and Font Properties</h3>
+  <ul class="list-disc pl-6 text-gray-700 space-y-2">
+    <li><code class="bg-gray-200 px-1 rounded">font-family</code>: Sets the font of the text.</li>
+    <li><code class="bg-gray-200 px-1 rounded">font-size</code>: Sets the size of the text.</li>
+    <li><code class="bg-gray-200 px-1 rounded">font-weight</code>: Sets the boldness of text (normal, bold, 100–900).</li>
+    <li><code class="bg-gray-200 px-1 rounded">line-height</code>: Controls spacing between lines.</li>
+    <li><code class="bg-gray-200 px-1 rounded">text-align</code>: Aligns text (left, center, right, justify).</li>
+    <li><code class="bg-gray-200 px-1 rounded">text-transform</code>: Changes text case (uppercase, lowercase, capitalize).</li>
+    <li><code class="bg-gray-200 px-1 rounded">letter-spacing</code>: Controls spacing between letters.</li>
+    <li><code class="bg-gray-200 px-1 rounded">word-spacing</code>: Controls spacing between words.</li>
+  </ul>
 
-<h3>3. Backgrounds and Colors</h3>
-<ul>
-  <li><code>background-color</code>: Sets background color.</li>
-  <li><code>background-image</code>: Sets background image.</li>
-  <li><code>color</code>: Sets text color.</li>
-  <li><code>opacity</code>: Controls transparency of element.</li>
-</ul>
+  <h3 class="text-2xl font-semibold text-indigo-500 mt-4">2. Box Model</h3>
+  <p class="text-gray-700 leading-relaxed">Every HTML element is a box. Box model consists of:</p>
+  <ul class="list-disc pl-6 text-gray-700 space-y-2">
+    <li><strong>Content:</strong> The actual content inside the box.</li>
+    <li><strong>Padding:</strong> Space between content and border.</li>
+    <li><strong>Border:</strong> Surrounds the padding and content.</li>
+    <li><strong>Margin:</strong> Space outside the border.</li>
+    <li><strong>Box-sizing:</strong> Defines how width and height are calculated: <code class="bg-gray-200 px-1 rounded">border-box</code>, <code class="bg-gray-200 px-1 rounded">content-box</code>.</li>
+  </ul>
 
-<h3>4. Display and Visibility</h3>
-<ul>
-  <li><code>display</code>: Controls element type: <code>block</code>, <code>inline</code>, <code>flex</code>, <code>grid</code>, <code>none</code>.</li>
-  <li><code>visibility</code>: Shows or hides element (<code>visible</code>, <code>hidden</code>).</li>
-  <li><code>z-index</code>: Controls stacking order of elements.</li>
-</ul>
+  <h3 class="text-2xl font-semibold text-indigo-500 mt-4">3. Backgrounds and Colors</h3>
+  <ul class="list-disc pl-6 text-gray-700 space-y-2">
+    <li><code class="bg-gray-200 px-1 rounded">background-color</code>: Sets background color.</li>
+    <li><code class="bg-gray-200 px-1 rounded">background-image</code>: Sets background image.</li>
+    <li><code class="bg-gray-200 px-1 rounded">color</code>: Sets text color.</li>
+    <li><code class="bg-gray-200 px-1 rounded">opacity</code>: Controls transparency of element.</li>
+  </ul>
 
-<h3>5. Positioning</h3>
-<ul>
-  <li><code>position</code>: Defines how an element is positioned: <code>static</code>, <code>relative</code>, <code>absolute</code>, <code>fixed</code>, <code>sticky</code>.</li>
-  <li><code>top, right, bottom, left</code>: Set offset values when position is not static.</li>
-</ul>
+  <h3 class="text-2xl font-semibold text-indigo-500 mt-4">4. Display and Visibility</h3>
+  <ul class="list-disc pl-6 text-gray-700 space-y-2">
+    <li><code class="bg-gray-200 px-1 rounded">display</code>: Controls element type: <code class="bg-gray-200 px-1 rounded">block</code>, <code class="bg-gray-200 px-1 rounded">inline</code>, <code class="bg-gray-200 px-1 rounded">flex</code>, <code class="bg-gray-200 px-1 rounded">grid</code>, <code class="bg-gray-200 px-1 rounded">none</code>.</li>
+    <li><code class="bg-gray-200 px-1 rounded">visibility</code>: Shows or hides element (<code class="bg-gray-200 px-1 rounded">visible</code>, <code class="bg-gray-200 px-1 rounded">hidden</code>).</li>
+    <li><code class="bg-gray-200 px-1 rounded">z-index</code>: Controls stacking order of elements.</li>
+  </ul>
+
+  <h3 class="text-2xl font-semibold text-indigo-500 mt-4">5. Positioning</h3>
+  <ul class="list-disc pl-6 text-gray-700 space-y-2">
+    <li><code class="bg-gray-200 px-1 rounded">position</code>: Defines how an element is positioned: <code class="bg-gray-200 px-1 rounded">static</code>, <code class="bg-gray-200 px-1 rounded">relative</code>, <code class="bg-gray-200 px-1 rounded">absolute</code>, <code class="bg-gray-200 px-1 rounded">fixed</code>, <code class="bg-gray-200 px-1 rounded">sticky</code>.</li>
+    <li><code class="bg-gray-200 px-1 rounded">top, right, bottom, left</code>: Set offset values when position is not static.</li>
+  </ul>
+
+</div>
 `,
 
           code: `
@@ -396,34 +411,46 @@ p.external-example { color: red; font-size: 22px; }
         {
           title: "CSS Layouts",
           theory: `
-<h2>CSS Layouts</h2>
-<p>CSS layouts define how elements are arranged on a web page. There are several techniques, including floats, flexbox, grid, and positioning.</p>
+<div class="p-6 bg-gray-50 rounded-lg shadow-md space-y-6">
 
-<h3>1. CSS Floats</h3>
-<p>Floats were used in the past to create layouts by floating elements left or right. They are less common today but still exist for legacy support.</p>
+  <h2 class="text-3xl font-bold text-indigo-600">CSS Layouts</h2>
+  <p class="text-gray-700 leading-relaxed">
+    CSS layouts define how elements are arranged on a web page. There are several techniques, including floats, flexbox, grid, and positioning.
+  </p>
 
-<h3>2. Flexbox</h3>
-<p>Flexbox is a modern layout system that provides easy alignment and spacing of elements.</p>
-<ul>
-  <li><strong>Container:</strong> Use <code>display: flex;</code> on the parent.</li>
-  <li><strong>Items:</strong> Control behavior with <code>flex-grow</code>, <code>flex-shrink</code>, <code>justify-content</code>, <code>align-items</code>.</li>
-</ul>
+  <h3 class="text-2xl font-semibold text-indigo-500 mt-4">1. CSS Floats</h3>
+  <p class="text-gray-700 leading-relaxed">
+    Floats were used in the past to create layouts by floating elements left or right. They are less common today but still exist for legacy support.
+  </p>
 
-<h3>3. Grid Layout</h3>
-<p>CSS Grid allows creating complex layouts with rows and columns.</p>
-<ul>
-  <li><strong>Container:</strong> Use <code>display: grid;</code> on the parent.</li>
-  <li><strong>Items:</strong> Control size and position using <code>grid-template-columns</code>, <code>grid-template-rows</code>.</li>
-  <li><strong>Positioning:</strong> Place items using <code>grid-column</code> and <code>grid-row</code>.</li>
-</ul>
+  <h3 class="text-2xl font-semibold text-indigo-500 mt-4">2. Flexbox</h3>
+  <p class="text-gray-700 leading-relaxed">
+    Flexbox is a modern layout system that provides easy alignment and spacing of elements.
+  </p>
+  <ul class="list-disc pl-6 text-gray-700 space-y-2">
+    <li><strong>Container:</strong> Use <code class="bg-gray-200 px-1 rounded">display: flex;</code> on the parent.</li>
+    <li><strong>Items:</strong> Control behavior with <code class="bg-gray-200 px-1 rounded">flex-grow</code>, <code class="bg-gray-200 px-1 rounded">flex-shrink</code>, <code class="bg-gray-200 px-1 rounded">justify-content</code>, <code class="bg-gray-200 px-1 rounded">align-items</code>.</li>
+  </ul>
 
-<h3>4. Layouts with display and position</h3>
-<p>You can center content using different methods:</p>
-<ul>
-  <li><strong>Margin auto:</strong> <code>margin: auto;</code> centers block elements.</li>
-  <li><strong>Flex:</strong> <code>justify-content: center; align-items: center;</code> centers items in a flex container.</li>
-  <li><strong>Grid:</strong> <code>place-items: center;</code> centers content in a grid container.</li>
-</ul>
+  <h3 class="text-2xl font-semibold text-indigo-500 mt-4">3. Grid Layout</h3>
+  <p class="text-gray-700 leading-relaxed">
+    CSS Grid allows creating complex layouts with rows and columns.
+  </p>
+  <ul class="list-disc pl-6 text-gray-700 space-y-2">
+    <li><strong>Container:</strong> Use <code class="bg-gray-200 px-1 rounded">display: grid;</code> on the parent.</li>
+    <li><strong>Items:</strong> Control size and position using <code class="bg-gray-200 px-1 rounded">grid-template-columns</code>, <code class="bg-gray-200 px-1 rounded">grid-template-rows</code>.</li>
+    <li><strong>Positioning:</strong> Place items using <code class="bg-gray-200 px-1 rounded">grid-column</code> and <code class="bg-gray-200 px-1 rounded">grid-row</code>.</li>
+  </ul>
+
+  <h3 class="text-2xl font-semibold text-indigo-500 mt-4">4. Layouts with display and position</h3>
+  <p class="text-gray-700 leading-relaxed">You can center content using different methods:</p>
+  <ul class="list-disc pl-6 text-gray-700 space-y-2">
+    <li><strong>Margin auto:</strong> <code class="bg-gray-200 px-1 rounded">margin: auto;</code> centers block elements.</li>
+    <li><strong>Flex:</strong> <code class="bg-gray-200 px-1 rounded">justify-content: center; align-items: center;</code> centers items in a flex container.</li>
+    <li><strong>Grid:</strong> <code class="bg-gray-200 px-1 rounded">place-items: center;</code> centers content in a grid container.</li>
+  </ul>
+
+</div>
 `,
 
           code: `
@@ -544,26 +571,36 @@ p.external-example { color: red; font-size: 22px; }
         {
           title: "CSS Transitions & Animations",
           theory: `
-<h2>CSS Transitions & Animations</h2>
-<p>CSS transitions and animations allow you to create smooth changes and animated effects on HTML elements.</p>
+<div class="p-6 bg-gray-50 rounded-lg shadow-md space-y-6">
 
-<h3>1. Transitions</h3>
-<p>Transitions allow properties to change gradually over time when an element's state changes.</p>
-<ul>
-  <li><code>transition-property</code>: Specifies the CSS property to animate.</li>
-  <li><code>transition-duration</code>: Duration of the transition (e.g., 0.5s, 2s).</li>
-  <li><code>transition-timing-function</code>: Defines the speed curve (e.g., linear, ease, ease-in, ease-out).</li>
-  <li><code>transition-delay</code>: Delay before the transition starts.</li>
-</ul>
+  <h2 class="text-3xl font-bold text-indigo-600">CSS Transitions & Animations</h2>
+  <p class="text-gray-700 leading-relaxed">
+    CSS transitions and animations allow you to create smooth changes and animated effects on HTML elements.
+  </p>
 
-<h3>2. Keyframe Animations</h3>
-<p>Keyframe animations allow defining multiple stages of an animation for smooth effects.</p>
-<ul>
-  <li><code>@keyframes</code>: Define the animation sequence using percentages or from/to.</li>
-  <li><code>animation-name</code>: Name of the keyframe animation.</li>
-  <li><code>animation-duration</code>: How long the animation lasts.</li>
-  <li><code>animation-timing-function</code>: Speed curve of the animation.</li>
-</ul>
+  <h3 class="text-2xl font-semibold text-indigo-500 mt-4">1. Transitions</h3>
+  <p class="text-gray-700 leading-relaxed">
+    Transitions allow properties to change gradually over time when an element's state changes.
+  </p>
+  <ul class="list-disc pl-6 text-gray-700 space-y-2">
+    <li><code class="bg-gray-200 px-1 rounded">transition-property</code>: Specifies the CSS property to animate.</li>
+    <li><code class="bg-gray-200 px-1 rounded">transition-duration</code>: Duration of the transition (e.g., 0.5s, 2s).</li>
+    <li><code class="bg-gray-200 px-1 rounded">transition-timing-function</code>: Defines the speed curve (e.g., linear, ease, ease-in, ease-out).</li>
+    <li><code class="bg-gray-200 px-1 rounded">transition-delay</code>: Delay before the transition starts.</li>
+  </ul>
+
+  <h3 class="text-2xl font-semibold text-indigo-500 mt-4">2. Keyframe Animations</h3>
+  <p class="text-gray-700 leading-relaxed">
+    Keyframe animations allow defining multiple stages of an animation for smooth effects.
+  </p>
+  <ul class="list-disc pl-6 text-gray-700 space-y-2">
+    <li><code class="bg-gray-200 px-1 rounded">@keyframes</code>: Define the animation sequence using percentages or from/to.</li>
+    <li><code class="bg-gray-200 px-1 rounded">animation-name</code>: Name of the keyframe animation.</li>
+    <li><code class="bg-gray-200 px-1 rounded">animation-duration</code>: How long the animation lasts.</li>
+    <li><code class="bg-gray-200 px-1 rounded">animation-timing-function</code>: Speed curve of the animation.</li>
+  </ul>
+
+</div>
 `,
 
           code: `
@@ -630,28 +667,40 @@ p.external-example { color: red; font-size: 22px; }
         {
           title: "Responsive Design",
           theory: `
-<h2>Responsive Design</h2>
-<p>Responsive design ensures that web pages look good on all devices, including desktops, tablets, and mobile phones.</p>
+<div class="p-6 bg-gray-50 rounded-lg shadow-md space-y-6">
 
-<h3>1. Media Queries</h3>
-<p>Media queries allow applying CSS rules based on screen size or device characteristics.</p>
-<ul>
-  <li><code>@media</code> rules are used to define conditions for different styles.</li>
-  <li><code>min-width</code>: Apply styles when screen width is greater than or equal to a value.</li>
-  <li><code>max-width</code>: Apply styles when screen width is less than or equal to a value.</li>
-</ul>
+  <h2 class="text-3xl font-bold text-indigo-600">Responsive Design</h2>
+  <p class="text-gray-700 leading-relaxed">
+    Responsive design ensures that web pages look good on all devices, including desktops, tablets, and mobile phones.
+  </p>
 
-<h3>2. Mobile-First Design</h3>
-<p>Start designing for small screens first, then adjust for larger screens using media queries.</p>
+  <h3 class="text-2xl font-semibold text-indigo-500 mt-4">1. Media Queries</h3>
+  <p class="text-gray-700 leading-relaxed">
+    Media queries allow applying CSS rules based on screen size or device characteristics.
+  </p>
+  <ul class="list-disc pl-6 text-gray-700 space-y-2">
+    <li><code class="bg-gray-200 px-1 rounded">@media</code> rules are used to define conditions for different styles.</li>
+    <li><code class="bg-gray-200 px-1 rounded">min-width</code>: Apply styles when screen width is greater than or equal to a value.</li>
+    <li><code class="bg-gray-200 px-1 rounded">max-width</code>: Apply styles when screen width is less than or equal to a value.</li>
+  </ul>
 
-<h3>3. Viewport Units</h3>
-<p>Viewport units help create responsive sizing based on the screen size:</p>
-<ul>
-  <li><code>vw</code>: 1% of viewport width</li>
-  <li><code>vh</code>: 1% of viewport height</li>
-  <li><code>vmin</code>: Minimum of <code>vw</code> and <code>vh</code></li>
-  <li><code>vmax</code>: Maximum of <code>vw</code> and <code>vh</code></li>
-</ul>
+  <h3 class="text-2xl font-semibold text-indigo-500 mt-4">2. Mobile-First Design</h3>
+  <p class="text-gray-700 leading-relaxed">
+    Start designing for small screens first, then adjust for larger screens using media queries.
+  </p>
+
+  <h3 class="text-2xl font-semibold text-indigo-500 mt-4">3. Viewport Units</h3>
+  <p class="text-gray-700 leading-relaxed">
+    Viewport units help create responsive sizing based on the screen size:
+  </p>
+  <ul class="list-disc pl-6 text-gray-700 space-y-2">
+    <li><code class="bg-gray-200 px-1 rounded">vw</code>: 1% of viewport width</li>
+    <li><code class="bg-gray-200 px-1 rounded">vh</code>: 1% of viewport height</li>
+    <li><code class="bg-gray-200 px-1 rounded">vmin</code>: Minimum of <code>vw</code> and <code>vh</code></li>
+    <li><code class="bg-gray-200 px-1 rounded">vmax</code>: Maximum of <code>vw</code> and <code>vh</code></li>
+  </ul>
+
+</div>
 `,
 
           code: `
@@ -717,20 +766,27 @@ p.external-example { color: red; font-size: 22px; }
         {
           title: "CSS Variables",
           theory: `
-<h2>CSS Variables (Custom Properties)</h2>
-<p>CSS Variables, also called custom properties, allow you to store values that can be reused throughout your stylesheet. They make it easier to maintain and update styles.</p>
+<div class="p-6 bg-gray-50 rounded-lg shadow-md space-y-6">
 
-<h3>1. Custom Properties</h3>
-<ul>
-  <li>Defined using a name that starts with <code>--</code>, e.g., <code>--main-color</code>.</li>
-  <li>Declared inside a selector, often <code>:root</code> for global scope.</li>
-</ul>
+  <h2 class="text-3xl font-bold text-indigo-600">CSS Variables (Custom Properties)</h2>
+  <p class="text-gray-700 leading-relaxed">
+    CSS Variables, also called custom properties, allow you to store values that can be reused throughout your stylesheet. 
+    They make it easier to maintain and update styles.
+  </p>
 
-<h3>2. Usage</h3>
-<ul>
-  <li>Access a variable using <code>var(--var-name)</code>.</li>
-  <li>Variables can be used for colors, fonts, spacing, or any CSS property.</li>
-</ul>
+  <h3 class="text-2xl font-semibold text-indigo-500 mt-4">1. Custom Properties</h3>
+  <ul class="list-disc pl-6 text-gray-700 space-y-2">
+    <li>Defined using a name that starts with <code class="bg-gray-200 px-1 rounded">--</code>, e.g., <code class="bg-gray-200 px-1 rounded">--main-color</code>.</li>
+    <li>Declared inside a selector, often <code class="bg-gray-200 px-1 rounded">:root</code> for global scope.</li>
+  </ul>
+
+  <h3 class="text-2xl font-semibold text-indigo-500 mt-4">2. Usage</h3>
+  <ul class="list-disc pl-6 text-gray-700 space-y-2">
+    <li>Access a variable using <code class="bg-gray-200 px-1 rounded">var(--var-name)</code>.</li>
+    <li>Variables can be used for colors, fonts, spacing, or any CSS property.</li>
+  </ul>
+
+</div>
 `,
 
           code: `
@@ -789,28 +845,34 @@ p.external-example { color: red; font-size: 22px; }
     },
 
     intermediate: {
-      title: "Intermediate Level CSS",
+      title: "Intermediate Level CSS Notes",
       topics: [
         {
           title: "CSS Pseudo-classes & Pseudo-elements",
           theory: `
-<h2>CSS Pseudo-classes & Pseudo-elements</h2>
-<p>Pseudo-classes and pseudo-elements allow targeting elements based on their state or parts of an element.</p>
+<div class="p-6 bg-gray-50 rounded-lg shadow-md space-y-6">
 
-<h3>1. Pseudo-classes</h3>
-<ul>
-  <li><code>:hover</code> – Styles when the user hovers over an element.</li>
-  <li><code>:focus</code> – Styles when an element is focused.</li>
-  <li><code>:nth-child(n)</code> – Styles the nth child of a parent element.</li>
-  <li><code>:first-child / :last-child</code> – Styles the first or last child.</li>
-</ul>
+  <h2 class="text-3xl font-bold text-indigo-600">CSS Pseudo-classes & Pseudo-elements</h2>
+  <p class="text-gray-700 leading-relaxed">
+    Pseudo-classes and pseudo-elements allow targeting elements based on their state or parts of an element.
+  </p>
 
-<h3>2. Pseudo-elements</h3>
-<ul>
-  <li><code>::before</code> – Inserts content before an element’s content.</li>
-  <li><code>::after</code> – Inserts content after an element’s content.</li>
-  <li><code>::first-letter / ::first-line</code> – Styles the first letter or first line of a text block.</li>
-</ul>
+  <h3 class="text-2xl font-semibold text-indigo-500 mt-4">1. Pseudo-classes</h3>
+  <ul class="list-disc pl-6 text-gray-700 space-y-2">
+    <li><code class="bg-gray-200 px-1 rounded">:hover</code> – Styles when the user hovers over an element.</li>
+    <li><code class="bg-gray-200 px-1 rounded">:focus</code> – Styles when an element is focused.</li>
+    <li><code class="bg-gray-200 px-1 rounded">:nth-child(n)</code> – Styles the nth child of a parent element.</li>
+    <li><code class="bg-gray-200 px-1 rounded">:first-child / :last-child</code> – Styles the first or last child.</li>
+  </ul>
+
+  <h3 class="text-2xl font-semibold text-indigo-500 mt-4">2. Pseudo-elements</h3>
+  <ul class="list-disc pl-6 text-gray-700 space-y-2">
+    <li><code class="bg-gray-200 px-1 rounded">::before</code> – Inserts content before an element’s content.</li>
+    <li><code class="bg-gray-200 px-1 rounded">::after</code> – Inserts content after an element’s content.</li>
+    <li><code class="bg-gray-200 px-1 rounded">::first-letter / ::first-line</code> – Styles the first letter or first line of a text block.</li>
+  </ul>
+
+</div>
 `,
           code: `
 <style>
@@ -861,15 +923,23 @@ p.external-example { color: red; font-size: 22px; }
         {
           title: "CSS Transforms",
           theory: `
-<h2>CSS Transforms</h2>
-<p>CSS transforms allow you to modify the coordinate space of elements, enabling rotation, scaling, translation, and skewing.</p>
-<ul>
-  <li><code>translate(x, y)</code> – Moves an element horizontally and vertically.</li>
-  <li><code>rotate(angle)</code> – Rotates an element.</li>
-  <li><code>scale(x, y)</code> – Resizes an element.</li>
-  <li><code>skew(x, y)</code> – Skews an element along X and Y axes.</li>
-</ul>
+<div class="p-6 bg-gray-50 rounded-lg shadow-md space-y-6">
+
+  <h2 class="text-3xl font-bold text-indigo-600">CSS Transforms</h2>
+  <p class="text-gray-700 leading-relaxed">
+    CSS transforms allow you to modify the coordinate space of elements, enabling rotation, scaling, translation, and skewing.
+  </p>
+
+  <ul class="list-disc pl-6 text-gray-700 space-y-2">
+    <li><code class="bg-gray-200 px-1 rounded">translate(x, y)</code> – Moves an element horizontally and vertically.</li>
+    <li><code class="bg-gray-200 px-1 rounded">rotate(angle)</code> – Rotates an element.</li>
+    <li><code class="bg-gray-200 px-1 rounded">scale(x, y)</code> – Resizes an element.</li>
+    <li><code class="bg-gray-200 px-1 rounded">skew(x, y)</code> – Skews an element along X and Y axes.</li>
+  </ul>
+
+</div>
 `,
+
           code: `
 <style>
   .box {
@@ -899,15 +969,23 @@ p.external-example { color: red; font-size: 22px; }
         },
         {
           title: "CSS Variables & Theming",
-          theory: `
-<h2>CSS Variables & Theming</h2>
-<p>Variables make styling reusable and easy to maintain. They are useful for creating themes.</p>
-<ul>
-  <li>Define: <code>--primary-color: #3498db;</code></li>
-  <li>Use: <code>color: var(--primary-color);</code></li>
-  <li>Change variable values dynamically to switch themes.</li>
-</ul>
+        theory: `
+<div class="p-6 bg-gray-50 rounded-lg shadow-md space-y-6">
+
+  <h2 class="text-3xl font-bold text-indigo-600">CSS Variables & Theming</h2>
+  <p class="text-gray-700 leading-relaxed">
+    Variables make styling reusable and easy to maintain. They are useful for creating themes.
+  </p>
+
+  <ul class="list-disc pl-6 text-gray-700 space-y-2">
+    <li><strong>Define:</strong> <code>--primary-color: #3498db;</code></li>
+    <li><strong>Use:</strong> <code>color: var(--primary-color);</code></li>
+    <li>Change variable values dynamically to switch themes.</li>
+  </ul>
+
+</div>
 `,
+
           code: `
 <style>
   :root {
@@ -939,12 +1017,19 @@ p.external-example { color: red; font-size: 22px; }
         {
           title: "CSS Clipping & Masking",
           theory: `
-<h2>CSS Clipping & Masking</h2>
-<p>Clipping and masking hide or reveal parts of elements for advanced design effects.</p>
-<ul>
-  <li><code>clip-path</code> – Clips an element into a shape (circle, polygon, ellipse).</li>
-  <li><code>mask-image</code> – Hides parts of an element based on an image mask.</li>
-</ul>
+<div class="p-6 bg-gray-50 rounded-lg shadow-md space-y-6">
+
+  <h2 class="text-3xl font-bold text-indigo-600">CSS Clipping & Masking</h2>
+  <p class="text-gray-700 leading-relaxed">
+    Clipping and masking hide or reveal parts of elements for advanced design effects.
+  </p>
+
+  <ul class="list-disc pl-6 text-gray-700 space-y-2">
+    <li><code class="bg-gray-200 px-1 rounded">clip-path</code> – Clips an element into a shape (circle, polygon, ellipse).</li>
+    <li><code class="bg-gray-200 px-1 rounded">mask-image</code> – Hides parts of an element based on an image mask.</li>
+  </ul>
+
+</div>
 `,
           code: `
 <style>
@@ -972,13 +1057,20 @@ p.external-example { color: red; font-size: 22px; }
         {
           title: "CSS Scroll & Sticky",
           theory: `
-<h2>CSS Scroll & Sticky</h2>
-<p>These properties control scrolling behavior and element positioning.</p>
-<ul>
-  <li><code>overflow: auto | scroll | hidden</code> – Controls scrollbars.</li>
-  <li><code>position: sticky</code> – Keeps an element fixed within its container until it scrolls past a point.</li>
-  <li><code>scroll-behavior: smooth</code> – Smooth scrolling effect.</li>
-</ul>
+<div class="p-6 bg-gray-50 rounded-lg shadow-md space-y-6">
+
+  <h2 class="text-3xl font-bold text-indigo-600">CSS Scroll & Sticky</h2>
+  <p class="text-gray-700 leading-relaxed">
+    These properties control scrolling behavior and element positioning.
+  </p>
+
+  <ul class="list-disc pl-6 text-gray-700 space-y-2">
+    <li><code class="bg-gray-200 px-1 rounded">overflow: auto | scroll | hidden</code> – Controls scrollbars.</li>
+    <li><code class="bg-gray-200 px-1 rounded">position: sticky</code> – Keeps an element fixed within its container until it scrolls past a point.</li>
+    <li><code class="bg-gray-200 px-1 rounded">scroll-behavior: smooth</code> – Smooth scrolling effect.</li>
+  </ul>
+
+</div>
 `,
           code: `
 <style>
@@ -1020,40 +1112,46 @@ p.external-example { color: red; font-size: 22px; }
       ]
     },
     advanced: {
-      title: "Advance Level CSS",
+      title: "Advance Level CSS Notes",
       topics: [
         {
           title: "Advanced CSS Topics",
           theory: `
-<h2>Advanced CSS Topics</h2>
-<p>Once you are comfortable with basic CSS, these advanced topics help you write more maintainable, scalable, and efficient styles.</p>
+<div class="p-6 bg-gray-50 rounded-lg shadow-md space-y-6">
 
-<h3>1. CSS Grid vs Flexbox</h3>
-<ul>
-  <li><strong>Flexbox:</strong> Best for 1-dimensional layouts (row or column). Great for aligning items and distributing space in a single direction.</li>
-  <li><strong>Grid:</strong> Best for 2-dimensional layouts (rows and columns). Useful for complex layouts where both rows and columns need control.</li>
-  <li>Choose Flexbox for simpler layouts and Grid for complex page layouts.</li>
-</ul>
+  <h2 class="text-3xl font-bold text-indigo-600">Advanced CSS Topics</h2>
+  <p class="text-gray-700 leading-relaxed">
+    Once you are comfortable with basic CSS, these advanced topics help you write more maintainable, scalable, and efficient styles.
+  </p>
 
-<h3>2. CSS Preprocessors</h3>
-<ul>
-  <li><strong>SASS, LESS, Stylus:</strong> Extend CSS with variables, nesting, mixins, and functions for cleaner and reusable code.</li>
-  <li>They need to be compiled into regular CSS before using in browsers.</li>
-</ul>
+  <h3 class="text-xl font-semibold text-gray-800">1. CSS Grid vs Flexbox</h3>
+  <ul class="list-disc pl-6 text-gray-700 space-y-2">
+    <li><strong>Flexbox:</strong> Best for 1-dimensional layouts (row or column). Great for aligning items and distributing space in a single direction.</li>
+    <li><strong>Grid:</strong> Best for 2-dimensional layouts (rows and columns). Useful for complex layouts where both rows and columns need control.</li>
+    <li>Choose Flexbox for simpler layouts and Grid for complex page layouts.</li>
+  </ul>
 
-<h3>3. CSS Frameworks</h3>
-<ul>
-  <li><strong>Bootstrap:</strong> Popular framework with ready-to-use components, grid system, and utilities.</li>
-  <li><strong>Tailwind:</strong> Utility-first framework for fast styling with classes.</li>
-  <li><strong>Foundation:</strong> Responsive front-end framework with grids, components, and accessibility features.</li>
-</ul>
+  <h3 class="text-xl font-semibold text-gray-800">2. CSS Preprocessors</h3>
+  <ul class="list-disc pl-6 text-gray-700 space-y-2">
+    <li><strong>SASS, LESS, Stylus:</strong> Extend CSS with variables, nesting, mixins, and functions for cleaner and reusable code.</li>
+    <li>They need to be compiled into regular CSS before using in browsers.</li>
+  </ul>
 
-<h3>4. CSS Architecture</h3>
-<ul>
-  <li><strong>BEM (Block-Element-Modifier):</strong> Naming convention to organize CSS for readability and maintainability.</li>
-  <li><strong>OOCSS (Object-Oriented CSS):</strong> Encourages separation of structure and skin to reuse styles.</li>
-  <li><strong>SMACSS (Scalable and Modular Architecture for CSS):</strong> Methodology for categorizing CSS rules into base, layout, module, state, and theme.</li>
-</ul>
+  <h3 class="text-xl font-semibold text-gray-800">3. CSS Frameworks</h3>
+  <ul class="list-disc pl-6 text-gray-700 space-y-2">
+    <li><strong>Bootstrap:</strong> Popular framework with ready-to-use components, grid system, and utilities.</li>
+    <li><strong>Tailwind:</strong> Utility-first framework for fast styling with classes.</li>
+    <li><strong>Foundation:</strong> Responsive front-end framework with grids, components, and accessibility features.</li>
+  </ul>
+
+  <h3 class="text-xl font-semibold text-gray-800">4. CSS Architecture</h3>
+  <ul class="list-disc pl-6 text-gray-700 space-y-2">
+    <li><strong>BEM (Block-Element-Modifier):</strong> Naming convention to organize CSS for readability and maintainability.</li>
+    <li><strong>OOCSS (Object-Oriented CSS):</strong> Encourages separation of structure and skin to reuse styles.</li>
+    <li><strong>SMACSS (Scalable and Modular Architecture for CSS):</strong> Methodology for categorizing CSS rules into base, layout, module, state, and theme.</li>
+  </ul>
+
+</div>
 `,
 
           code: `
@@ -1123,27 +1221,33 @@ p.external-example { color: red; font-size: 22px; }
         {
           title: "CSS Optimization & Best Practices",
           theory: `
-<h2>CSS Optimization & Best Practices</h2>
-<p>Optimizing CSS ensures faster page load times, better maintainability, and consistent behavior across browsers.</p>
+<div class="p-6 bg-gray-50 rounded-lg shadow-md space-y-6">
 
-<h3>1. Performance Tips</h3>
-<ul>
-  <li><strong>Minify and compress CSS:</strong> Remove spaces, comments, and unnecessary code to reduce file size.</li>
-  <li><strong>Reduce the number of CSS selectors:</strong> Avoid overly complex selectors to improve performance.</li>
-  <li><strong>Use shorthand properties:</strong> Combine properties like <code>margin</code> and <code>padding</code> to reduce code.</li>
-</ul>
+  <h2 class="text-3xl font-bold text-indigo-600">CSS Optimization & Best Practices</h2>
+  <p class="text-gray-700 leading-relaxed">
+    Optimizing CSS ensures faster page load times, better maintainability, and consistent behavior across browsers.
+  </p>
 
-<h3>2. Cross-Browser Compatibility</h3>
-<ul>
-  <li><strong>Prefixing:</strong> Use vendor prefixes like <code>-webkit-</code>, <code>-moz-</code>, <code>-ms-</code> for compatibility with older browsers.</li>
-  <li><strong>Testing:</strong> Always test your site in multiple browsers to ensure consistent appearance.</li>
-</ul>
+  <h3 class="text-xl font-semibold text-gray-800">1. Performance Tips</h3>
+  <ul class="list-disc pl-6 text-gray-700 space-y-2">
+    <li><strong>Minify and compress CSS:</strong> Remove spaces, comments, and unnecessary code to reduce file size.</li>
+    <li><strong>Reduce the number of CSS selectors:</strong> Avoid overly complex selectors to improve performance.</li>
+    <li><strong>Use shorthand properties:</strong> Combine properties like <code>margin</code> and <code>padding</code> to reduce code.</li>
+  </ul>
 
-<h3>3. Maintainable CSS</h3>
-<ul>
-  <li><strong>Naming conventions:</strong> Use methodologies like BEM (Block-Element-Modifier) to organize your CSS.</li>
-  <li><strong>Modular CSS files:</strong> Split CSS into multiple files based on components or sections to keep it maintainable.</li>
-</ul>
+  <h3 class="text-xl font-semibold text-gray-800">2. Cross-Browser Compatibility</h3>
+  <ul class="list-disc pl-6 text-gray-700 space-y-2">
+    <li><strong>Prefixing:</strong> Use vendor prefixes like <code>-webkit-</code>, <code>-moz-</code>, <code>-ms-</code> for compatibility with older browsers.</li>
+    <li><strong>Testing:</strong> Always test your site in multiple browsers to ensure consistent appearance.</li>
+  </ul>
+
+  <h3 class="text-xl font-semibold text-gray-800">3. Maintainable CSS</h3>
+  <ul class="list-disc pl-6 text-gray-700 space-y-2">
+    <li><strong>Naming conventions:</strong> Use methodologies like BEM (Block-Element-Modifier) to organize your CSS.</li>
+    <li><strong>Modular CSS files:</strong> Split CSS into multiple files based on components or sections to keep it maintainable.</li>
+  </ul>
+
+</div>
 `,
 
           code: `
@@ -1279,15 +1383,15 @@ p.external-example { color: red; font-size: 22px; }
       {/* Header */}
       <header className=" container mx-auto text-center mb-8 p-6 sm:p-8 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white rounded-xl shadow-lg mt-28">
         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2">
-          Complete Node js Learning Guide
+          Complete CSS Learning Guide
         </h1>
         <p className="text-sm sm:text-base lg:text-lg opacity-90">
-          Master Node js from Beginner to Advanced Level
+          Master in CSS from Beginner to Advanced Level
         </p>
       </header>
 
       {/* Level Navigation */}
-      <nav className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-8 max-w-5xl mx-auto container">
+      <nav className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 mb-8 max-w-5xl mx-auto container">
         {Object.keys(htmlContent).map((level) => (
           <button
             key={level}
