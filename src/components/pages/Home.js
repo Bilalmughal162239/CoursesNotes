@@ -55,6 +55,7 @@ const Home = () => {
       color: 'text-cyan-500',
       bgColor: 'bg-cyan-100',
       students: '14.3k',
+      href: 'ReactNotesPage',
       rating: 4.9,
       description: 'Create modern user interfaces'
     },
@@ -84,6 +85,7 @@ const Home = () => {
       color: 'text-blue-600',
       bgColor: 'bg-blue-100',
       students: '13.1k',
+      href: 'CppNotesPage',
       rating: 4.8,
       description: 'Master system programming'
     },

@@ -20,7 +20,7 @@ import {
   FaPython
 } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import { SiBootstrap, SiCplusplus } from 'react-icons/si';
+import { SiBootstrap, SiCheerio, SiCplusplus } from 'react-icons/si';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,11 +47,11 @@ const Header = () => {
     { name: 'CSS', icon: FaCss3Alt, color: "text-blue-600", href: 'CssNotesPage' },
     { name: 'Bootstrap', icon: SiBootstrap, color: "text-purple-600", href: 'BootstrapNotes' },
     { name: 'JavaScript', icon: FaJs, color: "text-yellow-500", href: 'JavaSceriptNotes' },
-    { name: 'React', icon: FaReact, color: "text-cyan-400", href: '/courses/react' },
+    { name: 'React', icon: FaReact, color: "text-cyan-400", href: 'ReactNotesPage' },
     { name: 'Node.js', icon: FaNodeJs, color: "text-green-600", href: 'NodeNotesPage' },
-    { name: 'C', icon: SiCplusplus, color: "text-indigo-600", href: '/courses/c' },
-    { name: 'C++', icon: SiCplusplus, color: "text-indigo-700", href: '/courses/cpp' },
-    { name: 'Python', icon: FaPython, color: "text-sky-500", href: '/courses/python' },
+    { name: 'C', icon: SiCheerio, color: "text-blue-600", href: '/courses/c' },
+    { name: 'C++', icon: SiCplusplus, color: "text-indigo-700", href: 'CppNotesPage' },
+    { name: 'Python', icon: FaPython, color: "text-green-700", href: '/courses/python' },
   ];
 
 
