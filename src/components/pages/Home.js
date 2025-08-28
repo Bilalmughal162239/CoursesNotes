@@ -96,6 +96,7 @@ const Home = () => {
       bgColor: 'bg-green-100',
       students: '16.9k',
       rating: 4.9,
+      href: 'PythonNotes',
       description: 'Versatile programming language'
     },
   ];

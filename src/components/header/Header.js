@@ -27,6 +27,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isCoursesOpen, setIsCoursesOpen] = useState(false);
+  const [isQuizeOpen, setIsQuizeOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,9 +50,20 @@ const Header = () => {
     { name: 'JavaScript', icon: FaJs, color: "text-yellow-500", href: 'JavaSceriptNotes' },
     { name: 'React', icon: FaReact, color: "text-cyan-400", href: 'ReactNotesPage' },
     { name: 'Node.js', icon: FaNodeJs, color: "text-green-600", href: 'NodeNotesPage' },
-    { name: 'C', icon: SiCheerio, color: "text-blue-600", href: '/courses/c' },
+    { name: 'C', icon: SiCheerio, color: "text-blue-600", href: 'CLanguageNotes' },
     { name: 'C++', icon: SiCplusplus, color: "text-indigo-700", href: 'CppNotesPage' },
-    { name: 'Python', icon: FaPython, color: "text-green-700", href: '/courses/python' },
+    { name: 'Python', icon: FaPython, color: "text-green-700", href: 'PythonNotes' }, 
+  ];
+  const quizeItems = [
+    { name: 'HTML', icon: FaHtml5, color: "text-orange-600", href: 'quize-html' },
+    { name: 'CSS', icon: FaCss3Alt, color: "text-blue-600", href: 'CssNotesPage' },
+    { name: 'Bootstrap', icon: SiBootstrap, color: "text-purple-600", href: 'BootstrapNotes' },
+    { name: 'JavaScript', icon: FaJs, color: "text-yellow-500", href: 'JavaSceriptNotes' },
+    { name: 'React', icon: FaReact, color: "text-cyan-400", href: 'ReactNotesPage' },
+    { name: 'Node.js', icon: FaNodeJs, color: "text-green-600", href: 'NodeNotesPage' },
+    { name: 'C', icon: SiCheerio, color: "text-blue-600", href: 'CLanguageNotes' },
+    { name: 'C++', icon: SiCplusplus, color: "text-indigo-700", href: 'CppNotesPage' },
+    { name: 'Python', icon: FaPython, color: "text-green-700", href: 'PythonNotes' }, 
   ];
 
 
@@ -60,7 +72,7 @@ const Header = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`header ${isScrolled ? 'scrolled' : ''}`}
+      className={`header_Main ${isScrolled ? 'scrolled' : ''}`}
     >
       <div className="container mx-auto">
         <div className="flex items-center justify-between h-16 lg:h-20">
@@ -120,6 +132,47 @@ const Header = () => {
                   className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50 border border-gray-200"
                 >
                   {courseItems.map((item, index) => (
+                    <motion.div
+                      key={item.name}
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.05 }}
+                    >
+                      <Link
+                        to={item.href}
+                        className="flex items-center space-x-3 px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-500 transition-colors duration-300"
+                      >
+                        <item.icon className={item.color + " text-xl"} />
+                        <span className="text-sm">{item.name}</span>
+                      </Link>
+                    </motion.div>
+                  ))}
+                </motion.div>
+              )}
+            </motion.div>
+            {/* Quize Dropdown */}
+            <motion.div
+              className="relative"
+              onHoverStart={() => setIsQuizeOpen(true)}
+              onHoverEnd={() => setIsQuizeOpen(false)}
+            >
+              <motion.button
+                whileHover={{ y: -2 }}
+                className="nav-link flex items-center space-x-2 text-gray-700 hover:text-primary-500 transition-colors duration-300"
+              >
+                <FaBook className="text-sm" />
+                <span className="font-medium">Quizes</span>
+                {isQuizeOpen ? <FaChevronUp className="text-xs" /> : <FaChevronDown className="text-xs" />}
+              </motion.button>
+
+              {isQuizeOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                  className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50 border border-gray-200"
+                >
+                  {quizeItems.map((item, index) => (
                     <motion.div
                       key={item.name}
                       initial={{ opacity: 0, x: -10 }}
@@ -204,6 +257,42 @@ const Header = () => {
               </button>
 
               {isCoursesOpen && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  className="pl-8 mt-2 space-y-2"
+                >
+                  {courseItems.map((item, index) => (
+                    <motion.a
+                      key={item.name}
+                      href={item.href}
+                      initial={{ x: -20, opacity: 0 }}
+                      animate={{ x: 0, opacity: 1 }}
+                      transition={{ delay: index * 0.05 }}
+                      className="flex items-center space-x-3 p-2 rounded-lg hover:bg-primary-50 transition-colors duration-300"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <item.icon className={item.color + " text-xl"} />
+                      <span className="text-sm text-gray-700">{item.name}</span>
+                    </motion.a>
+                  ))}
+                </motion.div>
+              )}
+            </div>
+            {/* Quize */}
+            <div className="border-t border-gray-200 pt-2 mt-2">
+              <button
+                onClick={() => setIsQuizeOpen(!isQuizeOpen)}
+                className="mobile-nav-link flex items-center justify-between w-full p-3 rounded-lg hover:bg-primary-50 transition-colors duration-300"
+              >
+                <div className="flex items-center space-x-3">
+                  <FaBook className="text-primary-500" />
+                  <span className="font-medium text-gray-700">Quizes</span>
+                </div>
+                {isQuizeOpen ? <FaChevronUp /> : <FaChevronDown />}
+              </button>
+
+              {isQuizeOpen && (
                 <motion.div
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: 'auto' }}

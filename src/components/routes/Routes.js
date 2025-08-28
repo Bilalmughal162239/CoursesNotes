@@ -12,6 +12,9 @@ import BootstrapNotes from '../pages/BootstrapNotes'
 import JavaSceriptNotes from '../pages/JavaSceriptNotes'
 import ReactNotesPage from '../pages/ReactNotesPage'
 import CPlusNotes from '../pages/CPlusNotes'
+import CNotes from '../pages/CNotes'
+import PythonNotes from '../pages/PythonNotes'
+import HTMLQuize from '../pages/Quizes/HTMLQuize'
 
 const Index = () => {
     return (
@@ -28,6 +31,10 @@ const Index = () => {
                     <Route path='JavaSceriptNotes' element={<JavaSceriptNotes />} />
                     <Route path='ReactNotesPage' element={<ReactNotesPage />} />
                     <Route path='CppNotesPage' element={<CPlusNotes />} />
+                    <Route path='CLanguageNotes' element={<CNotes />} />
+                    <Route path='PythonNotes' element={<PythonNotes />} />
+                    {/* Quizes routes */}
+                    <Route path='quize-html' element={<HTMLQuize/>} />
                     <Route path='Contact' element={<Contact />} />
                 </Routes>
             </main>
