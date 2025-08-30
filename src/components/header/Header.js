@@ -56,14 +56,14 @@ const Header = () => {
   ];
   const quizeItems = [
     { name: 'HTML', icon: FaHtml5, color: "text-orange-600", href: 'quize-html' },
-    { name: 'CSS', icon: FaCss3Alt, color: "text-blue-600", href: 'CssNotesPage' },
-    { name: 'Bootstrap', icon: SiBootstrap, color: "text-purple-600", href: 'BootstrapNotes' },
-    { name: 'JavaScript', icon: FaJs, color: "text-yellow-500", href: 'JavaSceriptNotes' },
-    { name: 'React', icon: FaReact, color: "text-cyan-400", href: 'ReactNotesPage' },
-    { name: 'Node.js', icon: FaNodeJs, color: "text-green-600", href: 'NodeNotesPage' },
-    { name: 'C', icon: SiCheerio, color: "text-blue-600", href: 'CLanguageNotes' },
-    { name: 'C++', icon: SiCplusplus, color: "text-indigo-700", href: 'CppNotesPage' },
-    { name: 'Python', icon: FaPython, color: "text-green-700", href: 'PythonNotes' }, 
+    { name: 'CSS', icon: FaCss3Alt, color: "text-blue-600", href: 'quize-css' },
+    { name: 'Bootstrap', icon: SiBootstrap, color: "text-purple-600", href: 'quize-bootstrap' },
+    { name: 'JavaScript', icon: FaJs, color: "text-yellow-500", href: 'quize-javascript' },
+    { name: 'React', icon: FaReact, color: "text-cyan-400", href: 'quize-react' },
+    { name: 'Node.js', icon: FaNodeJs, color: "text-green-600", href: 'quize-node' },
+    { name: 'C', icon: SiCheerio, color: "text-blue-600", href: 'quize-c' },
+    { name: 'C++', icon: SiCplusplus, color: "text-indigo-700", href: 'quize-cpp' },
+    { name: 'Python', icon: FaPython, color: "text-green-700", href: 'quize-python' }, 
   ];
 
 

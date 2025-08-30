@@ -2479,13 +2479,6 @@ Insert 3 images on a page:
           explanation: "This form example demonstrates how to create advanced, accessible, and visually appealing forms using Bootstrap form controls, validation states, input groups, custom checkboxes/radios, switches, and a responsive layout.",
           task: "Create a contact form that includes user information fields, a message textarea, preference checkboxes, and validation feedback. The form should be responsive and interactive."
         },
-        {
-          title: '',
-          theory: ``,
-          code: ``,
-          explanation: '',
-          task: '',
-        }
       ]
 
     },

@@ -15,31 +15,43 @@ import CPlusNotes from '../pages/CPlusNotes'
 import CNotes from '../pages/CNotes'
 import PythonNotes from '../pages/PythonNotes'
 import HTMLQuize from '../pages/Quizes/HTMLQuize'
+import CSSQuiz from '../pages/Quizes/CSSQuize'
+import JSQuize from '../pages/Quizes/JSQuize'
+import BootstrapQuize from '../pages/Quizes/BootstrapQuize'
+import NotFoundPage from '../pages/NotFoundPage'
 
 const Index = () => {
     return (
-        <>
-            <Header />
-            <main>
-                <Routes>
-                    <Route path='/' element={<Home />} />
-                    <Route path='about' element={<About />} />
-                    <Route path='HTMLNotesPage' element={<HTMLNotesPage />} />
-                    <Route path='NodeNotesPage' element={<NodeNotesPage />} />
-                    <Route path='CssNotesPage' element={<CssNotesPage />} />
-                    <Route path='BootstrapNotes' element={<BootstrapNotes />} />
-                    <Route path='JavaSceriptNotes' element={<JavaSceriptNotes />} />
-                    <Route path='ReactNotesPage' element={<ReactNotesPage />} />
-                    <Route path='CppNotesPage' element={<CPlusNotes />} />
-                    <Route path='CLanguageNotes' element={<CNotes />} />
-                    <Route path='PythonNotes' element={<PythonNotes />} />
-                    {/* Quizes routes */}
-                    <Route path='quize-html' element={<HTMLQuize/>} />
-                    <Route path='Contact' element={<Contact />} />
-                </Routes>
-            </main>
-            <Footer />
-        </>     
+        <Routes>
+            <Route path='*' element={<>
+                <Header />
+                <main>
+                    <Routes>
+                        <Route path='/' element={<Home />} />
+                        <Route path='about' element={<About />} />
+                        <Route path='HTMLNotesPage' element={<HTMLNotesPage />} />
+                        <Route path='NodeNotesPage' element={<NodeNotesPage />} />
+                        <Route path='CssNotesPage' element={<CssNotesPage />} />
+                        <Route path='BootstrapNotes' element={<BootstrapNotes />} />
+                        <Route path='JavaSceriptNotes' element={<JavaSceriptNotes />} />
+                        <Route path='ReactNotesPage' element={<ReactNotesPage />} />
+                        <Route path='CppNotesPage' element={<CPlusNotes />} />
+                        <Route path='CLanguageNotes' element={<CNotes />} />
+                        <Route path='PythonNotes' element={<PythonNotes />} />
+                        {/* Quizes routes */}
+                        <Route path='quize-html' element={<HTMLQuize />} />
+                        <Route path='quize-css' element={<CSSQuiz />} />
+                        <Route path='quize-bootstrap' element={<BootstrapQuize />} />
+                        <Route path='quize-js' element={<JSQuize />} />
+                        <Route path='Contact' element={<Contact />} />
+                        <Route path="*" element={<NotFoundPage />} />
+                    </Routes>
+                </main>
+                <Footer />
+            </>
+            } />
+
+        </Routes>
     )
 }
 

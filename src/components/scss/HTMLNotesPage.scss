@@ -236,6 +236,14 @@
   overflow-x: auto;
 }
 
+/* Add this CSS (if using Tailwind, extend via custom styles) */
+.app-disabled {
+  pointer-events: none;
+  /* Disable clicks everywhere */
+  opacity: 0.5;
+  /* Dim effect */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .content-area {
