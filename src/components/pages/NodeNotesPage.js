@@ -2351,7 +2351,7 @@ module.exports = app;`,
     <p class="text-gray-700 mb-4">
       Middleware that runs only for specific routes or routers. Useful for tasks like authentication, logging, or validation on a particular route group.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const express = require('express');
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const express = require('express');
 const app = express();
 const router = express.Router();
 
@@ -2374,7 +2374,7 @@ app.listen(3000, () => console.log('Server running on port 3000'));</code></pre>
     <p class="text-gray-700 mb-4">
       Centralized error handling middleware catches and manages application errors gracefully.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>app.get('/error', (req, res, next) => {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>app.get('/error', (req, res, next) => {
   try {
     throw new Error('Something went wrong!');
   } catch (err) {
@@ -2394,7 +2394,7 @@ app.use((err, req, res, next) => {
       <li><strong>Optional Parameters:</strong> parameters that may or may not be present in the route.</li>
       <li><strong>Regex Routes:</strong> routes matching pattern via regular expressions.</li>
     </ul>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>// Route parameter
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>// Route parameter
 app.get('/user/:id', (req, res) => {
   res.send(\`User ID: \${req.params.id}\`);
 });
@@ -2413,7 +2413,7 @@ app.get(/a/, (req, res) => {
     <p class="text-gray-700 mb-4">
       Organize routes, middleware, and controllers in separate files for maintainability.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>project/
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>project/
 ├── app.js
 ├── routes/
 │   └── userRoutes.js
@@ -2427,7 +2427,7 @@ app.get(/a/, (req, res) => {
     <p class="text-gray-700 mb-4">
       Common middleware to add functionality easily.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const bodyParser = require('body-parser');
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
 const cors = require('cors');
@@ -2439,7 +2439,7 @@ app.use(cors());
 </code></pre>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">F. Example: Complete Advanced Express App</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const express = require('express');
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const express = require('express');
 const app = express();
 
 // Built-in middleware
@@ -2546,14 +2546,14 @@ app.use(cors());
     <p class="text-gray-700 mb-4">
       Use npm to install Socket.io and Express for real-time app development.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>npm install socket.io
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>npm install socket.io
 npm install express</code></pre>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">B. Setting up a Basic Server</h2>
     <p class="text-gray-700 mb-4">
       Create an Express server integrated with Socket.io to handle real-time communication.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const express = require('express');
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const express = require('express');
 const http = require('http');
 const { Server } = require('socket.io');
 
@@ -2584,7 +2584,7 @@ server.listen(3000, () => console.log('Server running on port 3000'));</code></p
     <p class="text-gray-700 mb-4">
       Basic client listens and emits socket events to the server.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>&lt;!DOCTYPE html&gt;
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;title&gt;Socket.io Chat&lt;/title&gt;
@@ -2632,7 +2632,7 @@ server.listen(3000, () => console.log('Server running on port 3000'));</code></p
     </ul>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">E. Example: Room-based Chat</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>io.on('connection', (socket) =&gt; {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>io.on('connection', (socket) =&gt; {
   socket.on('join room', (room) =&gt; {
     socket.join(room);
     socket.to(room).emit('message', 'A new user joined ' + room);
@@ -2725,7 +2725,7 @@ io.on('connection', (socket) => {
     </ul>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">C. Setting Up Mocha & Chai</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>npm install --save-dev mocha chai supertest
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>npm install --save-dev mocha chai supertest
 
 // Add to package.json scripts
 "scripts": {
@@ -2734,14 +2734,14 @@ io.on('connection', (socket) => {
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">D. Example: Unit Testing a Function</h2>
     <p class="text-gray-700 mb-4">math.js</p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function sum(a, b) {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function sum(a, b) {
   return a + b;
 }
 module.exports = sum;
 </code></pre>
 
     <p class="text-gray-700 mb-4">test/math.test.js</p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const sum = require('../math');
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const sum = require('../math');
 const { expect } = require('chai');
 
 describe('Sum Function', () => {
@@ -2758,7 +2758,7 @@ describe('Sum Function', () => {
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">E. Example: Testing Express APIs</h2>
     <p class="text-gray-700 mb-4">app.js</p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const express = require('express');
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const express = require('express');
 const app = express();
 app.use(express.json());
 
@@ -2768,7 +2768,7 @@ module.exports = app;
 </code></pre>
 
     <p class="text-gray-700 mb-4">test/app.test.js</p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const request = require('supertest');
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const request = require('supertest');
 const app = require('../app');
 const { expect } = require('chai');
 
@@ -2871,7 +2871,7 @@ describe('GET /hello', () => {
       Node.js operates on a single-threaded event loop; blocking operations freeze the server.
       Prefer asynchronous APIs to keep the server responsive.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const fs = require('fs');
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const fs = require('fs');
 
 // Blocking - avoid this
 const data = fs.readFileSync('file.txt', 'utf8');
@@ -2888,7 +2888,7 @@ fs.readFile('file.txt', 'utf8', (err, data) =&gt; {
     <p class="text-gray-700 mb-4">
       Streams process data piece-by-piece, reducing memory usage, great for files, video streaming, uploads/downloads.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const fs = require('fs');
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const fs = require('fs');
 
 const readStream = fs.createReadStream('largefile.txt');
 const writeStream = fs.createWriteStream('output.txt');
@@ -2900,7 +2900,7 @@ readStream.pipe(writeStream);
     <p class="text-gray-700 mb-4">
       Reduce repeated expensive calls to DB or APIs using cache.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>let cache = {};
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>let cache = {};
 
 function getUser(id) {
   if (cache[id]) return Promise.resolve(cache[id]);
@@ -2917,7 +2917,7 @@ function getUser(id) {
       Take advantage of multi-core CPUs by creating worker processes.
       Cluster mode allows handling more requests concurrently.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const cluster = require('cluster');
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const cluster = require('cluster');
 const http = require('http');
 const numCPUs = require('os').cpus().length;
 
@@ -2966,7 +2966,7 @@ if (cluster.isMaster) {
       <li>Apply efficient algorithms and data structures.</li>
       <li>Compress HTTP responses with gzip using <code>compression</code> middleware.</li>
     </ul>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const compression = require('compression');
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const compression = require('compression');
 app.use(compression());
 </code></pre>
 
@@ -3046,7 +3046,7 @@ app.use(compression());
     <p class="text-gray-700 mb-4">
       Never trust user input. Always validate and sanitize data using libraries like <code>express-validator</code>.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>npm install express-validator
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>npm install express-validator
 
 const { body, validationResult } = require('express-validator');
 
@@ -3067,7 +3067,7 @@ app.post('/register',
     <p class="text-gray-700 mb-4">
       Escape HTML output in templates and use security headers to prevent XSS attacks.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>npm install helmet
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>npm install helmet
 
 const helmet = require('helmet');
 app.use(helmet());
@@ -3077,7 +3077,7 @@ app.use(helmet());
     <p class="text-gray-700 mb-4">
       Use <code>csurf</code> middleware to protect against CSRF attacks.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>npm install csurf cookie-parser
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>npm install csurf cookie-parser
 
 const csrf = require('csurf');
 const cookieParser = require('cookie-parser');
@@ -3094,7 +3094,7 @@ app.get('/form', (req, res) =&gt; {
     <p class="text-gray-700 mb-4">
       Never store passwords in plain text. Hash passwords securely using <code>bcrypt</code>.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>npm install bcrypt
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>npm install bcrypt
 
 const bcrypt = require('bcrypt');
 
@@ -3113,7 +3113,7 @@ async function registerUser(password) {
     <p class="text-gray-700 mb-4">
       Prevent DDoS attacks by limiting request rates using <code>express-rate-limit</code>.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>npm install express-rate-limit
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>npm install express-rate-limit
 
 const rateLimit = require('express-rate-limit');
 
@@ -3130,7 +3130,7 @@ app.use(limiter);
       Store API keys, passwords, and DB credentials in environment variables.
       Never commit .env files publicly.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>npm install dotenv
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>npm install dotenv
 
 require('dotenv').config();
 const dbPassword = process.env.DB_PASSWORD;
@@ -3140,7 +3140,7 @@ const dbPassword = process.env.DB_PASSWORD;
     <p class="text-gray-700 mb-4">
       Use Helmet to set HTTP headers that prevent MIME sniffing, clickjacking, and XSS.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const helmet = require('helmet');
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const helmet = require('helmet');
 app.use(helmet());
 </code></pre>
 
@@ -3148,14 +3148,14 @@ app.use(helmet());
     <p class="text-gray-700 mb-4">
       Use parameterized queries instead of string concatenation to prevent injection.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>// Example with MongoDB
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>// Example with MongoDB
 db.collection('users').findOne({ username: userInput }); // safe</code></pre>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">J. Session Security</h2>
     <p class="text-gray-700 mb-4">
       Use secure, HTTP-only cookies for sessions.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const session = require('express-session');
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const session = require('express-session');
 
 app.use(session({
   secret: 'your_secret_key',
@@ -3268,7 +3268,7 @@ app.use(session({
           theory: `
     <h2 class="text-2xl font-bold text-blue-600 mb-3">A. Project Idea 1: Real-Time Chat Application</h2>
     <p class="text-gray-700 mb-4">Features include user registration and authentication, real-time messaging with Socket.io, private messages, chat rooms, message history stored in MongoDB, typing indicators, and online status.</p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>chat-app/
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>chat-app/
 ├── server/
 │   ├── index.js             // Entry point
 │   ├── routes/
@@ -3289,7 +3289,7 @@ app.use(session({
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">B. Project Idea 2: E-commerce Backend API</h2>
     <p class="text-gray-700 mb-4">Features include CRUD for products, categories, users, JWT authentication with role-based access, file uploads for product images, cart & order management, and payment integrations.</p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>ecommerce-api/
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>ecommerce-api/
 ├── app.js                   // Express app
 ├── routes/
 │   ├── userRoutes.js
@@ -3313,7 +3313,7 @@ app.use(session({
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">C. Project Idea 3: Real-Time Collaboration Tool</h2>
     <p class="text-gray-700 mb-4">Features include multiple users editing documents simultaneously, real-time updates via WebSocket/Socket.io, user presence and cursor tracking, document history/version control, file attachments, notifications.</p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>collab-app/
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>collab-app/
 ├── server/
 │   ├── index.js
 │   ├── routes/

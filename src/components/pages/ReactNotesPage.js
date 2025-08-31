@@ -30,7 +30,7 @@ const element = &lt;h1&gt;Hello, {name}!&lt;/h1&gt;;</code></pre>
     </ul>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Library vs Framework</h2>
-    <table class="table-auto border-collapse border border-gray-300 w-full mb-6 text-left">
+    <table class="table-auto overflow-x-auto border-collapse border border-gray-300 w-full mb-6 text-left">
       <thead>
         <tr>
           <th class="border border-gray-300 px-4 py-2">Feature</th>
@@ -66,7 +66,7 @@ const element = &lt;h1&gt;Hello, {name}!&lt;/h1&gt;;</code></pre>
     </p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Example: Simple React Component</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React from "react";
 
 function Welcome() {
   return &lt;h1&gt;Hello, welcome to React!&lt;/h1&gt;;
@@ -148,7 +148,7 @@ export default Welcome;
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Virtual DOM Flow Example</h2>
     <p>Initial UI:</p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const element = &lt;h1&gt;Hello, Bilal!&lt;/h1&gt;
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const element = &lt;h1&gt;Hello, Bilal!&lt;/h1&gt;
 </code></pre>
     <p>React renders <code>&lt;h1&gt;Hello, Bilal!&lt;/h1&gt;</code> in the real DOM.</p>
     <p>State changes: <code>setName("Sara")</code></p>
@@ -156,7 +156,7 @@ export default Welcome;
     <p>React diffs old vs new VDOM and updates <code>&lt;h1&gt;</code> text node only in the real DOM.</p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Code Example Demonstrating VDOM Concept</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React, { useState } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 
 function App() {
@@ -241,7 +241,7 @@ root.render(<App />);
     <p class="text-gray-700 mb-4">
       Example:
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const element = &lt;h1&gt;Hello, React!&lt;/h1&gt;;
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const element = &lt;h1&gt;Hello, React!&lt;/h1&gt;;
 // Translates to:
 const element = React.createElement("h1", null, "Hello, React!");</code></pre>
 
@@ -249,13 +249,13 @@ const element = React.createElement("h1", null, "Hello, React!");</code></pre>
     <ul class="list-disc list-inside text-gray-800 mb-4">
       <li><strong>Single Parent Element:</strong> JSX must have one root element.
         <br />❌ Incorrect:
-        <pre class="bg-gray-100 p-3 rounded my-2"><code>return (
+        <pre class="bg-gray-100 overflow-x-auto p-3 rounded my-2"><code>return (
   &lt;h1&gt;Hello&lt;/h1&gt;
   &lt;p&gt;World&lt;/p&gt;
 );
 </code></pre>
         ✅ Correct:
-        <pre class="bg-gray-100 p-3 rounded my-2"><code>return (
+        <pre class="bg-gray-100 overflow-x-auto p-3 rounded my-2"><code>return (
   &lt;div&gt;
     &lt;h1&gt;Hello&lt;/h1&gt;
     &lt;p&gt;World&lt;/p&gt;
@@ -265,7 +265,7 @@ const element = React.createElement("h1", null, "Hello, React!");</code></pre>
       </li>
 
       <li><strong>JavaScript Expressions:</strong> Use curly braces <code>{}</code> to embed JS expressions.
-        <pre class="bg-gray-100 p-3 rounded my-2"><code>const name = "Bilal";
+        <pre class="bg-gray-100 overflow-x-auto p-3 rounded my-2"><code>const name = "Bilal";
 return &lt;h1&gt;Hello, {name}!&lt;/h1&gt;;</code></pre>
       </li>
 
@@ -276,11 +276,11 @@ return &lt;h1&gt;Hello, {name}!&lt;/h1&gt;;</code></pre>
           <li><code>onclick</code> → <code>onClick</code></li>
         </ul>
         Example:
-        <pre class="bg-gray-100 p-3 rounded my-2"><code>&lt;button className="btn" onClick={handleClick}&gt;Click Me&lt;/button&gt;</code></pre>
+        <pre class="bg-gray-100 overflow-x-auto p-3 rounded my-2"><code>&lt;button className="btn" onClick={handleClick}&gt;Click Me&lt;/button&gt;</code></pre>
       </li>
 
       <li><strong>Comments inside JSX:</strong> Use curly braces with JavaScript comment syntax.
-        <pre class="bg-gray-100 p-3 rounded my-2"><code>return (
+        <pre class="bg-gray-100 overflow-x-auto p-3 rounded my-2"><code>return (
   &lt;div&gt;
     {/* This is a JSX comment */}
     &lt;h1&gt;Hello&lt;/h1&gt;
@@ -289,12 +289,12 @@ return &lt;h1&gt;Hello, {name}!&lt;/h1&gt;;</code></pre>
       </li>
 
       <li><strong>Embedding Expressions:</strong> Any valid JS expression works inside <code>{}</code>.
-        <pre class="bg-gray-100 p-3 rounded my-2"><code>const a = 5, b = 10;
+        <pre class="bg-gray-100 overflow-x-auto p-3 rounded my-2"><code>const a = 5, b = 10;
 return &lt;p&gt;{a} + {b} = {a + b}&lt;/p&gt;;</code></pre>
       </li>
 
       <li><strong>Conditional Rendering:</strong> Use ternary operators or logical && inside JSX.
-        <pre class="bg-gray-100 p-3 rounded my-2"><code>const isLoggedIn = true;
+        <pre class="bg-gray-100 overflow-x-auto p-3 rounded my-2"><code>const isLoggedIn = true;
 return (
   &lt;div&gt;
     {isLoggedIn ? &lt;h1&gt;Welcome Back!&lt;/h1&gt; : &lt;h1&gt;Please Login&lt;/h1&gt;}
@@ -305,7 +305,7 @@ return (
     </ul>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Example: Complete JSX Usage</h2>
-    <pre class="bg-gray-100 p-3 rounded my-2"><code>import React from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded my-2"><code>import React from "react";
 
 function App() {
   const user = { name: "Bilal", age: 22 };
@@ -405,7 +405,7 @@ export default App;
       Functional components are simpler and represent the modern way to build React components.
       They can use <code>Hooks</code> (like <code>useState</code>, <code>useEffect</code>) to manage state and lifecycle features.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React from "react";
 
 function Welcome(props) {
   return &lt;h1&gt;Hello, {props.name}!&lt;/h1&gt;;
@@ -416,7 +416,7 @@ export default Welcome;
     <p class="text-gray-700 mb-4">
       <strong>Usage:</strong>
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React from "react";
 import ReactDOM from "react-dom/client";
 import Welcome from "./Welcome";
 
@@ -427,7 +427,7 @@ root.render(&lt;Welcome name="Bilal" /&gt;);
     <p class="text-gray-700 mb-4"><strong>Key Points:</strong> Props passed as argument, can be stateless or use Hooks, preferred in modern React.</p>
 
     <h3 class="font-semibold mb-2">Functional Component with State Example</h3>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React, { useState } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React, { useState } from "react";
 
 function Counter() {
   const [count, setCount] = useState(0);
@@ -449,7 +449,7 @@ export default Counter;
       Must have a <code>render()</code> method that returns JSX.
       Supports state and lifecycle methods like <code>componentDidMount</code>, <code>componentDidUpdate</code>.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React, { Component } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React, { Component } from "react";
 
 class Welcome extends Component {
   render() {
@@ -463,7 +463,7 @@ export default Welcome;
     <p class="text-gray-700 mb-4"><strong>Key Points:</strong> Uses <code>this.props</code> and <code>this.state</code>, lifecycle methods available, less used in modern React.</p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Comparison: Functional vs Class Components</h2>
-    <table class="table-auto border border-gray-300 w-full mb-6 text-left">
+    <table class="table-auto overflow-x-auto border border-gray-300 w-full mb-6 text-left">
       <thead>
         <tr class="bg-gray-200">
           <th class="border border-gray-300 px-4 py-2">Feature</th>
@@ -501,7 +501,7 @@ export default Welcome;
     </table>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Example: Combining Components</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function Header() {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function Header() {
   return &lt;h1&gt;My App Header&lt;/h1&gt;;
 }
 
@@ -598,7 +598,7 @@ export default Welcome;
     </ul>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Basic Example</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>// Child Component
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>// Child Component
 function Greeting(props) {
   return &lt;h1&gt;Hello, {props.name}!&lt;/h1&gt;;
 }
@@ -624,12 +624,12 @@ export default App;</code></pre>
     </p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Destructuring Props</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function Greeting({ name }) {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function Greeting({ name }) {
   return &lt;h1&gt;Hello, {name}!&lt;/h1&gt;;
 }</code></pre>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Passing Multiple Props</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function Profile({ name, age, city }) {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function Profile({ name, age, city }) {
   return (
     &lt;p&gt;
       Name: {name}, Age: {age}, City: {city}
@@ -645,7 +645,7 @@ function App() {
     <p class="text-gray-700 mb-4">
       Useful for handling events in the parent from child components.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function Child({ onClick }) {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function Child({ onClick }) {
   return &lt;button onClick={onClick}&gt;Click Me&lt;/button&gt;;
 }
 
@@ -663,7 +663,7 @@ function Parent() {
     </ul>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Example: List Rendering with Props</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function User({ name, age }) {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function User({ name, age }) {
   return &lt;li&gt;{name} - {age} years old&lt;/li&gt;;
 }
 
@@ -780,7 +780,7 @@ function App() {
     <p class="text-gray-700 mb-4">
       <code>useState</code> is a React Hook used in functional components to add and manage state.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const [state, setState] = useState(initialValue);
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const [state, setState] = useState(initialValue);
 
 state - current value
 setState - function to update state
@@ -788,7 +788,7 @@ initialValue - starting state value
 </code></pre>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Example 1: Simple Counter</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React, { useState } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React, { useState } from "react";
 
 function Counter() {
   const [count, setCount] = useState(0); // initial count = 0
@@ -809,7 +809,7 @@ export default Counter;
     </p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Example 2: Toggle Component</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function Toggle() {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function Toggle() {
   const [isOn, setIsOn] = useState(true);
 
   return (
@@ -822,7 +822,7 @@ export default Counter;
     <p class="text-gray-700 mb-4">Explanation: <code>isOn</code> boolean state that toggles between true/false on button click; UI updates immediately.</p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Example 3: Input Field with State</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function NameInput() {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function NameInput() {
   const [name, setName] = useState("");
 
   return (
@@ -930,7 +930,7 @@ function NameInput() {
     </p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Basic Rendering</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React from "react";
 import ReactDOM from "react-dom/client";
 
 const element = &lt;h1&gt;Hello, React!&lt;/h1&gt;;
@@ -946,7 +946,7 @@ root.render(element);
     </p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Rendering a Component</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function Welcome() {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function Welcome() {
   return &lt;h1&gt;Hello, Bilal!&lt;/h1&gt;;
 }
 
@@ -956,7 +956,7 @@ root.render(&lt;Welcome /&gt;);
     <p>React calls the component function and renders its returned JSX instead of rendering simple JSX directly.</p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Updating the Rendered UI</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React, { useState } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 
 function Counter() {
@@ -977,7 +977,7 @@ root.render(&lt;Counter /&gt;);
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Rendering Multiple Elements</h2>
     <p>JSX requires a single root element. You can use a <code>&lt;div&gt;</code> or React Fragment <code>&lt;&gt;</code> (empty tags) to wrap multiple elements.</p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const root = ReactDOM.createRoot(document.getElementById("root"));
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   &lt;div&gt;
     &lt;h1&gt;Heading&lt;/h1&gt;
@@ -1078,155 +1078,7 @@ root.render(
     </p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">1. Using if Statements (Outside JSX)</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function Greeting({ isLoggedIn }) {
-  if (isLoggedIn) {
-    return &lt;h1&gt;Welcome Back!&lt;/h1&gt;;
-  } else {
-    return &lt;h1&gt;Please Sign In&lt;/h1&gt;;
-  }
-}
-
-function App() {
-  return &lt;Greeting isLoggedIn={true} /&gt;;
-}</code></pre>
-    <p class="text-gray-700 mb-4">
-      React chooses which JSX to render based on the if condition.
-      Best practice: keep if-else logic outside JSX for readability.
-    </p>
-
-    <h2 class="text-2xl font-bold text-blue-600 mb-3">2. Using Ternary Operator (Inside JSX)</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function Greeting({ isLoggedIn }) {
-  return (
-    &lt;h1&gt;{isLoggedIn ? "Welcome Back!" : "Please Sign In"}&lt;/h1&gt;
-  );
-}
-
-function App() {
-  return &lt;Greeting isLoggedIn={false} /&gt;;
-}</code></pre>
-    <p>Ternary operator is concise and directly usable inside JSX: <code>condition ? trueValue : falseValue</code>.</p>
-
-    <h2 class="text-2xl font-bold text-blue-600 mb-3">3. Using Logical && Operator</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function Notification({ unreadMessages }) {
-  return (
-    &lt;div&gt;
-      &lt;h1&gt;Hello, Bilal!&lt;/h1&gt;
-      {unreadMessages.length &gt; 0 &amp;&amp; (
-        &lt;p&gt;You have {unreadMessages.length} unread messages.&lt;/p&gt;
-      )}
-    &lt;/div&gt;
-  );
-}
-
-function App() {
-  return &lt;Notification unreadMessages={["Hi", "Hello"]} /&gt;;
-}</code></pre>
-    <p>
-      Logical <code>&amp;&amp;</code> renders the element only if the condition is true.<br/>
-      If <code>unreadMessages</code> is empty, no paragraph will be rendered.
-    </p>
-
-    <h2 class="text-2xl font-bold text-blue-600 mb-3">4. Using Conditional Components</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function AdminPanel() {
-  return &lt;h2&gt;Admin Access Granted&lt;/h2&gt;;
-}
-
-function GuestPanel() {
-  return &lt;h2&gt;Guest Access&lt;/h2&gt;;
-}
-
-function Dashboard({ isAdmin }) {
-  return isAdmin ? &lt;AdminPanel /&gt; : &lt;GuestPanel /&gt;;
-}
-
-function App() {
-  return &lt;Dashboard isAdmin={true} /&gt;;
-}</code></pre>
-    <p>Conditional rendering can switch between components to keep code modular and clean.</p>
-
-    <h2 class="text-xl font-semibold text-blue-500 mb-2">Key Points</h2>
-    <ul class="list-disc list-inside text-gray-800">
-      <li>Use conditional rendering to display UI based on conditions.</li>
-      <li>Use <code>if-else</code> outside JSX for complex logic.</li>
-      <li>Use ternary operator for inline simple conditional rendering.</li>
-      <li>Logical <code>&amp;&amp;</code> shows content only if a condition is true.</li>
-      <li>Conditionally render entire components for modular code.</li>
-    </ul>
-
-    <h2 class="text-xl font-semibold text-green-600 mt-6">✅ Summary</h2>
-    <ul class="list-disc list-inside text-gray-800">
-      <li>React supports multiple ways to render conditionally.</li>
-      <li>Helps build dynamic, interactive UIs such as login pages, notifications, and admin dashboards.</li>
-      <li>Keep conditional logic clear and maintainable by choosing appropriate constructs.</li>
-    </ul>
-  `,
-          code: `
-// 1. Using if statement outside JSX
-function Greeting({ isLoggedIn }) {
-  if (isLoggedIn) {
-    return <h1>Welcome Back!</h1>;
-  } else {
-    return <h1>Please Sign In</h1>;
-  }
-}
-
-// 2. Using ternary operator inside JSX
-function Greeting({ isLoggedIn }) {
-  return <h1>{isLoggedIn ? "Welcome Back!" : "Please Sign In"}</h1>;
-}
-
-// 3. Using logical && operator
-function Notification({ unreadMessages }) {
-  return (
-    <div>
-      <h1>Hello, Bilal!</h1>
-      {unreadMessages.length > 0 && (
-        <p>You have {unreadMessages.length} unread messages.</p>
-      )}
-    </div>
-  );
-}
-
-// 4. Conditional components
-function AdminPanel() {
-  return <h2>Admin Access Granted</h2>;
-}
-
-function GuestPanel() {
-  return <h2>Guest Access</h2>;
-}
-
-function Dashboard({ isAdmin }) {
-  return isAdmin ? <AdminPanel /> : <GuestPanel />;
-}
-  `,
-          explanation: `
-  - Conditional rendering controls which UI elements or components to show based on state or props.
-  - Using if statements outside JSX keeps complex logic clean.
-  - Ternary operators allow inline conditional choices inside JSX.
-  - Logical && renders content only if the condition is true, handy for optional display.
-  - Swapping entire components conditionally keeps UI modular and maintainable.
-  `,
-          task: `
-  Task:
-  1. Write a component that uses if statement outside JSX to return different greetings.
-  2. Refactor it using ternary operator inside JSX.
-  3. Build a notification component that shows messages only if present, using &&.
-  4. Create an app that conditionally renders Admin or Guest components based on a prop.
-  5. Experiment with nesting multiple conditional renderings.
-  `
-        },
-        {
-          title: 'Conditional Rendering in React',
-          theory: `
-    <h2 class="text-2xl font-bold text-blue-600 mb-3">What is Conditional Rendering?</h2>
-    <p class="text-gray-700 mb-4">
-      Conditional rendering lets you display different UI elements based on conditions.
-      It’s similar to if-else statements in JavaScript but used inside JSX.
-    </p>
-
-    <h2 class="text-2xl font-bold text-blue-600 mb-3">1. Using if Statements (Outside JSX)</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function Greeting({ isLoggedIn }) {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function Greeting({ isLoggedIn }) {
   if (isLoggedIn) {
     return &lt;h1&gt;Welcome Back!&lt;/h1&gt;;
   } else {
@@ -1243,7 +1095,7 @@ function App() {
     </p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">2. Using Ternary Operator (Inside JSX)</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function Greeting({ isLoggedIn }) {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function Greeting({ isLoggedIn }) {
   return (
     &lt;h1&gt;{isLoggedIn ? "Welcome Back!" : "Please Sign In"}&lt;/h1&gt;
   );
@@ -1255,7 +1107,7 @@ function App() {
     <p>Ternary operator is concise and directly usable inside JSX.</p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">3. Using Logical && Operator</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function Notification({ unreadMessages }) {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function Notification({ unreadMessages }) {
   return (
     &lt;div&gt;
       &lt;h1&gt;Hello, Bilal!&lt;/h1&gt;
@@ -1275,7 +1127,7 @@ function App() {
     </p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">4. Using Conditional Components</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function AdminPanel() {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function AdminPanel() {
   return &lt;h2&gt;Admin Access Granted&lt;/h2&gt;;
 }
 
@@ -1374,7 +1226,7 @@ function Dashboard({ isAdmin }) {
     </p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Using map() to Render Lists</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function App() {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function App() {
   const fruits = ["Apple", "Banana", "Mango", "Orange"];
 
   return (
@@ -1398,7 +1250,7 @@ export default App;
       React uses the <code>key</code> prop to identify which items in the list have changed, added, or removed.
       This helps React optimize DOM updates.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function App() {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function App() {
   const fruits = ["Apple", "Banana", "Mango", "Orange"];
 
   return (
@@ -1412,7 +1264,7 @@ export default App;
     <p>Note: Using <code>index</code> as key is okay for static lists; for dynamic lists, use a unique ID instead.</p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Rendering Objects in Lists</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function App() {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function App() {
   const users = [
     { id: 1, name: "Bilal", age: 22 },
     { id: 2, name: "Sara", age: 20 },
@@ -1432,7 +1284,7 @@ export default App;
     <p>Using unique IDs as keys helps React effectively track individual items in the list.</p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Rendering Components in Lists</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function User({ name, age }) {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function User({ name, age }) {
   return &lt;li&gt;{name} - {age} years old&lt;/li&gt;;
 }
 
@@ -1548,7 +1400,7 @@ function App() {
     </p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">1. Handling Click Events</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function ClickExample() {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function ClickExample() {
   const handleClick = () =&gt; {
     alert("Button clicked!");
   };
@@ -1563,7 +1415,7 @@ export default ClickExample;</code></pre>
     </p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">2. Handling Input Change Events</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import { useState } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import { useState } from "react";
 
 function InputExample() {
   const [text, setText] = useState("");
@@ -1582,7 +1434,7 @@ function InputExample() {
     <p><code>onChange</code> updates state with the current input value <code>e.target.value</code>.</p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">3. Handling Form Submit</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import { useState } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import { useState } from "react";
 
 function FormExample() {
   const [name, setName] = useState("");
@@ -1609,7 +1461,7 @@ export default FormExample;</code></pre>
     <p><code>e.preventDefault()</code> stops the default HTML form submission reload.</p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">4. Passing Arguments to Event Handlers</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function Button({ name }) {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function Button({ name }) {
   const handleClick = (userName) =&gt; {
     alert(\`Hello, \${userName}!\`);
   };
@@ -1619,7 +1471,7 @@ export default FormExample;</code></pre>
     <p>Wrap handler in arrow function to pass custom arguments; avoid calling the function directly.</p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">5. Common Event Types in React</h2>
-    <table class="table-auto border-collapse border border-gray-300 w-full mb-6 text-left">
+    <table class="table-auto overflow-x-auto border-collapse border border-gray-300 w-full mb-6 text-left">
       <thead>
         <tr class="bg-gray-200">
           <th class="border border-gray-300 px-4 py-2">Event Type</th>
@@ -1766,10 +1618,10 @@ function Button({ name }) {
     <p class="text-gray-700 mb-4">
       Used to manage state in functional components.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const [state, setState] = useState(initialValue);</code></pre>
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const [state, setState] = useState(initialValue);</code></pre>
 
     <h3 class="text-xl font-semibold mb-2">Example: Counter</h3>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import { useState } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import { useState } from "react";
 
 function Counter() {
   const [count, setCount] = useState(0);
@@ -1790,13 +1642,13 @@ export default Counter;</code></pre>
       <code>useEffect</code> lets you perform side effects – such as API calls, timers, subscriptions, or manual DOM manipulations – inside functional components.
       It combines the life-cycle behavior of <code>componentDidMount</code>, <code>componentDidUpdate</code>, and <code>componentWillUnmount</code> from class components.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>useEffect(() =&gt; {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>useEffect(() =&gt; {
   // Code to run
 }, [dependencies]);</code></pre>
     <p>Dependencies array controls when the effect runs. An empty array <code>[]</code> means it runs once after the first render.</p>
 
     <h3 class="text-xl font-semibold mb-2">1. useEffect Example – Component Mount</h3>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import { useEffect } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import { useEffect } from "react";
 
 function App() {
   useEffect(() =&gt; {
@@ -1809,7 +1661,7 @@ function App() {
 export default App;</code></pre>
 
     <h3 class="text-xl font-semibold mb-2">2. useEffect Example – Watching State</h3>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import { useState, useEffect } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import { useState, useEffect } from "react";
 
 function Counter() {
   const [count, setCount] = useState(0);
@@ -1830,7 +1682,7 @@ export default Counter;</code></pre>
     <p>The effect runs only when <code>count</code> changes, efficiently managing side effects.</p>
 
     <h3 class="text-xl font-semibold mb-2">3. useEffect Cleanup</h3>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import { useEffect, useState } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import { useEffect, useState } from "react";
 
 function Timer() {
   const [seconds, setSeconds] = useState(0);
@@ -1967,7 +1819,7 @@ export default Timer;
       In controlled components, form data is handled by React state.
       The input's <code>value</code> is bound to state, and updates via <code>onChange</code> event handlers.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import { useState } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import { useState } from "react";
 
 function ControlledForm() {
   const [name, setName] = useState("");
@@ -1994,7 +1846,7 @@ export default ControlledForm;</code></pre>
     <p><strong>Key Points:</strong> <code>value</code> binds input to state; <code>onChange</code> updates state dynamically. Validation and manipulation are easy.</p>
 
     <h3 class="text-xl font-semibold mb-2">Example: Multiple Inputs</h3>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function ControlledMultiInput() {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function ControlledMultiInput() {
   const [formData, setFormData] = useState({ email: "", password: "" });
 
   const handleChange = (e) =&gt; {
@@ -2033,7 +1885,7 @@ export default ControlledForm;</code></pre>
       In uncontrolled components, form data is handled by the DOM, not React.
       Use refs to access input values directly.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import { useRef } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import { useRef } from "react";
 
 function UncontrolledForm() {
   const inputRef = useRef();
@@ -2055,7 +1907,7 @@ export default UncontrolledForm;</code></pre>
     <p><strong>Key Points:</strong> <code>ref</code> accesses the DOM element, React does not track input changes. Useful for quick forms or third-party libraries.</p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Controlled vs Uncontrolled Components</h2>
-    <table class="table-auto border border-gray-300 w-full mb-6 text-left">
+    <table class="table-auto overflow-x-auto border border-gray-300 w-full mb-6 text-left">
       <thead>
         <tr class="bg-gray-200">
           <th class="border border-gray-300 px-4 py-2">Feature</th>
@@ -2224,19 +2076,19 @@ export default UncontrolledForm;
     <ol class="list-decimal list-inside text-gray-800 mb-4">
       <li>Install Node.js (LTS version) which includes npm.</li>
       <li>Create new React app with:
-        <pre class="bg-gray-100 p-3 my-2 rounded"><code>npx create-react-app my-app</code></pre>
+        <pre class="bg-gray-100 overflow-x-auto p-3 my-2 rounded"><code>npx create-react-app my-app</code></pre>
       </li>
       <li>Navigate to folder:
-        <pre class="bg-gray-100 p-3 my-2 rounded"><code>cd my-app</code></pre>
+        <pre class="bg-gray-100 overflow-x-auto p-3 my-2 rounded"><code>cd my-app</code></pre>
       </li>
       <li>Start dev server:
-        <pre class="bg-gray-100 p-3 my-2 rounded"><code>npm start</code></pre>
+        <pre class="bg-gray-100 overflow-x-auto p-3 my-2 rounded"><code>npm start</code></pre>
         Opens <a href="http://localhost:3000" target="_blank">http://localhost:3000/</a> automatically with hot reloading.
       </li>
     </ol>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">B. Folder Structure of CRA</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>my-app/
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>my-app/
 ├── node_modules/          (project dependencies)
 ├── public/
 │   ├── index.html         (main HTML template)
@@ -2256,16 +2108,16 @@ export default UncontrolledForm;
     </p>
     <ol class="list-decimal list-inside text-gray-800 mb-4">
       <li>Create new app:
-        <pre class="bg-gray-100 p-3 my-2 rounded"><code>npm create vite@latest my-app</code></pre>
+        <pre class="bg-gray-100 overflow-x-auto p-3 my-2 rounded"><code>npm create vite@latest my-app</code></pre>
       </li>
       <li>Go to the folder:
-        <pre class="bg-gray-100 p-3 my-2 rounded"><code>cd my-app</code></pre>
+        <pre class="bg-gray-100 overflow-x-auto p-3 my-2 rounded"><code>cd my-app</code></pre>
       </li>
       <li>Install dependencies:
-        <pre class="bg-gray-100 p-3 my-2 rounded"><code>npm install</code></pre>
+        <pre class="bg-gray-100 overflow-x-auto p-3 my-2 rounded"><code>npm install</code></pre>
       </li>
       <li>Run dev server:
-        <pre class="bg-gray-100 p-3 my-2 rounded"><code>npm run dev</code></pre>
+        <pre class="bg-gray-100 overflow-x-auto p-3 my-2 rounded"><code>npm run dev</code></pre>
         Dev server runs at <a href="http://localhost:5173" target="_blank">http://localhost:5173/</a>
       </li>
     </ol>
@@ -2273,7 +2125,7 @@ export default UncontrolledForm;
     <h2 class="text-2xl font-bold text-blue-600 mb-3">D. Running Production Build</h2>
     <p class="text-gray-700 mb-4">
       To deploy a React app, run:
-      <pre class="bg-gray-100 p-3 rounded"><code>npm run build</code></pre>
+      <pre class="bg-gray-100 overflow-x-auto p-3 rounded"><code>npm run build</code></pre>
       This creates an optimized <code>build/</code> folder with minified JS, CSS, and HTML ready for production deployment.
     </p>
 
@@ -2365,7 +2217,7 @@ export default UncontrolledForm;
     </p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Creating a Context</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React, { createContext, useContext, useState } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React, { createContext, useContext, useState } from "react";
 
 // 1. Create Context
 const ThemeContext = createContext();
@@ -2504,7 +2356,7 @@ export default App;
     </p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Syntax</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const [state, dispatch] = useReducer(reducer, initialState);
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const [state, dispatch] = useReducer(reducer, initialState);
 
 state     - current state value
 dispatch  - function to send actions to reducer
@@ -2513,7 +2365,7 @@ initialState - initial state value
 </code></pre>
 
     <h3 class="text-xl font-semibold mb-2">Example: Counter with useReducer</h3>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React, { useReducer } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React, { useReducer } from "react";
 
 // 1. Reducer function
 function reducer(state, action) {
@@ -2551,7 +2403,7 @@ export default Counter;
     <p>Reducer describes how state updates based on action types. Dispatch sends actions. State holds current value. This setup is better for multiple related state updates.</p>
 
     <h3 class="text-xl font-semibold mb-2">Example: Form with useReducer</h3>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React, { useReducer } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React, { useReducer } from "react";
 
 const initialState = { username: "", email: "" };
 
@@ -2724,13 +2576,13 @@ export default Form;
     </p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Syntax</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const memoizedFunction = useCallback(() =&gt; {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const memoizedFunction = useCallback(() =&gt; {
   // function logic
 }, [dependencies]);</code></pre>
     <p>The function is recreated only if dependencies change.</p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Example: Basic useCallback</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React, { useState, useCallback } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React, { useState, useCallback } from "react";
 
 function Counter() {
   const [count, setCount] = useState(0);
@@ -2752,7 +2604,7 @@ export default Counter;
     <p>Without <code>useCallback</code>, <code>increment</code> would be recreated every render. Memoizing keeps the function stable.</p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Example: Preventing Unnecessary Child Re-renders</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React, { useState, useCallback } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React, { useState, useCallback } from "react";
 
 const Child = React.memo(({ handleClick }) =&gt; {
   console.log("Child rendered");
@@ -2872,14 +2724,14 @@ export default Parent;
     </p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Syntax</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const memoizedValue = useMemo(() =&gt; {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const memoizedValue = useMemo(() =&gt; {
   // expensive calculation
   return result;
 }, [dependencies]);</code></pre>
     <p>The calculation runs only when dependencies change. It returns the memoized value.</p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Example: Expensive Calculation</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React, { useState, useMemo } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React, { useState, useMemo } from "react";
 
 function ExpensiveComponent() {
   const [count, setCount] = useState(0);
@@ -2915,7 +2767,7 @@ export default ExpensiveComponent;
     </p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Example: Filtering a Large List</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React, { useState, useMemo } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React, { useState, useMemo } from "react";
 
 function UserList({ users }) {
   const [search, setSearch] = useState("");
@@ -3060,12 +2912,12 @@ export default UserList;
     </p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Syntax</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const refContainer = useRef(initialValue);
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const refContainer = useRef(initialValue);
 
 refContainer.current // holds the value or DOM element</code></pre>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">A. Accessing DOM Elements</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React, { useRef } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React, { useRef } from "react";
 
 function InputFocus() {
   const inputRef = useRef();
@@ -3089,7 +2941,7 @@ export default InputFocus;</code></pre>
     </p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">B. Storing Mutable Values</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React, { useRef, useState, useEffect } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React, { useRef, useState, useEffect } from "react";
 
 function RenderCounter() {
   const [count, setCount] = useState(0);
@@ -3114,7 +2966,7 @@ export default RenderCounter;</code></pre>
     </p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">C. Combining with useEffect</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React, { useState, useEffect, useRef } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React, { useState, useEffect, useRef } from "react";
 
 function PreviousValue() {
   const [count, setCount] = useState(0);
@@ -3262,7 +3114,7 @@ export default PreviousValue;
     </ul>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">A. Example: useFetch Custom Hook</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import { useState, useEffect } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import { useState, useEffect } from "react";
 
 function useFetch(url) {
   const [data, setData] = useState(null);
@@ -3298,7 +3150,7 @@ export default useFetch;
     </p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">B. Using the Custom Hook</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React from "react";
 import useFetch from "./useFetch";
 
 function Users() {
@@ -3324,7 +3176,7 @@ export default Users;
     </p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">C. Example: useCounter Custom Hook</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import { useState } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import { useState } from "react";
 
 function useCounter(initialValue = 0) {
   const [count, setCount] = useState(initialValue);
@@ -3340,7 +3192,7 @@ export default useCounter;
 </code></pre>
 
     <h3 class="text-xl font-semibold mb-2">Usage:</h3>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React from "react";
 import useCounter from "./useCounter";
 
 function CounterApp() {
@@ -3494,7 +3346,7 @@ export default CounterApp;
     <h2 class="text-2xl font-bold text-blue-600 mb-3">A. Context API (Global State Management)</h2>
     <p>Context API allows sharing state globally without prop drilling (avoiding passing props through many component layers).</p>
 
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React, { createContext, useState, useContext } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React, { createContext, useState, useContext } from "react";
 
 // 1. Create Context
 const ThemeContext = createContext();
@@ -3551,11 +3403,11 @@ export default App;</code></pre>
     <ol class="list-decimal list-inside mb-4">
       <li>
         <strong>Install dependencies:</strong>
-        <pre class="bg-gray-100 p-3 rounded"><code>npm install @reduxjs/toolkit react-redux</code></pre>
+        <pre class="bg-gray-100 overflow-x-auto p-3 rounded"><code>npm install @reduxjs/toolkit react-redux</code></pre>
       </li>
       <li>
         <strong>Create a slice:</strong>
-        <pre class="bg-gray-100 p-3 rounded"><code>// counterSlice.js
+        <pre class="bg-gray-100 overflow-x-auto p-3 rounded"><code>// counterSlice.js
 import { createSlice } from "@reduxjs/toolkit";
 
 export const counterSlice = createSlice({
@@ -3574,7 +3426,7 @@ export default counterSlice.reducer;
       </li>
       <li>
         <strong>Configure store:</strong>
-        <pre class="bg-gray-100 p-3 rounded"><code>// store.js
+        <pre class="bg-gray-100 overflow-x-auto p-3 rounded"><code>// store.js
 import { configureStore } from "@reduxjs/toolkit";
 import counterReducer from "./counterSlice";
 
@@ -3585,7 +3437,7 @@ export const store = configureStore({
       </li>
       <li>
         <strong>Provide store in app:</strong>
-        <pre class="bg-gray-100 p-3 rounded"><code>// index.js
+        <pre class="bg-gray-100 overflow-x-auto p-3 rounded"><code>// index.js
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
@@ -3602,7 +3454,7 @@ ReactDOM.render(
       </li>
       <li>
         <strong>Use Redux in component:</strong>
-        <pre class="bg-gray-100 p-3 rounded"><code>import React from "react";
+        <pre class="bg-gray-100 overflow-x-auto p-3 rounded"><code>import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { increment, decrement, reset } from "./counterSlice";
 
@@ -3769,10 +3621,10 @@ export default Counter;
     </p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Installation</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>npm install react-router-dom</code></pre>
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>npm install react-router-dom</code></pre>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">A. Basic Routing</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function Home() {
@@ -3803,7 +3655,7 @@ export default App;
     <p>Router wraps the app; Routes contain all routes; Route defines path & component; Link enables navigation without reload.</p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">B. Dynamic Routes</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link, useParams } from "react-router-dom";
 
 function User() {
@@ -3830,7 +3682,7 @@ export default App;
     <p><code>:id</code> denotes a dynamic segment; <code>useParams()</code> accesses the parameter.</p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">C. Nested Routes</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link, Outlet } from "react-router-dom";
 
 function Dashboard() {
@@ -3866,7 +3718,7 @@ export default App;
     <p><code>Outlet</code> renders nested routes. Nested routes organize hierarchies.</p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">D. Programmatic Navigation</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React from "react";
 import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
 
 function Home() {
@@ -4066,7 +3918,7 @@ export default App;
       <code>React.memo</code> is a Higher-Order Component that memoizes functional components.
       It skips re-rendering if props haven't changed, similar to <code>PureComponent</code> in class components.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React, { useState } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React, { useState } from "react";
 
 const Child = React.memo(({ name }) => {
   console.log("Child rendered");
@@ -4089,7 +3941,7 @@ export default Parent;</code></pre>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">B. useCallback for Function Memoization</h2>
     <p>Memoizes functions passed to child components to prevent unnecessary re-rendering.</p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React, { useState, useCallback } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React, { useState, useCallback } from "react";
 
 const Button = React.memo(({ handleClick }) =&gt; {
   console.log("Button rendered");
@@ -4116,7 +3968,7 @@ export default App;</code></pre>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">C. useMemo for Expensive Calculations</h2>
     <p>Memoizes computationally heavy values to prevent recalculation on every render.</p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React, { useMemo } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React, { useMemo } from "react";
 
 function ExpensiveComponent({ num }) {
   const factorial = (n) =&gt; (n &lt;= 0 ? 1 : n * factorial(n - 1));
@@ -4128,7 +3980,7 @@ function ExpensiveComponent({ num }) {
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">D. Code Splitting and Lazy Loading</h2>
     <p>Splits app into smaller chunks, improving the initial load time.</p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React, { Suspense, lazy } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React, { Suspense, lazy } from "react";
 
 const About = lazy(() =&gt; import("./About"));
 
@@ -4270,7 +4122,7 @@ export default App;
       React apps fetch data from APIs, managing loading, success, and error states.
       The native Fetch API can be used within <code>useEffect</code> for this purpose.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React, { useState, useEffect } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React, { useState, useEffect } from "react";
 
 function Users() {
   const [users, setUsers] = useState([]);
@@ -4306,8 +4158,8 @@ export default Users;
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">B. Using Axios</h2>
     <p>Axios is a promise-based HTTP client with easier syntax and features like interceptors.</p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>npm install axios</code></pre>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React, { useState, useEffect } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>npm install axios</code></pre>
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 function Users() {
@@ -4339,7 +4191,7 @@ export default Users;
     <p>Axios automatically parses JSON and has better error handling.</p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">C. Handling Form Submission & POST Requests</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React, { useState } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React, { useState } from "react";
 import axios from "axios";
 
 function AddUser() {
@@ -4515,12 +4367,12 @@ export default AddUser;
     </ul>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">C. Setting Up</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>npm install --save-dev jest @testing-library/react @testing-library/jest-dom</code></pre>
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>npm install --save-dev jest @testing-library/react @testing-library/jest-dom</code></pre>
     <p>With Create React App, Jest is preinstalled.</p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">D. Writing a Simple Test</h2>
     <p><strong>Counter Component</strong></p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>// Counter.js
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>// Counter.js
 import React, { useState } from "react";
 
 function Counter() {
@@ -4538,7 +4390,7 @@ export default Counter;
 </code></pre>
 
     <p><strong>Test File</strong></p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>// Counter.test.js
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>// Counter.test.js
 import { render, screen, fireEvent } from "@testing-library/react";
 import Counter from "./Counter";
 
@@ -4565,7 +4417,7 @@ test("increments count on button click", () =&gt; {
     </ul>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">E. Testing Props</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function Greeting({ name }) {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function Greeting({ name }) {
   return &lt;h1&gt;Hello, {name}!&lt;/h1&gt;;
 }
 
@@ -4578,7 +4430,7 @@ test("renders greeting with name", () =&gt; {
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">F. Snapshot Testing</h2>
     <p>Used to detect unintended UI changes.</p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import renderer from "react-test-renderer";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import renderer from "react-test-renderer";
 import Counter from "./Counter";
 
 test("Counter snapshot", () =&gt; {
@@ -4688,7 +4540,7 @@ test("Counter snapshot", () => {
       CSS Modules are CSS files scoped locally to components.
       This prevents class name collisions in large projects automatically.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>/* Counter.module.css */
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>/* Counter.module.css */
 .counter {
   background-color: #f0f0f0;
   padding: 20px;
@@ -4702,7 +4554,7 @@ test("Counter snapshot", () => {
   padding: 10px 15px;
   cursor: pointer;
 }</code></pre>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React, { useState } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React, { useState } from "react";
 import styles from "./Counter.module.css";
 
 function Counter() {
@@ -4723,8 +4575,8 @@ export default Counter;</code></pre>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">B. Styled-Components (CSS-in-JS)</h2>
     <p>Write CSS inside JavaScript using template literals with dynamically generated unique class names.</p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>npm install styled-components</code></pre>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React, { useState } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>npm install styled-components</code></pre>
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React, { useState } from "react";
 import styled from "styled-components";
 
 const Container = styled.div\`
@@ -4761,7 +4613,7 @@ export default Counter;</code></pre>
       Tailwind CSS uses utility classes directly in JSX.
       No separate CSS files needed.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>npm install -D tailwindcss postcss autoprefixer
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 
 // tailwind.config.js
@@ -4776,7 +4628,7 @@ module.exports = {
 @tailwind components;
 @tailwind utilities;
 </code></pre>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React, { useState } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React, { useState } from "react";
 
 function Counter() {
   const [count, setCount] = useState(0);
@@ -4956,7 +4808,7 @@ export default Counter;
     </ul>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Importance of Keys in Lists</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const fruits = ["Apple", "Banana", "Cherry"];
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const fruits = ["Apple", "Banana", "Cherry"];
 
 function FruitList() {
   return (
@@ -4973,7 +4825,7 @@ function FruitList() {
     </p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">Example of Efficient Update</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React, { useState } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React, { useState } from "react";
 
 function App() {
   const [items, setItems] = useState([{ id: 1, name: "Apple" }]);
@@ -5147,7 +4999,7 @@ export default App;
       <li><strong>Plugins:</strong> Extend Webpack functionality, e.g. <code>HtmlWebpackPlugin</code>, <code>MiniCssExtractPlugin</code>.</li>
       <li><strong>Dev Server:</strong> Provides hot reloading during development.</li>
     </ul>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>// webpack.config.js
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>// webpack.config.js
 const path = require("path");
 
 module.exports = {
@@ -5176,7 +5028,7 @@ module: {
       <li>Supports modern syntax: ES6+, TypeScript out of the box.</li>
       <li>Simple configuration compared to Webpack’s complexity.</li>
     </ul>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code># Create React app with Vite
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code># Create React app with Vite
 npm create vite@latest my-app
 cd my-app
 npm install
@@ -5257,7 +5109,7 @@ npm run dev
       An HOC is a function that takes a component and returns a new component.
       It’s used to share reusable logic across multiple components.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>// withLogger.js
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>// withLogger.js
 import React from "react";
 
 const withLogger = (WrappedComponent) =&gt; {
@@ -5285,7 +5137,7 @@ export default withLogger(Hello);
     <p>
       A component receives a function as a prop to dynamically render content.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function MouseTracker({ render }) {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function MouseTracker({ render }) {
   const [x, setX] = React.useState(0);
   const [y, setY] = React.useState(0);
 
@@ -5308,7 +5160,7 @@ function App() {
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">C. Compound Components Pattern</h2>
     <p>This pattern allows children components to share state managed by their parent.</p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function Tabs({ children }) {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function Tabs({ children }) {
   const [activeIndex, setActiveIndex] = React.useState(0);
 
   return React.Children.map(children, (child, index) =&gt;
@@ -5342,7 +5194,7 @@ function App() {
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">D. Prop Getters and State Reducers (for Custom Hooks)</h2>
     <p>Custom hooks can provide prop getters to let users customize event handlers and state reducers for flexible state management.</p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function useToggle(initial = false) {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function useToggle(initial = false) {
   const [on, setOn] = React.useState(initial);
 
   const getTogglerProps = ({ onClick, ...props } = {}) =&gt; ({
@@ -5501,7 +5353,7 @@ function ToggleButton() {
       Ideal for side effects like API calls, subscriptions, and timers.<br/>
       Non-blocking: it does not block browser painting.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React, { useState, useEffect } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React, { useState, useEffect } from "react";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -5520,7 +5372,7 @@ function App() {
       Blocks browser painting until it finishes.<br/>
       Useful for reading layout measurements and synchronizing DOM mutations.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React, { useState, useLayoutEffect, useRef } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React, { useState, useLayoutEffect, useRef } from "react";
 
 function App() {
   const [width, setWidth] = useState(0);
@@ -5545,7 +5397,7 @@ function App() {
       Customize the instance value exposed to a parent component via <code>ref</code>.<br/>
       Useful to expose imperative methods of child components safely.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React, { useRef, useImperativeHandle, forwardRef } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React, { useRef, useImperativeHandle, forwardRef } from "react";
 
 const Input = forwardRef((props, ref) =&gt; {
   const inputRef = useRef();
@@ -5611,7 +5463,7 @@ function App() {
       Server-Side Rendering (SSR) means React components are rendered on the server before the HTML is sent to the browser.
       This provides fully rendered HTML on page load, improving SEO and speeding up first paint.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>// pages/index.js
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>// pages/index.js
 export async function getServerSideProps() {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts");
   const posts = await res.json();
@@ -5640,7 +5492,7 @@ export default function Home({ posts }) {
       Great for pages with static or rarely changing content.
       These static pages load very fast because they can be served from a CDN.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>// pages/posts.js
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>// pages/posts.js
 export async function getStaticProps() {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts");
   const posts = await res.json();
@@ -5721,7 +5573,7 @@ export default function Posts({ posts }) {
     </ul>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">B. Setting Up TypeScript with React</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code># Using Create React App
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code># Using Create React App
 npx create-react-app my-app --template typescript
 
 # Using Vite
@@ -5731,7 +5583,7 @@ npm create vite@latest my-app -- --template react-ts
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">C. Typing Components</h2>
     <h3 class="font-semibold">1. Functional Component</h3>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>type GreetingProps = {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>type GreetingProps = {
   name: string;
   age?: number; // optional prop
 };
@@ -5740,7 +5592,7 @@ const Greeting: React.FC&lt;GreetingProps&gt; = ({ name, age }) =&gt; {
   return &lt;h1&gt;Hello, {name}! {age && \`Age: \${age}\`}&lt;/h1&gt;;
 };</code></pre>
     <h3 class="font-semibold">2. Props Interface</h3>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>interface ButtonProps {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>interface ButtonProps {
   label: string;
   onClick: () =&gt; void;
 }
@@ -5751,7 +5603,7 @@ const Button = ({ label, onClick }: ButtonProps) =&gt; (
 </code></pre>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">D. Typing State and Hooks</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React, { useState } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React, { useState } from "react";
 
 function Counter() {
   const [count, setCount] = useState&lt;number&gt;(0); // type annotation
@@ -5762,7 +5614,7 @@ function Counter() {
     <p><code>useState&lt;Type&gt;()</code> specifies the type of the state value explicitly, improving type safety.</p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">E. Typing Events</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function Input() {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function Input() {
   const handleChange = (e: React.ChangeEvent&lt;HTMLInputElement&gt;) =&gt; {
     console.log(e.target.value);
   };
@@ -5773,7 +5625,7 @@ function Counter() {
     <p>React provides built-in event types like <code>React.ChangeEvent&lt;HTMLInputElement&gt;</code> for type-safe event handling.</p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">F. Typing Refs</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React, { useRef } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React, { useRef } from "react";
 
 function TextInput() {
   const inputRef = useRef&lt;HTMLInputElement | null&gt;(null);
@@ -5877,7 +5729,7 @@ function TextInput() {
     <p>
       Generate a production-ready optimized build folder containing minified JS/CSS, optimized images, and hashed filenames for cache busting.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code># Create React App
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code># Create React App
 npm run build
 
 # Vite
@@ -5886,13 +5738,13 @@ npm run build
 
     <h3 class="font-semibold mb-2">2. Bundle Analysis</h3>
     <p>Identify large files, unused libraries, and code splitting opportunities using tools like source-map-explorer or Webpack Bundle Analyzer.</p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>npm install source-map-explorer --save-dev
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>npm install source-map-explorer --save-dev
 npx source-map-explorer build/static/js/*.js
 </code></pre>
 
     <h3 class="font-semibold mb-2">3. Code Splitting & Lazy Loading</h3>
     <p>Split large components to reduce initial load and improve performance.</p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>import React, { Suspense, lazy } from "react";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>import React, { Suspense, lazy } from "react";
 
 const HeavyComponent = lazy(() => import("./HeavyComponent"));
 

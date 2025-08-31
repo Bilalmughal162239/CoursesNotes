@@ -4,24 +4,33 @@
   left: 0;
   right: 0;
   z-index: 50;
-  background-color: rgba(255, 255, 255, 0.9); /* bg-white/90 */
-  backdrop-filter: blur(12px); /* backdrop-blur-md */
-  border-bottom: 1px solid rgba(229, 231, 235, 0.5); /* border-gray-200/50 */
+  background-color: rgba(255, 255, 255, 0.9);
+  /* bg-white/90 */
+  backdrop-filter: blur(12px);
+  /* backdrop-blur-md */
+  border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+  /* border-gray-200/50 */
   transition: all 0.3s ease;
 
   &.scrolled {
-    background-color: rgba(255, 255, 255, 0.95); /* bg-white/95 */
+    background-color: rgba(255, 255, 255, 0.95);
+    /* bg-white/95 */
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-                0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    /* shadow-lg */
   }
 
   .logo-icon {
-    padding: 0.5rem; /* p-2 */
-    background: linear-gradient(to bottom right, #3b82f6, #8b5cf6); /* from-primary-500 to-secondary-500 */
-    border-radius: 0.5rem; /* rounded-lg */
+    padding: 0.5rem;
+    /* p-2 */
+    background: linear-gradient(to bottom right, #3b82f6, #8b5cf6);
+    /* from-primary-500 to-secondary-500 */
+    border-radius: 0.5rem;
+    /* rounded-lg */
 
     svg {
-      color: #fff; /* text-white */
+      color: #fff;
+      /* text-white */
     }
   }
 
@@ -34,14 +43,22 @@
       bottom: 0;
       left: 0;
       width: 0;
-      height: 2px; /* h-0.5 */
-      background: linear-gradient(to right, #3b82f6, #8b5cf6); /* from-primary-500 to-secondary-500 */
+      height: 2px;
+      /* h-0.5 */
+      background: linear-gradient(to right, #3b82f6, #8b5cf6);
+      /* from-primary-500 to-secondary-500 */
       transition: width 0.3s ease;
     }
 
     &:hover::after {
       width: 100%;
     }
+  }
+
+  .mobile-nav-scroll-container {
+    max-height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   .mobile-nav-link {
@@ -54,7 +71,8 @@
 @media (max-width: 768px) {
   .header {
     .logo-text {
-      font-size: 1.125rem; /* text-lg */
+      font-size: 1.125rem;
+      /* text-lg */
       line-height: 1.75rem;
     }
   }

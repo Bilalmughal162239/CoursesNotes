@@ -40,30 +40,30 @@ const Header = () => {
   const navItems = [
     { name: 'Home', icon: FaHome, href: '/' },
     { name: 'About', icon: FaUser, href: '/about' },
-    { name: 'Contact', icon: FaEnvelope, href: 'Contact' },
+    { name: 'Contact', icon: FaEnvelope, href: '/Contact' },
   ];
 
   const courseItems = [
-    { name: 'HTML', icon: FaHtml5, color: "text-orange-600", href: 'HTMLNotesPage' },
-    { name: 'CSS', icon: FaCss3Alt, color: "text-blue-600", href: 'CssNotesPage' },
-    { name: 'Bootstrap', icon: SiBootstrap, color: "text-purple-600", href: 'BootstrapNotes' },
-    { name: 'JavaScript', icon: FaJs, color: "text-yellow-500", href: 'JavaSceriptNotes' },
-    { name: 'React', icon: FaReact, color: "text-cyan-400", href: 'ReactNotesPage' },
-    { name: 'Node.js', icon: FaNodeJs, color: "text-green-600", href: 'NodeNotesPage' },
-    { name: 'C', icon: SiCheerio, color: "text-blue-600", href: 'CLanguageNotes' },
-    { name: 'C++', icon: SiCplusplus, color: "text-indigo-700", href: 'CppNotesPage' },
-    { name: 'Python', icon: FaPython, color: "text-green-700", href: 'PythonNotes' }, 
+    { name: 'HTML', icon: FaHtml5, color: "text-orange-600", href: '/HTMLNotesPage' },
+    { name: 'CSS', icon: FaCss3Alt, color: "text-blue-600", href: '/CssNotesPage' },
+    { name: 'Bootstrap', icon: SiBootstrap, color: "text-purple-600", href: '/BootstrapNotes' },
+    { name: 'JavaScript', icon: FaJs, color: "text-yellow-500", href: '/JavaSceriptNotes' },
+    { name: 'React', icon: FaReact, color: "text-cyan-400", href: '/ReactNotesPage' },
+    { name: 'Node.js', icon: FaNodeJs, color: "text-green-600", href: '/NodeNotesPage' },
+    { name: 'C', icon: SiCheerio, color: "text-blue-600", href: '/CLanguageNotes' },
+    { name: 'C++', icon: SiCplusplus, color: "text-indigo-700", href: '/CppNotesPage' },
+    { name: 'Python', icon: FaPython, color: "text-green-700", href: '/PythonNotes' }, 
   ];
   const quizeItems = [
-    { name: 'HTML', icon: FaHtml5, color: "text-orange-600", href: 'quize-html' },
-    { name: 'CSS', icon: FaCss3Alt, color: "text-blue-600", href: 'quize-css' },
-    { name: 'Bootstrap', icon: SiBootstrap, color: "text-purple-600", href: 'quize-bootstrap' },
-    { name: 'JavaScript', icon: FaJs, color: "text-yellow-500", href: 'quize-javascript' },
-    { name: 'React', icon: FaReact, color: "text-cyan-400", href: 'quize-react' },
-    { name: 'Node.js', icon: FaNodeJs, color: "text-green-600", href: 'quize-node' },
-    { name: 'C', icon: SiCheerio, color: "text-blue-600", href: 'quize-c' },
-    { name: 'C++', icon: SiCplusplus, color: "text-indigo-700", href: 'quize-cpp' },
-    { name: 'Python', icon: FaPython, color: "text-green-700", href: 'quize-python' }, 
+    { name: 'HTML', icon: FaHtml5, color: "text-orange-600", href: '/quize-html' },
+    { name: 'CSS', icon: FaCss3Alt, color: "text-blue-600", href: '/quize-css' },
+    { name: 'Bootstrap', icon: SiBootstrap, color: "text-purple-600", href: '/quize-bootstrap' },
+    { name: 'JavaScript', icon: FaJs, color: "text-yellow-500", href: '/quize-js' },
+    { name: 'React', icon: FaReact, color: "text-cyan-400", href: '/quize-react' },
+    { name: 'Node.js', icon: FaNodeJs, color: "text-green-600", href: '/quize-node' },
+    { name: 'C', icon: SiCheerio, color: "text-blue-600", href: '/quize-c-language' },
+    { name: 'C++', icon: SiCplusplus, color: "text-indigo-700", href: '/quize-cpp' },
+    { name: 'Python', icon: FaPython, color: "text-green-700", href: '/quize-python' }, 
   ];
 
 
@@ -225,9 +225,9 @@ const Header = () => {
             height: isMenuOpen ? 'auto' : 0
           }}
           transition={{ duration: 0.3 }}
-          className="lg:hidden overflow-hidden"
+          className="lg:hidden"
         >
-          <div className="py-4 space-y-2">
+          <div className="mobile-nav-scroll-container py-4 space-y-2">
             {navItems.map((item, index) => (
               <motion.a
                 key={item.name}
@@ -298,7 +298,7 @@ const Header = () => {
                   animate={{ opacity: 1, height: 'auto' }}
                   className="pl-8 mt-2 space-y-2"
                 >
-                  {courseItems.map((item, index) => (
+                  {quizeItems.map((item, index) => (
                     <motion.a
                       key={item.name}
                       href={item.href}

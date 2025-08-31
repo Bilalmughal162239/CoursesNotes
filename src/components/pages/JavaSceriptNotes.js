@@ -65,12 +65,12 @@ const JavaSceriptNotes = () => {
       </ul>
 
       <h3 class="text-xl font-semibold text-green-600 mb-2">Comments</h3>
-      <pre class="bg-black text-white p-3 rounded-lg mb-4"><code>// Single-line comment
+      <pre class="bg-black text-white p-3 rounded-lg mb-4 overflow-x-auto"><code>// Single-line comment
 /* Multi-line
    comment */</code></pre>
 
       <h3 class="text-xl font-semibold text-purple-600 mb-2">Statements Example</h3>
-      <pre class="bg-black text-white p-3 rounded-lg"><code>let name = "Bilal"; // variable declaration
+      <pre class="bg-black text-white p-3 rounded-lg overflow-x-auto"><code>let name = "Bilal"; // variable declaration
 console.log("Hello " + name); // output statement</code></pre>
     </div>
   `,
@@ -120,7 +120,7 @@ console.log("Hello " + name); // output statement</code></pre>
       </ul>
 
       <h3 class="text-xl font-semibold text-blue-600 mb-2">Example</h3>
-      <pre class="bg-black text-white p-3 rounded-lg"><code>if (true) {
+      <pre class="bg-black text-white p-3 rounded-lg overflow-x-auto"><code>if (true) {
   var x = 10;   // accessible outside block
   let y = 20;   // only inside block
   const z = 30; // only inside block
@@ -181,19 +181,19 @@ console.log(z); // Error</code></pre>
       </ul>
 
       <h3 class="text-xl font-semibold text-purple-600 mb-2">Examples</h3>
-      <pre class="bg-black text-white p-3 rounded-lg mb-4"><code>let name = "Ali";        // string
+      <pre class="bg-black text-white p-3 rounded-lg mb-4 overflow-x-auto"><code>let name = "Ali";        // string
 let age = 21;            // number
 let isStudent = true;    // boolean
 let car = null;          // null
 let data;                // undefined</code></pre>
 
       <h3 class="text-xl font-semibold text-blue-600 mb-2">Type Conversion (Explicit)</h3>
-      <pre class="bg-black text-white p-3 rounded-lg mb-4"><code>Number("123"); // 123
+      <pre class="bg-black text-white p-3 rounded-lg mb-4 overflow-x-auto"><code>Number("123"); // 123
 String(45);    // "45"
 Boolean(0);    // false</code></pre>
 
       <h3 class="text-xl font-semibold text-yellow-600 mb-2">Type Coercion (Implicit)</h3>
-      <pre class="bg-black text-white p-3 rounded-lg"><code>"5" + 2  // "52" (string concatenation)
+      <pre class="bg-black text-white p-3 rounded-lg overflow-x-auto"><code>"5" + 2  // "52" (string concatenation)
 "5" - 2  // 3   (converted to number)</code></pre>
     </div>
   `,
@@ -267,7 +267,7 @@ Boolean(0);    // false</code></pre>
       </ul>
 
       <h3 class="text-xl font-semibold text-blue-600 mb-2">Example</h3>
-      <pre class="bg-black text-white p-3 rounded-lg"><code>let a = 5, b = "5";
+      <pre class="bg-black text-white p-3 rounded-lg overflow-x-auto"><code>let a = 5, b = "5";
 console.log(a == b);  // true (loose equality)
 console.log(a === b); // false (strict equality)</code></pre>
     </div>
@@ -310,7 +310,7 @@ console.log(a === b); // false (strict equality)</code></pre>
 
       <h3 class="text-xl font-semibold text-red-600 mb-2">if-else</h3>
       <p class="text-gray-700 mb-2">Executes a block of code if the condition is true, otherwise executes another block.</p>
-      <pre class="bg-black text-white p-3 rounded-lg mb-4"><code>let age = 18;
+      <pre class="bg-black text-white p-3 rounded-lg mb-4 overflow-x-auto"><code>let age = 18;
 if (age >= 18) {
   console.log("You are an adult");
 } else {
@@ -319,7 +319,7 @@ if (age >= 18) {
 
       <h3 class="text-xl font-semibold text-green-600 mb-2">switch-case</h3>
       <p class="text-gray-700 mb-2">Used to perform different actions based on multiple possible values of a variable.</p>
-      <pre class="bg-black text-white p-3 rounded-lg mb-4"><code>let day = "Monday";
+      <pre class="bg-black text-white p-3 rounded-lg mb-4 overflow-x-auto"><code>let day = "Monday";
 switch (day) {
   case "Monday": 
     console.log("Start of the week"); 
@@ -333,7 +333,7 @@ switch (day) {
 
       <h3 class="text-xl font-semibold text-purple-600 mb-2">Ternary Operator</h3>
       <p class="text-gray-700 mb-2">A shorthand way of writing simple if-else conditions.</p>
-      <pre class="bg-black text-white p-3 rounded-lg"><code>let result = (age >= 18) ? "Adult" : "Minor";</code></pre>
+      <pre class="bg-black text-white p-3 rounded-lg overflow-x-auto"><code>let result = (age >= 18) ? "Adult" : "Minor";</code></pre>
     </div>
   `,
           code: `
@@ -372,13 +372,13 @@ switch (day) {
 
       <h3 class="text-xl font-semibold text-red-600 mb-2">for loop</h3>
       <p class="text-gray-700 mb-2">Repeats code a specific number of times.</p>
-      <pre class="bg-black text-white p-3 rounded-lg mb-4"><code>for (let i = 0; i < 5; i++) {
+      <pre class="bg-black overflow-x-auto text-white p-3 rounded-lg mb-4"><code>for (let i = 0; i < 5; i++) {
   console.log(i);
 }</code></pre>
 
       <h3 class="text-xl font-semibold text-green-600 mb-2">while loop</h3>
       <p class="text-gray-700 mb-2">Executes as long as the condition is true.</p>
-      <pre class="bg-black text-white p-3 rounded-lg mb-4"><code>let i = 0;
+      <pre class="bg-black overflow-x-auto text-white p-3 rounded-lg mb-4"><code>let i = 0;
 while (i < 5) {
   console.log(i);
   i++;
@@ -386,7 +386,7 @@ while (i < 5) {
 
       <h3 class="text-xl font-semibold text-purple-600 mb-2">do-while loop</h3>
       <p class="text-gray-700 mb-2">Executes the block at least once before checking the condition.</p>
-      <pre class="bg-black text-white p-3 rounded-lg mb-4"><code>let j = 0;
+      <pre class="bg-black overflow-x-auto text-white p-3 rounded-lg mb-4"><code>let j = 0;
 do {
   console.log(j);
   j++;
@@ -394,14 +394,14 @@ do {
 
       <h3 class="text-xl font-semibold text-blue-600 mb-2">for-in loop</h3>
       <p class="text-gray-700 mb-2">Used for iterating over object properties.</p>
-      <pre class="bg-black text-white p-3 rounded-lg mb-4"><code>let obj = {name: "Ali", age: 21};
+      <pre class="bg-black overflow-x-auto text-white p-3 rounded-lg mb-4"><code>let obj = {name: "Ali", age: 21};
 for (let key in obj) {
   console.log(key, obj[key]);
 }</code></pre>
 
       <h3 class="text-xl font-semibold text-yellow-600 mb-2">for-of loop</h3>
       <p class="text-gray-700 mb-2">Used for iterating over arrays or strings.</p>
-      <pre class="bg-black text-white p-3 rounded-lg"><code>let arr = [10, 20, 30];
+      <pre class="bg-black overflow-x-auto text-white p-3 rounded-lg"><code>let arr = [10, 20, 30];
 for (let value of arr) {
   console.log(value);
 }</code></pre>
@@ -448,26 +448,26 @@ for (let value of arr) {
 
       <h3 class="text-xl font-semibold text-green-600 mb-2">Function Declaration</h3>
       <p class="text-gray-700 mb-2">Defined using the <code>function</code> keyword.</p>
-      <pre class="bg-black text-white p-3 rounded-lg mb-4"><code>function greet(name) {
+      <pre class="bg-black text-white p-3 rounded-lg mb-4 overflow-x-auto "><code>function greet(name) {
   return "Hello " + name;
 }
 console.log(greet("Bilal"));</code></pre>
 
       <h3 class="text-xl font-semibold text-purple-600 mb-2">Function Expression</h3>
       <p class="text-gray-700 mb-2">Stored inside a variable.</p>
-      <pre class="bg-black text-white p-3 rounded-lg mb-4"><code>const add = function(a, b) {
+      <pre class="bg-black text-white p-3 rounded-lg mb-4 overflow-x-auto "><code>const add = function(a, b) {
   return a + b;
 };
 console.log(add(5, 3));</code></pre>
 
       <h3 class="text-xl font-semibold text-red-600 mb-2">Arrow Function</h3>
       <p class="text-gray-700 mb-2">Shorter syntax introduced in ES6.</p>
-      <pre class="bg-black text-white p-3 rounded-lg mb-4"><code>const multiply = (x, y) => x * y;
+      <pre class="bg-black text-white p-3 rounded-lg mb-4 overflow-x-auto "><code>const multiply = (x, y) => x * y;
 console.log(multiply(4, 6));</code></pre>
 
       <h3 class="text-xl font-semibold text-yellow-600 mb-2">Default Parameters</h3>
       <p class="text-gray-700 mb-2">Allow setting default values for function arguments.</p>
-      <pre class="bg-black text-white p-3 rounded-lg"><code>function welcome(name = "Guest") {
+      <pre class="bg-black text-white p-3 rounded-lg overflow-x-auto"><code>function welcome(name = "Guest") {
   return "Welcome " + name;
 }
 console.log(welcome());
@@ -511,18 +511,18 @@ console.log(welcome("Ali"));</code></pre>
 
       <h3 class="text-xl font-semibold text-green-600 mb-2">Accessing Elements</h3>
       <p class="text-gray-700 mb-2">Use DOM methods to select HTML elements.</p>
-      <pre class="bg-black text-white p-3 rounded-lg mb-4"><code>document.getElementById("demo");
+      <pre class="bg-black text-white p-3 rounded-lg mb-4 overflow-x-auto "><code>document.getElementById("demo");
 document.querySelector(".className");</code></pre>
 
       <h3 class="text-xl font-semibold text-purple-600 mb-2">Changing Content & Styles</h3>
       <p class="text-gray-700 mb-2">Modify text, HTML, or CSS styles dynamically.</p>
-      <pre class="bg-black text-white p-3 rounded-lg mb-4"><code>let el = document.getElementById("demo");
+      <pre class="bg-black text-white p-3 rounded-lg mb-4 overflow-x-auto "><code>let el = document.getElementById("demo");
 el.innerHTML = "New Content";
 el.style.color = "blue";</code></pre>
 
       <h3 class="text-xl font-semibold text-red-600 mb-2">Event Handling</h3>
       <p class="text-gray-700 mb-2">Attach JavaScript functions to user actions (like clicks).</p>
-      <pre class="bg-black text-white p-3 rounded-lg"><code>&lt;button id="btn"&gt;Click Me&lt;/button&gt;
+      <pre class="bg-black text-white p-3 rounded-lg overflow-x-auto"><code>&lt;button id="btn"&gt;Click Me&lt;/button&gt;
 
 &lt;script&gt;
   document.getElementById("btn").addEventListener("click", () =&gt; {
@@ -566,7 +566,7 @@ document.getElementById("btn").addEventListener("mouseover", () => {
       <h3 class="text-xl font-semibold text-blue-600 mb-2">try-catch Block</h3>
       <p class="text-gray-700 mb-2">The <code>try</code> block contains code that might throw an error. 
       If an error occurs, control is passed to the <code>catch</code> block.</p>
-      <pre class="bg-black text-white p-3 rounded-lg mb-4"><code>try {
+      <pre class="bg-black overflow-x-auto text-white p-3 rounded-lg mb-4"><code>try {
   let result = 10 / 0;
   throw new Error("Something went wrong!");
 } catch (err) {
@@ -577,7 +577,7 @@ document.getElementById("btn").addEventListener("mouseover", () => {
 
       <h3 class="text-xl font-semibold text-green-600 mb-2">Custom Errors</h3>
       <p class="text-gray-700 mb-2">You can create and throw your own errors using the <code>Error</code> object.</p>
-      <pre class="bg-black text-white p-3 rounded-lg mb-4"><code>function checkAge(age) {
+      <pre class="bg-black overflow-x-auto text-white p-3 rounded-lg mb-4"><code>function checkAge(age) {
   if (age < 18) {
     throw new Error("Age must be 18 or older");
   }
@@ -637,11 +637,11 @@ try {
 
       <h3 class="text-xl font-semibold text-blue-600 mb-2">1. Inline JavaScript</h3>
       <p class="text-gray-700 mb-2">Directly write JavaScript inside an HTML element’s attribute.</p>
-      <pre class="bg-black text-white p-3 rounded-lg mb-4"><code>&lt;button onclick="alert('Hello!')"&gt;Click&lt;/button&gt;</code></pre>
+      <pre class="bg-black overflow-x-auto text-white p-3 rounded-lg mb-4"><code>&lt;button onclick="alert('Hello!')"&gt;Click&lt;/button&gt;</code></pre>
 
       <h3 class="text-xl font-semibold text-green-600 mb-2">2. Internal JavaScript</h3>
       <p class="text-gray-700 mb-2">Write JavaScript inside the <code>&lt;script&gt;</code> tag in the HTML file.</p>
-      <pre class="bg-black text-white p-3 rounded-lg mb-4"><code>&lt;script&gt;
+      <pre class="bg-black overflow-x-auto text-white p-3 rounded-lg mb-4"><code>&lt;script&gt;
   console.log("Hello from JS");
 &lt;/script&gt;</code></pre>
 
@@ -1125,7 +1125,7 @@ console.log(nested.flat(2)); // [1, 2, 3, 4]
     <p class="text-gray-700 mb-3">
       A <span class="font-semibold">callback</span> is a function passed into another function to run later when a task completes.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function fetchData(callback) {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function fetchData(callback) {
   console.log("Fetching data...");
   setTimeout(() => {
     callback("Data received!");
@@ -1148,7 +1148,7 @@ fetchData((result) => {
       <li><code class="bg-gray-200 px-1 rounded">fulfilled</code> - success</li>
       <li><code class="bg-gray-200 px-1 rounded">rejected</code> - error</li>
     </ul>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>let promise = new Promise((resolve, reject) => {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>let promise = new Promise((resolve, reject) => {
   let success = true;
   setTimeout(() => {
     success ? resolve("Data loaded") : reject("Error loading data");
@@ -1170,7 +1170,7 @@ promise
       <li><code class="bg-gray-200 px-1 rounded">async</code> keyword declares an asynchronous function.</li>
       <li><code class="bg-gray-200 px-1 rounded">await</code> pauses execution until a Promise resolves.</li>
     </ul>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>async function getData() {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>async function getData() {
   try {
     let response = await new Promise((resolve) =>
       setTimeout(() => resolve("Data fetched"), 2000)
@@ -1183,7 +1183,7 @@ promise
 getData();</code></pre>
 
     <h2 class="text-xl font-semibold text-blue-500 mb-2">🌍 Real Example with API</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>async function fetchUsers() {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>async function fetchUsers() {
   try {
     let response = await fetch("https://jsonplaceholder.typicode.com/users");
     let data = await response.json();
@@ -1289,7 +1289,7 @@ fetchUsers();
     <p class="text-gray-700 mb-3">
       Before <code class="bg-gray-200 px-1 rounded">fetch()</code>, <code class="bg-gray-200 px-1 rounded">XMLHttpRequest</code> was used to make HTTP requests.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const xhr = new XMLHttpRequest();
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const xhr = new XMLHttpRequest();
 xhr.open("GET", "https://jsonplaceholder.typicode.com/posts", true);
 
 xhr.onload = function () {
@@ -1316,13 +1316,13 @@ xhr.send();</code></pre>
     </p>
 
     <h3 class="text-lg font-semibold mb-1">Using Promises</h3>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>fetch("https://jsonplaceholder.typicode.com/posts")
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>fetch("https://jsonplaceholder.typicode.com/posts")
   .then(response => response.json())
   .then(data => console.log("Data:", data))
   .catch(error => console.error("Error:", error));</code></pre>
 
     <h3 class="text-lg font-semibold mb-1">Using Async/Await</h3>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>async function getPosts() {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>async function getPosts() {
   try {
     let response = await fetch("https://jsonplaceholder.typicode.com/posts");
     let data = await response.json();
@@ -1334,7 +1334,7 @@ xhr.send();</code></pre>
 getPosts();</code></pre>
 
     <h2 class="text-xl font-semibold text-blue-500 mb-2">📤 Sending Data (POST Request)</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>async function addPost() {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>async function addPost() {
   try {
     let response = await fetch("https://jsonplaceholder.typicode.com/posts", {
       method: "POST",
@@ -1450,7 +1450,7 @@ addPost();
     <p class="text-gray-700 mb-4">
       Use <code class="bg-gray-200 px-1 rounded">try...catch</code> to catch errors and handle them gracefully without stopping the whole program.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>try {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>try {
   let result = JSON.parse('{"name":"Ali"}');  
   console.log(result.name);
 } catch (error) {
@@ -1461,7 +1461,7 @@ addPost();
     <p class="text-gray-700 mb-4">
       The <code class="bg-gray-200 px-1 rounded">finally</code> block runs whether or not an error occurred—perfect for cleanup tasks.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>try {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>try {
   console.log("Start process...");
   throw new Error("Something went wrong");
 } catch (err) {
@@ -1474,7 +1474,7 @@ addPost();
     <p class="text-gray-700 mb-4">
       Create and throw your own errors for validations or specific business logic.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function divide(a, b) {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function divide(a, b) {
   if (b === 0) {
     throw new Error("Division by zero is not allowed");
   }
@@ -1497,7 +1497,7 @@ try {
       </li>
       <li><strong>Breakpoints:</strong> Use Developer Tools (press F12 → Sources tab) to pause code execution and inspect variables step by step.</li>
       <li><strong>Debugger Statement:</strong> Add <code class="bg-gray-200 px-1 rounded">debugger;</code> in code to pause execution when DevTools are open.
-      <pre class="bg-gray-100 p-3 rounded my-2"><code>function test(x) {
+      <pre class="bg-gray-100 overflow-x-auto p-3 rounded my-2"><code>function test(x) {
   debugger; // pauses in DevTools
   return x * 2;
 }
@@ -1596,7 +1596,7 @@ multiply(5);
         <li>Function expressions assigned with <code class="bg-gray-200 px-1 rounded">let/const</code> are not hoisted.</li>
       </ul>
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>console.log(a); // undefined (hoisted declaration, not initialization)
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>console.log(a); // undefined (hoisted declaration, not initialization)
 var a = 10;
 
 sayHello(); // works because function decl is hoisted
@@ -1610,18 +1610,18 @@ function sayHello() {
     </p>
     <ul class="list-disc list-inside text-gray-800 mb-4">
       <li><strong>Global Scope:</strong> Variables accessible anywhere.
-      <pre class="bg-gray-100 p-3 rounded my-2"><code>var globalVar = "I'm global";
+      <pre class="bg-gray-100 overflow-x-auto p-3 rounded my-2"><code>var globalVar = "I'm global";
 console.log(globalVar); // works everywhere</code></pre>
       </li>
       <li><strong>Function Scope:</strong> Variables declared with <code class="bg-gray-200 px-1 rounded">var</code> inside functions.
-      <pre class="bg-gray-100 p-3 rounded my-2"><code>function test() {
+      <pre class="bg-gray-100 overflow-x-auto p-3 rounded my-2"><code>function test() {
   var x = 5;
   console.log(x); // works here
 }
 console.log(x); // error - x not accessible outside function</code></pre>
       </li>
       <li><strong>Block Scope:</strong> Variables declared with <code class="bg-gray-200 px-1 rounded">let</code> or <code class="bg-gray-200 px-1 rounded">const</code> are limited to the block (curly braces).
-      <pre class="bg-gray-100 p-3 rounded my-2"><code>{
+      <pre class="bg-gray-100 overflow-x-auto p-3 rounded my-2"><code>{
   let y = 10;
   const z = 20;
 }
@@ -1642,7 +1642,7 @@ console.log(y); // error - y is block scoped</code></pre>
     <p class="text-gray-700 mb-4">
       Execution contexts are managed in a call stack (Last In, First Out).
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function first() {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function first() {
   console.log("First");
   second();
 }
@@ -1737,7 +1737,7 @@ first();
       The Call Stack keeps track of the execution contexts (functions) that are currently running.
       It works on a <strong>LIFO</strong> (Last In, First Out) principle.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function a() {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function a() {
   console.log("A");
 }
 function b() {
@@ -1755,7 +1755,7 @@ b();
       Asynchronous functions like <code class="bg-gray-200 px-1 rounded">setTimeout()</code>, <code class="bg-gray-200 px-1 rounded">fetch()</code>, and DOM events (<code>click</code>, <code>scroll</code>) 
       are handled by the browser’s Web APIs outside the JavaScript engine.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>console.log("Start");
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>console.log("Start");
 
 setTimeout(() => {
   console.log("Inside setTimeout");
@@ -1779,7 +1779,7 @@ console.log("End");
       The microtask queue holds callbacks from promises and mutation observers.
       It has higher priority than the callback queue.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>console.log("Start");
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>console.log("Start");
 
 setTimeout(() => console.log("setTimeout"), 0);
 
@@ -1884,7 +1884,7 @@ console.log("End");
     <p class="text-gray-700 mb-4">
       A <strong>closure</strong> occurs when a function retains access to variables from its lexical scope even after that scope has finished executing.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function outer() {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function outer() {
   let count = 0;  // captured variable
 
   return function inner() {
@@ -1915,7 +1915,7 @@ counter(); // 3</code></pre>
       JS stores references to outer scope variables inside closures, so those variables remain in heap memory as long as the closure is reachable.
       This can lead to <strong>memory leaks</strong> if large objects are retained unnecessarily.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function bigClosure() {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function bigClosure() {
   const largeArray = new Array(1000000).fill("🚀"); // Huge data
   return function getArray() {
     return largeArray;
@@ -1931,12 +1931,12 @@ const leaked = bigClosure(); // largeArray stays in memory because of closure re
     <h2 class="text-2xl font-bold text-blue-600 mb-3">📌 Avoiding Memory Leaks</h2>
     <ul class="list-disc list-inside text-gray-800 mb-4">
       <li>Nullify references when no longer needed to allow garbage collection:
-      <pre class="bg-gray-100 p-3 rounded my-2"><code>let leaked = bigClosure();
+      <pre class="bg-gray-100 overflow-x-auto p-3 rounded my-2"><code>let leaked = bigClosure();
 console.log(leaked());
 leaked = null; // frees largeArray for garbage collection</code></pre>
       </li>
       <li>Use <code>WeakMap</code> or <code>WeakSet</code> for temporary objects that should not prevent garbage collection:
-      <pre class="bg-gray-100 p-3 rounded my-2"><code>let weak = new WeakMap();
+      <pre class="bg-gray-100 overflow-x-auto p-3 rounded my-2"><code>let weak = new WeakMap();
 (function() {
   let obj = {};
   weak.set(obj, "temp");
@@ -1948,7 +1948,7 @@ leaked = null; // frees largeArray for garbage collection</code></pre>
     <h2 class="text-2xl font-bold text-blue-600 mb-3">📌 Practical Uses of Closures in Memory Management</h2>
     <ul class="list-disc list-inside text-gray-800 mb-4">
       <li>Data hiding / encapsulation:
-      <pre class="bg-gray-100 p-3 rounded my-2"><code>function userSecret() {
+      <pre class="bg-gray-100 overflow-x-auto p-3 rounded my-2"><code>function userSecret() {
   let secret = "myPassword123";
   return {
     getSecret: () => secret
@@ -2040,7 +2040,7 @@ console.log(user.getSecret()); // s3cr3t
       Every JavaScript object has a hidden property called <code class="bg-gray-200 px-1 rounded">[[Prototype]]</code> (accessed as <code class="bg-gray-200 px-1 rounded">__proto__</code>). 
       This points to another object that acts as a fallback when a property or method is not found on the original object.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const user = { name: "Ali" };
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const user = { name: "Ali" };
 console.log(user.__proto__); // Default Object prototype object</code></pre>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">📌 Prototype Chain</h2>
@@ -2053,7 +2053,7 @@ console.log(user.__proto__); // Default Object prototype object</code></pre>
       </ol>
       Example:
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const obj = {};
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const obj = {};
 console.log(obj.toString());
 // toString not on obj → found in Object.prototype</code></pre>
 
@@ -2061,7 +2061,7 @@ console.log(obj.toString());
     <p class="text-gray-700 mb-4">
       Functions have a special <code class="bg-gray-200 px-1 rounded">.prototype</code> property used for inheritance when creating new objects via <code>new</code>.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function Person(name) {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function Person(name) {
   this.name = name;
 }
 
@@ -2077,7 +2077,7 @@ p1.sayHello(); // Hello, I am Bilal
     <p class="text-gray-700 mb-4">
       You can create an object with a specific prototype using <code>Object.create()</code>.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const animal = {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const animal = {
   speak() {
     console.log("Animal sound");
   }
@@ -2090,7 +2090,7 @@ dog.speak(); // Animal sound</code></pre>
     <p class="text-gray-700 mb-4">
       ES6 classes are just a nicer syntax on top of prototypes.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>class Car {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>class Car {
   drive() {
     console.log("Vroom 🚗");
   }
@@ -2100,7 +2100,7 @@ c1.drive(); // Vroom 🚗
 // Internally, Car.prototype.drive = function() { ... }</code></pre>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">📌 Prototype Chain Example</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function A() {}
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function A() {}
 A.prototype.sayHi = function() {
   console.log("Hi from A");
 };
@@ -2219,7 +2219,7 @@ b1.sayHi(); // Hi from A
       <li><strong>Microtask Queue:</strong> Holds higher-priority tasks like Promise callbacks, MutationObservers.</li>
       <li><strong>Event Loop:</strong> Checks if call stack is empty, then runs all microtasks before macrotasks.</li>
     </ul>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>console.log("Start");
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>console.log("Start");
 
 setTimeout(() => console.log("Timeout"), 0);
 
@@ -2243,7 +2243,7 @@ console.log("End");
     </p>
     <ul class="list-disc list-inside text-gray-800 mb-4">
       <li><strong>Promise.all</strong>: Waits for all promises to resolve; rejects if any fail.
-      <pre class="bg-gray-100 p-3 rounded my-2"><code>Promise.all([
+      <pre class="bg-gray-100 overflow-x-auto p-3 rounded my-2"><code>Promise.all([
   fetch("/user"),
   fetch("/posts"),
 ])
@@ -2252,21 +2252,21 @@ console.log("End");
 </code></pre>
       </li>
       <li><strong>Promise.race</strong>: Returns the first promise that settles (resolve or reject).
-      <pre class="bg-gray-100 p-3 rounded my-2"><code>Promise.race([
+      <pre class="bg-gray-100 overflow-x-auto p-3 rounded my-2"><code>Promise.race([
   fetch("/slow"),
   fetch("/fast"),
 ]).then(res => console.log("Fastest response"));
 </code></pre>
       </li>
       <li><strong>Promise.allSettled</strong>: Waits for all promises; never rejects, returns all results.
-      <pre class="bg-gray-100 p-3 rounded my-2"><code>Promise.allSettled([
+      <pre class="bg-gray-100 overflow-x-auto p-3 rounded my-2"><code>Promise.allSettled([
   Promise.resolve("✅ success"),
   Promise.reject("❌ error")
 ]).then(results => console.log(results));
 </code></pre>
       </li>
       <li><strong>Promise.any</strong>: Returns the first fulfilled promise, ignores rejections.
-      <pre class="bg-gray-100 p-3 rounded my-2"><code>Promise.any([
+      <pre class="bg-gray-100 overflow-x-auto p-3 rounded my-2"><code>Promise.any([
   Promise.reject("fail"),
   Promise.resolve("first success"),
   Promise.resolve("second success"),
@@ -2276,7 +2276,7 @@ console.log("End");
     </ul>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">📌 Async/Await with Combinators</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>async function getData() {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>async function getData() {
   try {
     const [user, posts] = await Promise.all([
       fetch("/user"),
@@ -2386,7 +2386,7 @@ getData();
     <p class="text-gray-700 mb-4">
       Encapsulates code and exposes only what’s necessary, enabling private and public members.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const Counter = (() => {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const Counter = (() => {
   let count = 0; // private variable
   
   return {
@@ -2406,7 +2406,7 @@ console.log(Counter.value());     // 1</code></pre>
     <p class="text-gray-700 mb-4">
       Ensures only one instance of a class or object exists.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>class Config {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>class Config {
   constructor() {
     if (Config.instance) return Config.instance;
     this.settings = {};
@@ -2426,7 +2426,7 @@ console.log(c1 === c2); // true</code></pre>
     <p class="text-gray-700 mb-4">
       Allows objects to subscribe to events and be notified when those events happen.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>class EventEmitter {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>class EventEmitter {
   constructor() {
     this.events = {};
   }
@@ -2449,7 +2449,7 @@ bus.emit("login", "Bilal");</code></pre>
     <p class="text-gray-700 mb-4">
       Creates objects without specifying exact classes, based on input.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function createUser(type) {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function createUser(type) {
   if (type === "admin") return { role: "admin", canEdit: true };
   if (type === "guest") return { role: "guest", canEdit: false };
 }
@@ -2463,7 +2463,7 @@ console.log(createUser("admin"));</code></pre>
     <p class="text-gray-700 mb-4">
       Encapsulates interchangeable algorithms or behaviors.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>class Payment {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>class Payment {
   constructor(strategy) {
     this.strategy = strategy;
   }
@@ -2493,7 +2493,7 @@ payment2.pay(200);</code></pre>
       Organize large apps into modules for better maintainability and scalability.
     </p>
     <p class="text-gray-700 mb-2 font-semibold">🔹 ES6 Modules</p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>// user.js
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>// user.js
 export function getUser() {
   return { name: "Bilal" };
 }
@@ -2503,7 +2503,7 @@ import { getUser } from './user.js';
 console.log(getUser());</code></pre>
 
     <p class="text-gray-700 mb-2 font-semibold">🔹 CommonJS (Node.js)</p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>// user.js
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>// user.js
 module.exports = { getUser: () => ({ name: "Bilal" }) };
 
 // app.js
@@ -2640,7 +2640,7 @@ payment2.pay(200);
       Each Symbol is guaranteed to be unique, even if descriptions (optional labels) are the same.
       This uniqueness helps prevent property name collisions in objects.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const sym1 = Symbol("id");
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const sym1 = Symbol("id");
 const sym2 = Symbol("id");
 
 console.log(sym1 === sym2); // false</code></pre>
@@ -2649,7 +2649,7 @@ console.log(sym1 === sym2); // false</code></pre>
     <p class="text-gray-700 mb-4">
       Symbols can be used as keys in objects, creating properties that are not enumerable in normal loops.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const id = Symbol("id");
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const id = Symbol("id");
 
 const user = {
   name: "Bilal",
@@ -2668,7 +2668,7 @@ for (let key in user) {
     <p class="text-gray-700 mb-4">
       Use <code>Symbol.for(key)</code> to create or retrieve a global symbol shared across your codebase.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const globalSym = Symbol.for("appId");
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const globalSym = Symbol.for("appId");
 const sameSym = Symbol.for("appId");
 
 console.log(globalSym === sameSym); // true
@@ -2684,7 +2684,7 @@ console.log(Symbol.keyFor(globalSym)); // "appId"</code></pre>
       <li><code>Symbol.toStringTag</code> → sets custom tag for <code>Object.prototype.toString</code></li>
       <li><code>Symbol.hasInstance</code> → customizes behavior of <code>instanceof</code></li>
     </ul>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const myIterable = {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const myIterable = {
   [Symbol.iterator]() {
     let step = 0;
     return {
@@ -2785,7 +2785,7 @@ for (const val of myIterable) {
     <p class="text-gray-700 mb-4">
       A <strong>Proxy</strong> wraps an object and allows intercepting fundamental operations like property access, assignment, function calls, deletion, and more.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const user = { name: "Bilal", age: 25 };
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const user = { name: "Bilal", age: 25 };
 
 const proxyUser = new Proxy(user, {
   get(target, prop) {
@@ -2814,7 +2814,7 @@ proxyUser.age = 30;           // Logs: Setting age to 30
       <li><code>has</code> → intercept <code>in</code> operator</li>
       <li><code>apply</code> → intercept function calls</li>
     </ul>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const func = () => "Hello";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const func = () => "Hello";
 
 const proxyFunc = new Proxy(func, {
   apply(target, thisArg, args) {
@@ -2831,7 +2831,7 @@ proxyFunc(); // Logs: Function called! → Hello
       The <strong>Reflect</strong> object offers methods that correspond to fundamental JavaScript operations, providing default behavior utilities.
       It is commonly used inside Proxy traps to delegate operations to the original object.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const user = { name: "Bilal" };
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const user = { name: "Bilal" };
 
 const proxyUser = new Proxy(user, {
   get(target, prop) {
@@ -2850,7 +2850,7 @@ console.log(proxyUser.name); // Logs: Getting name → Bilal
       <li><strong>Logging / Debugging:</strong> track property access and changes.</li>
       <li><strong>Reactive frameworks:</strong> like Vue.js use Proxy to track dependencies and trigger updates.</li>
     </ul>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const numbers = [];
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const numbers = [];
 const reactiveNumbers = new Proxy(numbers, {
   set(target, prop, value) {
     console.log(\`Adding value: \${value}\`);
@@ -2952,7 +2952,7 @@ reactiveNumbers.push(10); // Adding value: 10
       </ul>
       Example:
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const greet = () => "Hello";
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const greet = () => "Hello";
 const say = (fn) => fn() + " World";
 
 console.log(say(greet)); // Hello World</code></pre>
@@ -2966,7 +2966,7 @@ console.log(say(greet)); // Hello World</code></pre>
       </ul>
       Example:
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function add(a, b) {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function add(a, b) {
   return a + b; // pure function
 }</code></pre>
 
@@ -2974,7 +2974,7 @@ console.log(say(greet)); // Hello World</code></pre>
     <p class="text-gray-700 mb-4">
       Avoid changing existing data directly; instead create new copies. This prevents unintended side effects.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const arr = [1, 2, 3];
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const arr = [1, 2, 3];
 const newArr = [...arr, 4]; // immutable approach
 
 console.log(arr);    // [1, 2, 3]
@@ -2984,14 +2984,14 @@ console.log(newArr); // [1, 2, 3, 4]</code></pre>
     <p class="text-gray-700 mb-4">
       Higher-order functions accept functions as arguments or return new functions.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const multiplyBy = (n) => (x) => x * n;
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const multiplyBy = (n) => (x) => x * n;
 const double = multiplyBy(2);
 
 console.log(double(5)); // 10</code></pre>
     <p class="text-gray-700 mb-4">
       Common HOFs on arrays include <code>.map()</code>, <code>.filter()</code>, <code>.reduce()</code>, <code>.forEach()</code>, <code>.some()</code>, <code>.every()</code>.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const numbers = [1, 2, 3, 4];
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const numbers = [1, 2, 3, 4];
 const doubled = numbers.map(n => n * 2);
 console.log(doubled); // [2, 4, 6, 8]</code></pre>
 
@@ -2999,7 +2999,7 @@ console.log(doubled); // [2, 4, 6, 8]</code></pre>
     <p class="text-gray-700 mb-4">
       Combining multiple functions to form a sequence or pipeline.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const add5 = (x) => x + 5;
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const add5 = (x) => x + 5;
 const multiply2 = (x) => x * 2;
 
 const composed = (x) => multiply2(add5(x));
@@ -3077,7 +3077,7 @@ console.log(composed(10)); // 30
       <li><strong>Minimize DOM Access:</strong><br>
         Accessing and updating the DOM is slow. Cache DOM elements and batch updates.
       </li>
-      <pre class="bg-gray-100 p-3 rounded mb-4"><code>// Bad approach
+      <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>// Bad approach
 for (let i = 0; i &lt; 100; i++) {
   document.getElementById("list").innerHTML += "&lt;li&gt;Item&lt;/li&gt;";
 }
@@ -3094,7 +3094,7 @@ list.innerHTML = html;
       <li><strong>Debouncing & Throttling:</strong><br>
         Reduce how often event handlers execute during high-frequency events like scroll or resize.
       </li>
-      <pre class="bg-gray-100 p-3 rounded mb-4"><code>// Debounce function
+      <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>// Debounce function
 function debounce(fn, delay) {
   let timeout;
   return (...args) => {
@@ -3109,14 +3109,14 @@ window.addEventListener("resize", debounce(() => console.log("Resized"), 200));
       <li><strong>Avoid Memory Leaks:</strong><br>
         Remove unnecessary event listeners and clear references to DOM elements no longer needed.
       </li>
-      <pre class="bg-gray-100 p-3 rounded mb-4"><code>element.removeEventListener("click", handleClick);
+      <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>element.removeEventListener("click", handleClick);
 element = null;
 </code></pre>
 
       <li><strong>Use requestAnimationFrame:</strong><br>
         For smooth animations, use <code>requestAnimationFrame</code> instead of <code>setTimeout</code> or <code>setInterval</code>.
       </li>
-      <pre class="bg-gray-100 p-3 rounded mb-4"><code>function animate() {
+      <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function animate() {
   // update element position here
   requestAnimationFrame(animate);
 }
@@ -3129,7 +3129,7 @@ animate();
     <p class="text-gray-700 mb-4">
       Instead of attaching event listeners to many individual elements, attach one listener to a common parent element and handle events via <code>event.target</code>.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const list = document.getElementById("list");
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const list = document.getElementById("list");
 
 list.addEventListener("click", (e) => {
   if (e.target && e.target.nodeName === "LI") {
@@ -3147,7 +3147,7 @@ list.addEventListener("click", (e) => {
     </p>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">🔹 Example: Dynamic List with Delegation</h2>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const ul = document.querySelector("ul");
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const ul = document.querySelector("ul");
 
 ul.addEventListener("click", (e) => {
   if (e.target.tagName === "LI") {
@@ -3233,7 +3233,7 @@ animate();
       XSS occurs when untrusted user input is executed as code in the browser.
       Always sanitize or escape user input before inserting into the DOM.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>// Unsafe - vulnerable to XSS
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>// Unsafe - vulnerable to XSS
 document.getElementById("output").innerHTML = userInput;
 
 // Safe - textContent prevents code execution
@@ -3246,7 +3246,7 @@ document.getElementById("output").textContent = userInput;
       <code>eval()</code> executes strings as JavaScript code, which is dangerous and can lead to code injection.
       Use safer alternatives, like <code>JSON.parse</code>, whenever possible.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>// Unsafe
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>// Unsafe
 eval("alert('Hacked!')");
 
 // Safe
@@ -3257,13 +3257,13 @@ const data = JSON.parse('{"name":"Bilal"}');</code></pre>
       Avoid inline event handlers such as <code>onclick</code> or <code>onload</code>, which may be exploited for injection.
       Use <code>addEventListener</code> to attach event handlers securely.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>button.addEventListener("click", handleClick);</code></pre>
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>button.addEventListener("click", handleClick);</code></pre>
 
     <h2 class="text-2xl font-bold text-blue-600 mb-3">📌 Input Validation & Sanitization</h2>
     <p class="text-gray-700 mb-4">
       Always validate user input both on client and server sides using type checks, regex, length checks to prevent invalid data.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function isValidEmail(email) {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function isValidEmail(email) {
   return /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email);
 }</code></pre>
 
@@ -3271,7 +3271,7 @@ const data = JSON.parse('{"name":"Bilal"}');</code></pre>
     <p class="text-gray-700 mb-4">
       Avoid letting untrusted input modify <code>Object.prototype</code> or <code>__proto__</code>, which can cause security flaws.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>const obj = {};
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>const obj = {};
 const malicious = JSON.parse('{"__proto__":{"isAdmin":true}}');
 Object.assign(obj, malicious);
 console.log({}.isAdmin); // true → vulnerability
@@ -3289,7 +3289,7 @@ console.log({}.isAdmin); // true → vulnerability
       Avoid polluting the global scope as it may be exploited.
       Use block-scoped <code>let</code>, <code>const</code>, closures, or modules instead of <code>var</code>.
     </p>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>(function(){
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>(function(){
   let privateVar = 123; // not accessible globally
 })();</code></pre>
 
@@ -3385,7 +3385,7 @@ console.log({}.isAdmin); // undefined - safe
       <li><strong>Heap Memory:</strong> Stores objects, closures, and dynamic data.</li>
       <li><strong>Garbage Collection (GC):</strong> Automatically frees memory no longer referenced, using algorithms like Mark-and-Sweep.</li>
     </ul>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>let obj = { name: "Bilal" };
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>let obj = { name: "Bilal" };
 obj = null; // obj is now eligible for garbage collection
 </code></pre>
 
@@ -3415,7 +3415,7 @@ obj = null; // obj is now eligible for garbage collection
       <li>Frequently executed ("hot") functions are compiled to optimized machine code by the JIT compiler.</li>
       <li>If assumptions made during optimization break, engines <em>deoptimize</em> back to less optimized versions.</li>
     </ul>
-    <pre class="bg-gray-100 p-3 rounded mb-4"><code>function add(a, b) {
+    <pre class="bg-gray-100 overflow-x-auto p-3 rounded mb-4"><code>function add(a, b) {
   return a + b;
 }
 

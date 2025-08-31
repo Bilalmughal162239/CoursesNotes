@@ -19,6 +19,11 @@ import CSSQuiz from '../pages/Quizes/CSSQuize'
 import JSQuize from '../pages/Quizes/JSQuize'
 import BootstrapQuize from '../pages/Quizes/BootstrapQuize'
 import NotFoundPage from '../pages/NotFoundPage'
+import CQuize from '../pages/Quizes/CQuize'
+import ReactQuize from '../pages/Quizes/ReactQuize'
+import CppQuize from '../pages/Quizes/CppQuize'
+import NodeQuize from '../pages/Quizes/NodeQuize'
+import PytonQuize from '../pages/Quizes/PytonQuize'
 
 const Index = () => {
     return (
@@ -28,7 +33,7 @@ const Index = () => {
                 <main>
                     <Routes>
                         <Route path='/' element={<Home />} />
-                        <Route path='about' element={<About />} />
+                        {/* Courses routes */}
                         <Route path='HTMLNotesPage' element={<HTMLNotesPage />} />
                         <Route path='NodeNotesPage' element={<NodeNotesPage />} />
                         <Route path='CssNotesPage' element={<CssNotesPage />} />
@@ -43,6 +48,13 @@ const Index = () => {
                         <Route path='quize-css' element={<CSSQuiz />} />
                         <Route path='quize-bootstrap' element={<BootstrapQuize />} />
                         <Route path='quize-js' element={<JSQuize />} />
+                        <Route path='quize-c-language' element={<CQuize />} />
+                        <Route path='quize-react' element={<ReactQuize />} />
+                        <Route path='quize-cpp' element={<CppQuize />} />
+                        <Route path='quize-python' element={<PytonQuize />} />
+                        <Route path='quize-node' element={<NodeQuize />} />
+                        {/* other routes */}
+                        <Route path='about' element={<About />} />
                         <Route path='Contact' element={<Contact />} />
                         <Route path="*" element={<NotFoundPage />} />
                     </Routes>
