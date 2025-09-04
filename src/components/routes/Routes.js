@@ -1,29 +1,34 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
+// other routes
 import Home from '../pages/Home'
 import Header from '../header/Header'
 import Footer from '../footer/Footer'
 import About from '../pages/About'
-import HTMLNotesPage from '../pages/HTMLNotesPage'
 import Contact from '../pages/Contact'
-import NodeNotesPage from '../pages/NodeNotesPage'
-import CssNotesPage from '../pages/CssNotesPage'
-import BootstrapNotes from '../pages/BootstrapNotes'
-import JavaSceriptNotes from '../pages/JavaSceriptNotes'
-import ReactNotesPage from '../pages/ReactNotesPage'
-import CPlusNotes from '../pages/CPlusNotes'
-import CNotes from '../pages/CNotes'
-import PythonNotes from '../pages/PythonNotes'
+import NotFoundPage from '../pages/NotFoundPage'
+// notes routes
+import HTMLNotesPage from '../pages/notes/HTMLNotesPage'
+import NodeNotesPage from '../pages/notes/NodeNotesPage'
+import CssNotesPage from '../pages/notes/CssNotesPage'
+import BootstrapNotes from '../pages/notes/BootstrapNotes'
+import JavaSceriptNotes from '../pages/notes/JavaSceriptNotes'
+import ReactNotesPage from '../pages/notes/ReactNotesPage'
+import CPlusNotes from '../pages/notes/CPlusNotes'
+import CNotes from '../pages/notes/CNotes'
+import PythonNotes from '../pages/notes/PythonNotes'
+// Quize routes
 import HTMLQuize from '../pages/Quizes/HTMLQuize'
 import CSSQuiz from '../pages/Quizes/CSSQuize'
 import JSQuize from '../pages/Quizes/JSQuize'
 import BootstrapQuize from '../pages/Quizes/BootstrapQuize'
-import NotFoundPage from '../pages/NotFoundPage'
 import CQuize from '../pages/Quizes/CQuize'
 import ReactQuize from '../pages/Quizes/ReactQuize'
 import CppQuize from '../pages/Quizes/CppQuize'
 import NodeQuize from '../pages/Quizes/NodeQuize'
 import PytonQuize from '../pages/Quizes/PytonQuize'
+// Auth routes
+import AdmissionPage from '../pages/auth/AdmissionPage'
 
 const Index = () => {
     return (
@@ -53,6 +58,8 @@ const Index = () => {
                         <Route path='quize-cpp' element={<CppQuize />} />
                         <Route path='quize-python' element={<PytonQuize />} />
                         <Route path='quize-node' element={<NodeQuize />} />
+                        {/* Auth routes */}
+                        <Route path='admissionpage' element={<AdmissionPage />} />
                         {/* other routes */}
                         <Route path='about' element={<About />} />
                         <Route path='Contact' element={<Contact />} />

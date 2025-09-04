@@ -172,14 +172,16 @@ const Home = () => {
                 transition={{ delay: 0.6 }}
                 className="flex flex-col sm:flex-row gap-4"
               >
-                <motion.button
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="btn-primary flex items-center justify-center space-x-2 px-8 py-4 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-shadow duration-300"
-                >
-                  <span>Start Learning</span>
-                  <FaArrowRight />
-                </motion.button>
+                <Link to='/admissionpage'>
+                  <motion.button
+                    whileHover={{ scale: 1.05, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="btn-primary flex items-center justify-center space-x-2 px-8 py-4 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  >
+                    <span>Start Learning</span>
+                    <FaArrowRight />
+                  </motion.button>
+                </Link>
                 <motion.button
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
@@ -364,7 +366,7 @@ const Home = () => {
                     <p className="opacity-90">Join thousands of successful developers</p>
                   </div>
 
-                  <div className="bg-white/10 rounded-2xl p-6 backdrop-blur-sm">
+                  <div className="bg-white/10 rounded-2xl p-6 backdrop-blur-sm mb-3">
                     <div className="flex items-center justify-between mb-4">
                       <span className="font-semibold">Course Progress</span>
                       <span className="text-sm opacity-75">75%</span>
@@ -382,14 +384,15 @@ const Home = () => {
                       12 of 16 lessons completed
                     </div>
                   </div>
-
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="w-full bg-white text-primary-500 py-3 rounded-xl font-semibold hover:shadow-lg transition-shadow duration-300"
-                  >
-                    Continue Learning
-                  </motion.button>
+                  <Link to='/admissionpage'>
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="w-full bg-white text-primary-500 py-3 rounded-xl font-semibold hover:shadow-lg transition-shadow duration-300 my-3"
+                    >
+                      Continue Learning
+                    </motion.button>
+                  </Link>
                 </div>
               </div>
             </div>

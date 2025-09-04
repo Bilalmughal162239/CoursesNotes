@@ -8,8 +8,6 @@ import {
   FaBook,
   FaUser,
   FaEnvelope,
-  FaMoon,
-  FaSun,
   FaChevronDown,
   FaChevronUp,
   FaCss3Alt,
@@ -25,7 +23,7 @@ import { SiBootstrap, SiCheerio, SiCplusplus } from 'react-icons/si';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  // const [isDarkMode, setIsDarkMode] = useState(false);
   const [isCoursesOpen, setIsCoursesOpen] = useState(false);
   const [isQuizeOpen, setIsQuizeOpen] = useState(false);
 
@@ -52,7 +50,7 @@ const Header = () => {
     { name: 'Node.js', icon: FaNodeJs, color: "text-green-600", href: '/NodeNotesPage' },
     { name: 'C', icon: SiCheerio, color: "text-blue-600", href: '/CLanguageNotes' },
     { name: 'C++', icon: SiCplusplus, color: "text-indigo-700", href: '/CppNotesPage' },
-    { name: 'Python', icon: FaPython, color: "text-green-700", href: '/PythonNotes' }, 
+    { name: 'Python', icon: FaPython, color: "text-green-700", href: '/PythonNotes' },
   ];
   const quizeItems = [
     { name: 'HTML', icon: FaHtml5, color: "text-orange-600", href: '/quize-html' },
@@ -63,7 +61,7 @@ const Header = () => {
     { name: 'Node.js', icon: FaNodeJs, color: "text-green-600", href: '/quize-node' },
     { name: 'C', icon: SiCheerio, color: "text-blue-600", href: '/quize-c-language' },
     { name: 'C++', icon: SiCplusplus, color: "text-indigo-700", href: '/quize-cpp' },
-    { name: 'Python', icon: FaPython, color: "text-green-700", href: '/quize-python' }, 
+    { name: 'Python', icon: FaPython, color: "text-green-700", href: '/quize-python' },
   ];
 
 
@@ -76,7 +74,6 @@ const Header = () => {
     >
       <div className="container mx-auto">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <div className="logo-icon p-1 sm:p-2 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-lg text-white">
@@ -192,17 +189,14 @@ const Header = () => {
               )}
             </motion.div>
           </nav>
-
-          {/* Theme Toggle & Mobile Menu Button */}
+          {/* signup  */}
           <div className="flex items-center space-x-4">
-            {/* Dark mode toggle only for md and above */}
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              onClick={() => setIsDarkMode(!isDarkMode)}
-              className="hidden md:flex p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors duration-300"
+              className="hidden md:flex p-2"
             >
-              {isDarkMode ? <FaSun className="text-yellow-500" /> : <FaMoon className="text-gray-600" />}
+              <Link to='/auth-container' className='w-full px-4 bg-gradient-to-r from-primary-500 to-secondary-500 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-shadow duration-300 inline-block text-center'>Sign up</Link>
             </motion.button>
 
             {/* Mobile menu button */}
